@@ -166,14 +166,14 @@ input_no = 100
 level = 0
 inputarr = ["b1n1135B", "b1u045tp14500u180zp20000u000c1", "mp2u180b2"]
 
-weight = [30, 40]
+weight = [30, 60]
 ext_force = [0, 0, 0, 0]  # y,x format
 # position of force on block in diagram
 dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
 
-b_size = [[30, 30], [30, 30]]
+b_size = [[20, 20], [20, 20]]
 c_size = [150]
-p_radius = [15, 18]
+p_radius = [10, 18]
 
-bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={"1": [1, "l", [0, 0]]},
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={"1": [1, "l", [-50, -50]]},
                rpulley=0, lpulley=0, cpulley=1, mass=(-1), size=[100, 100])
