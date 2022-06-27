@@ -193,3 +193,19 @@ p_radius = [15]
 
 bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
                rpulley=0, lpulley=0, cpulley=1, mass=0, size=[120, 120])
+
+input_no = 10
+level = 0
+inputarr = ["b1u000tp10000u180zp20000u000c1", "mp2u180b2", "mp1u000c1"]
+
+weight = [30, 40]
+ext_force = [0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20]]
+c_size = [150]
+p_radius = [15, 15]
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=1, mass=0, size=[120, 120])
