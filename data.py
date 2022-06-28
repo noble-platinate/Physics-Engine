@@ -117,23 +117,6 @@ input_no = 55
 level = 1
 inputarr = ["b1n1135B", "b1u045tp14500u180b2"]
 
-rpulley = 0
-lpulley = 0
-cpulley = 1
-
-bblock = {1: [1, "l", [0, 0]]}
-mass = -1
-rangle = 90
-langle = 45
-
-weight = [20, 30]
-ext_force = [0, 0, 0, 0]
-dir_ext_force = ['t', 'r', 't', 'r']
-
-input_no = 55
-level = 1
-inputarr = ["b1n1135B", "b1u045tp14500u180b2"]
-
 weight = [30, 40]
 ext_force = [0, 0, 0, 0]  # y,x format
 # position of force on block in diagram
