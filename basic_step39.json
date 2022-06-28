@@ -7,9 +7,9 @@
                 "question": "How many moving objects are present?",
                 "options": [
                     3,
-                    2,
-                    5,
-                    6
+                    0,
+                    1,
+                    2
                 ],
                 "answer": 0,
                 "threejsstep": "motion",
@@ -27,7 +27,7 @@
                 "question": "How many strings are there?",
                 "options": [
                     1,
-                    5,
+                    3,
                     2,
                     0
                 ],
@@ -46,12 +46,12 @@
             {
                 "question": "How many contacting surfaces are there?",
                 "options": [
-                    1,
-                    2,
                     3,
-                    0
+                    1,
+                    0,
+                    2
                 ],
-                "answer": 0,
+                "answer": 1,
                 "threejsstep": "motion",
                 "threejssubstep": 2,
                 "threejssubsubstep": 0,
@@ -73,9 +73,9 @@
                 "question": "How many surfaces are in contact with the red block?",
                 "options": [
                     2,
-                    0,
+                    4,
                     1,
-                    4
+                    0
                 ],
                 "threejsstep": "fbd",
                 "threejssubstep": 1,
@@ -148,10 +148,10 @@
             {
                 "question": "What is the force at this point of intersection on red block?",
                 "options": [
-                    "T\u2081 leftwards",
-                    "T\u2081 rightwards"
+                    "T\u2081 rightwards",
+                    "T\u2081 leftwards"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "threejsstep": "fbd",
                 "threejssubstep": 1,
                 "threejssubsubstep": 2,
@@ -172,12 +172,12 @@
             {
                 "question": "Whats the FBD equation of red block in the y-direction",
                 "options": [
-                    "+N\u2081-30=0",
                     "+N\u2081+30=0",
                     "-N\u2081+30=0",
+                    "+N\u2081-30=0",
                     "-N\u2081-30=0"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "threejsstep": "fbd",
                 "threejssubstep": 1,
                 "threejssubsubstep": 100,
@@ -256,10 +256,10 @@
             {
                 "question": "What is the force at this point of intersection on yellow block?",
                 "options": [
-                    "T\u2082 downwards",
-                    "T\u2082 upwards"
+                    "T\u2082 upwards",
+                    "T\u2082 downwards"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "threejsstep": "fbd",
                 "threejssubstep": 2,
                 "threejssubsubstep": 1,
@@ -345,14 +345,104 @@
                 "answer": 3
             },
             {
-                "question": "Whats the FBD equation of first pulley in the x-direction",
+                "question": "What is the force at this point of intersection on first pulley?",
                 "options": [
-                    "-2T\u2081+T\u2082=0.0",
-                    "+2T\u2081-T\u2082=0.0",
-                    "+2T\u2081+T\u2082=0.0",
-                    "-2T\u2081-T\u2082=0.0"
+                    "T\u2081 leftwards",
+                    "T\u2081 rightwards"
                 ],
                 "answer": 0,
+                "threejsstep": "fbd",
+                "threejssubstep": 3,
+                "threejssubsubstep": 1,
+                "show1": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+N\u2081-30=0",
+                    "+T\u2081=3.0a\u2081x",
+                    "+40-T\u2082=4.0a\u2082"
+                ],
+                "show2": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+N\u2081-30=0",
+                    "+T\u2081=3.0a\u2081x",
+                    "+40-T\u2082=4.0a\u2082"
+                ],
+                "showfc": [
+                    "First pulley",
+                    "Upward Forces: ",
+                    "Downward Forces: ",
+                    "Rightward Forces: ",
+                    "Leftward Forces: "
+                ]
+            },
+            {
+                "question": "What is the force at this point of intersection on first pulley?",
+                "options": [
+                    "T\u2081 leftwards",
+                    "T\u2081 rightwards"
+                ],
+                "answer": 0,
+                "threejsstep": "fbd",
+                "threejssubstep": 3,
+                "threejssubsubstep": 2,
+                "show1": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+N\u2081-30=0",
+                    "+T\u2081=3.0a\u2081x",
+                    "+40-T\u2082=4.0a\u2082"
+                ],
+                "show2": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+N\u2081-30=0",
+                    "+T\u2081=3.0a\u2081x",
+                    "+40-T\u2082=4.0a\u2082"
+                ],
+                "showfc": [
+                    "First pulley",
+                    "Upward Forces: ",
+                    "Downward Forces: ",
+                    "Rightward Forces: ",
+                    "Leftward Forces: T\u2081, "
+                ]
+            },
+            {
+                "question": "What is the force at this point of intersection on first pulley?",
+                "options": [
+                    "T\u2082 rightwards",
+                    "T\u2082 leftwards"
+                ],
+                "answer": 0,
+                "threejsstep": "fbd",
+                "threejssubstep": 3,
+                "threejssubsubstep": 3,
+                "show1": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+N\u2081-30=0",
+                    "+T\u2081=3.0a\u2081x",
+                    "+40-T\u2082=4.0a\u2082"
+                ],
+                "show2": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+N\u2081-30=0",
+                    "+T\u2081=3.0a\u2081x",
+                    "+40-T\u2082=4.0a\u2082"
+                ],
+                "showfc": [
+                    "First pulley",
+                    "Upward Forces: ",
+                    "Downward Forces: ",
+                    "Rightward Forces: ",
+                    "Leftward Forces: T\u2081, T\u2081, "
+                ]
+            },
+            {
+                "question": "Whats the FBD equation of first pulley in the x-direction",
+                "options": [
+                    "+2T\u2081+T\u2082=0.0",
+                    "+2T\u2081-T\u2082=0.0",
+                    "-2T\u2081-T\u2082=0.0",
+                    "-2T\u2081+T\u2082=0.0"
+                ],
+                "answer": 3,
                 "threejsstep": "fbd",
                 "threejssubstep": 3,
                 "threejssubsubstep": 100,
@@ -366,8 +456,8 @@
                     "First pulley",
                     "Upward Forces: ",
                     "Downward Forces: ",
-                    "Rightward Forces: ",
-                    "Leftward Forces: "
+                    "Rightward Forces: T\u2082, ",
+                    "Leftward Forces: T\u2081, T\u2081, "
                 ],
                 "show2": [
                     "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
@@ -386,10 +476,10 @@
             {
                 "question": "What is the rate of change of the length of string if the dog is moving towards right with speed 5 m/s",
                 "options": [
-                    -5,
-                    5
+                    5,
+                    -5
                 ],
-                "answer": 1,
+                "answer": 0,
                 "threejsstep": "constraint Understanding",
                 "threejssubstep": 1,
                 "threejssubsubstep": [
@@ -399,7 +489,8 @@
                 "show1": [],
                 "show2": [
                     "Rate of change of length of the string is 5 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string if the dog is moving towards left with speed 5 m/s",
@@ -417,7 +508,8 @@
                 "show1": [],
                 "show2": [
                     "Rate of change of length of the string is -5 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string if the human is moving towards right with speed 3 m/s",
@@ -435,7 +527,8 @@
                 "show1": [],
                 "show2": [
                     "Rate of change of length of the string is -3 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string if the human is moving towards left with speed 3 m/s",
@@ -453,15 +546,16 @@
                 "show1": [],
                 "show2": [
                     "Rate of change of length of the string is 3 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
                 "options": [
-                    5,
-                    -5
+                    -5,
+                    5
                 ],
-                "answer": 0,
+                "answer": 1,
                 "threejsstep": "constraint Understanding",
                 "threejssubstep": 5,
                 "threejssubsubstep": [
@@ -471,7 +565,8 @@
                 "show1": [],
                 "show2": [
                     "Rate of change of length of the string due tp motion of dog is 5 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
@@ -492,17 +587,18 @@
                 "show2": [
                     "Rate of change of length of the string due tp motion of dog is 5 m/s",
                     "Rate of change of length of the string due tp motion of huamn is -3 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
                 "options": [
-                    -2,
-                    2,
                     -8,
-                    8
+                    8,
+                    -2,
+                    2
                 ],
-                "answer": 1,
+                "answer": 3,
                 "threejsstep": "constraint Understanding",
                 "threejssubstep": 7,
                 "threejssubsubstep": [
@@ -517,7 +613,8 @@
                     "Rate of change of length of the string due tp motion of dog is 5 m/s",
                     "Rate of change of length of the string due tp motion of huamn is -3 m/s",
                     "Total Rate of change of length of the string due motion of both human and dog is 2m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
@@ -535,7 +632,8 @@
                 "show1": [],
                 "show2": [
                     "Rate of change of length of the string due tp motion of dog is 5 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
@@ -556,17 +654,18 @@
                 "show2": [
                     "Rate of change of length of the string due tp motion of dog is 5 m/s",
                     "Rate of change of length of the string due tp motion of huamn is 3 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
                 "options": [
-                    -8,
                     8,
                     2,
-                    -2
+                    -2,
+                    -8
                 ],
-                "answer": 1,
+                "answer": 0,
                 "threejsstep": "constraint Understanding",
                 "threejssubstep": 10,
                 "threejssubsubstep": [
@@ -581,15 +680,16 @@
                     "Rate of change of length of the string due tp motion of dog is 5 m/s",
                     "Rate of change of length of the string due tp motion of huamn is 3 m/s",
                     "Total Rate of change of length of the string due motion of both human and dog is 8m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
                 "options": [
-                    -5,
-                    5
+                    5,
+                    -5
                 ],
-                "answer": 0,
+                "answer": 1,
                 "threejsstep": "constraint Understanding",
                 "threejssubstep": 11,
                 "threejssubsubstep": [
@@ -599,7 +699,8 @@
                 "show1": [],
                 "show2": [
                     "Rate of change of length of the string due tp motion of dog is -5 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
@@ -620,17 +721,18 @@
                 "show2": [
                     "Rate of change of length of the string due tp motion of dog is -5 m/s",
                     "Rate of change of length of the string due tp motion of huamn is -3 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
                 "options": [
-                    -8,
-                    -2,
                     8,
-                    2
+                    2,
+                    -8,
+                    -2
                 ],
-                "answer": 0,
+                "answer": 2,
                 "threejsstep": "constraint Understanding",
                 "threejssubstep": 13,
                 "threejssubsubstep": [
@@ -645,7 +747,8 @@
                     "Rate of change of length of the string due tp motion of dog is -5 m/s",
                     "Rate of change of length of the string due tp motion of huamn is -3 m/s",
                     "Total Rate of change of length of the string due motion of both human and dog is -8m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
@@ -663,7 +766,8 @@
                 "show1": [],
                 "show2": [
                     "Rate of change of length of the string due tp motion of dog is -5 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
@@ -684,17 +788,18 @@
                 "show2": [
                     "Rate of change of length of the string due tp motion of dog is -5 m/s",
                     "Rate of change of length of the string due tp motion of huamn is 3 m/s"
-                ]
+                ],
+                "showfc": []
             },
             {
                 "question": "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
                 "options": [
-                    2,
-                    8,
                     -8,
-                    -2
+                    2,
+                    -2,
+                    8
                 ],
-                "answer": 3,
+                "answer": 2,
                 "threejsstep": "constraint Understanding",
                 "threejssubstep": 16,
                 "threejssubsubstep": [
@@ -709,7 +814,8 @@
                     "Rate of change of length of the string due tp motion of dog is -5 m/s",
                     "Rate of change of length of the string due tp motion of huamn is 3 m/s",
                     "Total Rate of change of length of the string due motion of both human and dog is -2m/s"
-                ]
+                ],
+                "showfc": []
             }
         ]
     },
@@ -770,6 +876,7 @@
                     "-2T\u2081+T\u2082=0.0"
                 ],
                 "showfc": [
+                    "Pink string",
                     "l\u2081 + l\u2082 = constant"
                 ]
             },
@@ -798,6 +905,7 @@
                     "-2T\u2081+T\u2082=0.0"
                 ],
                 "showfc": [
+                    "Pink string",
                     "l\u2081 + l\u2082 = constant"
                 ]
             },
@@ -830,6 +938,7 @@
                     "-2T\u2081+T\u2082=0.0"
                 ],
                 "showfc": [
+                    "Pink string",
                     "l\u2081 + l\u2082 = constant"
                 ]
             },
@@ -858,6 +967,7 @@
                     "-2T\u2081+T\u2082=0.0"
                 ],
                 "showfc": [
+                    "Pink string",
                     "l\u2081 + l\u2082 = constant"
                 ]
             },
@@ -890,6 +1000,7 @@
                     "+a\u2082-a\u2083=0"
                 ],
                 "showfc": [
+                    "Pink string",
                     "l\u2081 + l\u2082 = constant",
                     "l\u2081'' = +a\u2083-a\u2081",
                     "l\u2082'' = +a\u2083"
@@ -952,6 +1063,7 @@
                     "-a\u2081x+2.0a\u2083=0"
                 ],
                 "showfc": [
+                    "Red string",
                     "l\u2081 + l\u2082 = constant"
                 ]
             },
@@ -982,6 +1094,7 @@
                     "-a\u2081x+2.0a\u2083=0"
                 ],
                 "showfc": [
+                    "Red string",
                     "l\u2081 + l\u2082 = constant"
                 ]
             },
@@ -1015,6 +1128,7 @@
                     "+a\u2082-a\u2083=0"
                 ],
                 "showfc": [
+                    "Red string",
                     "l\u2081 + l\u2082 = constant",
                     "l\u2081'' = -a\u2083",
                     "l\u2082'' = +a\u2082"
