@@ -124,10 +124,10 @@ dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
 
 b_size = [[30, 30], [30, 30]]
 c_size = [150]
-p_radius = [10]
+p_radius = [15]
 
-bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={"1": [1, "l", [0, 0]]},
-               rpulley=0, lpulley=0, cpulley=1, mass=(-1), size=[100, 100])
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={"1": [1, "l", [-50, -50]]},
+               rpulley=0, lpulley=0, cpulley=1, mass=(-1), size=[200, 200])
 
 input_no = 39
 level = 1
