@@ -193,3 +193,202 @@ p_radius = [15, 15]
 
 bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
                rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+input_no = 1
+level = 0
+inputarr = ["b1u000c1"]
+
+weight = [30]
+ext_force = [0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r']
+
+b_size = [[20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+input_no = 2
+level = 0
+inputarr = ["b1u000b2", "b2u000c1"]
+
+weight = [30, 40]
+ext_force = [0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+input_no = 3
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+input_no = 4
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+input_no = 5
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+
+input_no = 6
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+
+input_no = 7
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+
+input_no = 8
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+
+input_no = 9
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+
+input_no = 10
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+
+vinput_no = 11
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+
+input_no = 12
+level = 0
+inputarr = ["b1u000b2", "b2u000b3", "b3u000c1"]
+
+weight = [30, 40, 50]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
+
+b_size = [[20, 20], [20, 20], [20, 20]]
+c_size = [150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
