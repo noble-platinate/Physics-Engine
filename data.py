@@ -192,4 +192,4 @@ c_size = [150, 150]
 p_radius = [15, 15]
 
 bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={},
-               rpulley=0, lpulley=0, cpulley=1, mass=0, size=[120, 120])
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
