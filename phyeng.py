@@ -3348,10 +3348,11 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
             if(step_count == 1):
                 substep_count = 0
                 step_actions = []
-
+                k=0
                 for substep_question in step_one_question:
                     new_substep_dick = {}
                     if(step_one_options[substep_count][step_one_correct_option_index[substep_count]] == 0):
+                        k+=1
                         continue
                     new_substep_dick["question"] = substep_question
                     new_substep_dick["options"] = step_one_options[substep_count]
@@ -3393,6 +3394,21 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                     step_actions.append(new_substep_dick)
 
                     substep_count += 1
+                if(k==3):
+                    new_substep_dick = {}
+                    new_substep_dick["question"] = step_one_question[0]
+                    new_substep_dick["options"] = [3,1,0,2]
+                    new_substep_dick["answer"] = 2
+                    new_substep_dick["threejsstep"] = "motion"
+                    new_substep_dick["threejssubstep"] = 0
+                    new_substep_dick["threejssubsubstep"] = 0
+                    new_substep_dick["show1"] = [""]
+                    new_substep_dick["show2"] = [""]
+                    new_substep_dick["showfc"] = []
+                    new_substep_dick["type"] = "basic"
+                    new_substep_dick["showfcheading"] = []
+                    step_actions.append(new_substep_dick)
+
 
             if(step_count == 2):
                 substep_count = 0
@@ -4057,7 +4073,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                 new_substep_dick["question"] = "What are the final accelerations, tensions and normal reactions?"
                 new_substep_dick["options"] = answer_options
                 new_substep_dick["answer"] = answer_idx
-                new_substep_dick["threejsstep"] = "motion"
+                new_substep_dick["threejsstep"] = "finalanswer"
                 new_substep_dick["threejssubstep"] = 0
                 new_substep_dick["threejssubsubstep"] = 0
                 new_substep_dick["show1"] = mallu[0:lent]
@@ -4092,10 +4108,11 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
             if(step_count == 1):
                 substep_count = 0
                 step_actions = []
-
+                k=0
                 for substep_question in step_one_question:
                     new_substep_dick = {}
                     if(step_one_options[substep_count][step_one_correct_option_index[substep_count]] == 0):
+                        k+=1
                         continue
                     new_substep_dick["question"] = substep_question
                     new_substep_dick["options"] = step_one_options[substep_count]
@@ -4131,6 +4148,21 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
 
                     substep_count += 1
 
+                if(k==3):
+                    new_substep_dick = {}
+                    new_substep_dick["question"] = step_one_question[0]
+                    new_substep_dick["options"] = [3,1,0,2]
+                    new_substep_dick["answer"] = 2
+                    new_substep_dick["threejsstep"] = "motion"
+                    new_substep_dick["threejssubstep"] = 0
+                    new_substep_dick["threejssubsubstep"] = 0
+                    new_substep_dick["show1"] = [""]
+                    new_substep_dick["show2"] = [""]
+                    new_substep_dick["showfc"] = []
+                    new_substep_dick["type"] = "basic"
+                    new_substep_dick["showfcheading"] = []
+                    step_actions.append(new_substep_dick)
+                    
             if(step_count == 2):
                 substep_count = 0
                 step_actions = []
@@ -4709,7 +4741,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                 new_substep_dick["question"] = "What are the final accelerations, tensions and normal reactions?"
                 new_substep_dick["options"] = answer_options
                 new_substep_dick["answer"] = answer_idx
-                new_substep_dick["threejsstep"] = "motion"
+                new_substep_dick["threejsstep"] = "finalanswer"
                 new_substep_dick["threejssubstep"] = 0
                 new_substep_dick["threejssubsubstep"] = 0
                 new_substep_dick["show1"] = mallu[0:lent]
