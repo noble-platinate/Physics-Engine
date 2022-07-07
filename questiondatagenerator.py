@@ -12,14 +12,41 @@ Datan = [
         "stepNumber": 2,
     },
     {
-        "stepName": "Understanding Constaint equation",
+        "stepName": "Constraint",
         "stepStatus": "inactive",
         "stepNumber": 3,
     },
     {
-        "stepName": "Constraint equation for each string",
+        "stepName": "Final answer",
         "stepStatus": "inactive",
         "stepNumber": 4,
+    }
+]
+Datam = [
+    {
+        "stepName": "Find no.of unknowns",
+        "stepStatus": "active",
+        "stepNumber": 1,
+    },
+    {
+        "stepName": "Use F= ma for each object",
+        "stepStatus": "inactive",
+        "stepNumber": 2,
+    },
+    {
+        "stepName": "Understanding Constraint equation",
+        "stepStatus": "inactive",
+        "stepNumber": 3,
+    },
+    {
+        "stepName": "Constraint",
+        "stepStatus": "inactive",
+        "stepNumber": 4,
+    },
+    {
+        "stepName": "Final answer",
+        "stepStatus": "inactive",
+        "stepNumber": 5,
     }
 ]
 chapterNumber = "chapterNumber"
@@ -31,13 +58,17 @@ steps = "steps"
 questions = "questions"
 question_dick = []
 for i in range(140):
+
     new_question_dick = {}
     new_question_dick[chapterNumber] = 1
     new_question_dick[chapterName] = "Newton's law"
 
     # print(chdata);
     # xdata = open("stepsch.json").read();
-    new_question_dick[steps] = Datan
+    if i+1 > 70:
+        new_question_dick[steps] = Datan
+    else:
+        new_question_dick[steps] = Datam
     questionsn = []
     newsub_questions = {}
     newsub_questions[questionNumber] = i+1
