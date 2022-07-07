@@ -870,6 +870,46 @@ bb = bigblocks(number=1, type="tp", rangle=90, langle=90, block={},
 func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius,bb,level=0)
 func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius,bb,level=1)
 
+input_no = 49
+inputarr = ["b1n1090c1", "b1n2180b2", "b2n3090c2", "b2n4180c3"]
+
+weight = [30, 40]
+ext_force = [0, 15, -10, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'l', 't', 'r', 't', 'r']
+
+b_size = [[30, 30], [40, 40]]
+c_size = [150, 150, 150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tp", rangle=90, langle=90, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=0)
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=1)
+
+input_no = 50
+inputarr = ["b1n1090c1", "b1n2180b2", "b2n3090c2", "b2n4180c3"]
+
+weight = [30, 40]
+ext_force = [0, 15, -10, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['t', 'l', 't', 'r', 't', 'r']
+
+b_size = [[30, 30], [40, 40]]
+c_size = [150, 150, 150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tp", rangle=90, langle=90, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[120, 120])
+
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=0)
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=1)
+
 input_no = 51 
 inputarr = ["b1u000tp10000u180mp2","b2u000tp20000u180c1","mp1u000c2"]
 
@@ -1086,6 +1126,28 @@ bb = bigblocks(number=1, type="tr", rangle=45, langle=45, block={"1": [1, "l", [
 func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius,bb,level=0)
 func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius,bb,level=1)
 
+input_no = 63
+inputarr = ["b1n1135B", "b2n2045b1", "b2n3135B",
+            "b2u045tp14545u135b3", "b3n4045B"]
+
+weight = [20, 50, 10]
+ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['b', 'l', 't', 'r', 't', 'r']
+
+b_size = [[40, 40], [30, 30], [30, 30]]
+c_size = []
+p_radius = [15]
+
+bb = bigblocks(number=1, type="tr", rangle=45, langle=45, block={"1": [1, "l", [-20, -20]], "2": [2, "l", [15, 15]], "3": [3, "r", [0, 0]]},
+               rpulley=0, lpulley=0, cpulley=1, mass=(-1), size=[200, 200])
+
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=0)
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=1)
+
+
 input_no = 64 
 inputarr = ["b1u000c1","b1u300c2"]
 weight = [20]
@@ -1119,6 +1181,46 @@ bb = bigblocks(number=1, type="tp", rangle=90, langle=90, block={},
 
 func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius,bb,level=0)
 func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius,bb,level=1)
+
+input_no = 66
+inputarr = ["b1u000c1", "b1u300c2"]
+weight = [20]
+ext_force = [-20, 5]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['b', 'r', 't', 'r', 't', 'r', 't', 'r']
+
+b_size = [[30, 30]]
+c_size = [150, 150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tp", rangle=90, langle=90, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[200, 200])
+
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=0)
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=1)
+
+
+input_no = 67
+inputarr = ["b1u000c1", "b1u300c2"]
+weight = [20]
+ext_force = [-20, 5]  # y,x format
+# position of force on block in diagram
+dir_ext_force = ['b', 'r', 't', 'r', 't', 'r', 't', 'r']
+
+b_size = [[30, 30]]
+c_size = [150, 150]
+p_radius = []
+
+bb = bigblocks(number=1, type="tp", rangle=90, langle=90, block={},
+               rpulley=0, lpulley=0, cpulley=0, mass=0, size=[200, 200])
+
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=0)
+func(input_no, inputarr, weight, ext_force,
+     dir_ext_force, b_size, c_size, p_radius, bb, level=1)
+
 
 input_no = 68 
 inputarr = ["b1n1135B", "b1u045tp14500u180zp20000u000c1", "mp2u180b2"]
