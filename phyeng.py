@@ -4148,7 +4148,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
 
                     substep_count += 1
 
-                if(k==3):
+                if(k == 2):
                     new_substep_dick = {}
                     new_substep_dick["question"] = step_one_question[0]
                     new_substep_dick["options"] = [3,1,0,2]
