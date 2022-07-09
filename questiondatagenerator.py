@@ -1,5 +1,6 @@
 import json
-
+import os
+os.system('python3 data.py')
 Datan = [
     {
         "stepName": "Find no.of unknowns",
