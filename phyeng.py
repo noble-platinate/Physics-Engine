@@ -2932,10 +2932,10 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
     all_dick["ceiling dick"] = ceiling_dick
 
     if(level==0):
-        a_file = open("/Users/akshatanshnayak/Desktop/phyeng/src/components/Que/all_dick_" +
+        a_file = open("all_dick_" +
                     str(input_no)+".json", "w")
     else:
-        a_file = open("/Users/akshatanshnayak/Desktop/phyeng/src/components/Que/all_dick_" +
+        a_file = open("all_dick_" +
                     str(70+input_no)+".json", "w")
     a_file = json.dump(all_dick, a_file)
 
