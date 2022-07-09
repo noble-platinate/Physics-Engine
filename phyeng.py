@@ -227,7 +227,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                             ref_point_set = 1
 
                         if(input[j + 6] == "t"):
-                            ran_length = random.randint(50, 100)
+                            ran_length = random.randint(50, 70)
                             extra_theta = math.atan(
                                 pulle[int(input[j+8]) - 1].radius / ran_length)
                             total_angle = angle + extra_theta
@@ -256,9 +256,9 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
 
                         elif(input[j + 6] == "m" and pulle[int(input[j+8]) - 1].pos_init == 0):
                             pulle[int(input[j+8]) - 1].centre[0] = block[int(input[j+1]) -
-                                                                        1].loc[0] + random.randint(50, 100) * np.sin(angle)
+                                                                        1].loc[0] + random.randint(50, 70) * np.sin(angle)
                             pulle[int(input[j+8]) - 1].centre[1] = block[int(input[j+1]) -
-                                                                        1].loc[1] + random.randint(50, 100) * np.cos(angle)
+                                                                        1].loc[1] + random.randint(50, 70) * np.cos(angle)
                             pulle[int(input[j+8]) - 1].pos_init = 1
                             phstr.append(phystr(phstr_no, block[int(
                                 input[j+1]) - 1], pulle[int(input[j+8]) - 1], angle, strindex-num_norm+1, toc="mm"))
@@ -266,9 +266,9 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
 
                         elif(input[j+6] == "b" and block[int(input[j+7]) - 1].pos_init == 0):
                             block[int(input[j+7]) - 1].loc[0] = block[int(input[j+1]) -
-                                                                    1].loc[0] + random.randint(50, 100) * np.sin(angle)
+                                                                    1].loc[0] + random.randint(50, 70) * np.sin(angle)
                             block[int(input[j+7]) - 1].loc[1] = block[int(input[j+1]) -
-                                                                    1].loc[1] + random.randint(50, 100) * np.cos(angle)
+                                                                    1].loc[1] + random.randint(50, 70) * np.cos(angle)
                             block[int(input[j+7]) - 1].pos_init = 1
                             phstr.append(phystr(phstr_no, block[int(
                                 input[j+1]) - 1], block[int(input[j+7]) - 1], angle, strindex-num_norm+1, toc="mm"))
@@ -276,9 +276,9 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
 
                         elif(input[j+6] == "c" and ceiling[int(input[j+7]) - 1].pos_init == 0):
                             ceiling[int(input[j+7]) - 1].loc[0] = block[int(input[j+1]) -
-                                                                        1].loc[0] + random.randint(50, 100) * np.sin(angle)
+                                                                        1].loc[0] + random.randint(50, 70) * np.sin(angle)
                             ceiling[int(input[j+7]) - 1].loc[1] = block[int(input[j+1]) -
-                                                                        1].loc[1] + random.randint(50, 100) * np.cos(angle)
+                                                                        1].loc[1] + random.randint(50, 70) * np.cos(angle)
                             ceiling[int(input[j+7]) - 1].pos_init = 1
                             if (degree == 0):
                                 ceiling[int(input[j+7]) - 1].position = 't'
@@ -432,16 +432,16 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                             ref_point_set = 1
                         if(input[j + 6] == "b" and block[int(input[j+7]) - 1].pos_init == 0):
                             block[int(input[j+7]) - 1].loc[0] = pulle[int(input[j+1]) -
-                                                                    1].centre[0] + random.randint(50, 100) * np.sin(angle)
+                                                                    1].centre[0] + random.randint(50, 70) * np.sin(angle)
                             block[int(input[j+7]) - 1].loc[1] = pulle[int(input[j+1]) -
-                                                                    1].centre[1] + random.randint(50, 100) * np.cos(angle)
+                                                                    1].centre[1] + random.randint(50, 70) * np.cos(angle)
                             block[int(input[j+7]) - 1].pos_init = 1
                             phstr.append(phystr(phstr_no, pulle[int(
                                 input[j+1]) - 1], block[int(input[j+7]) - 1], angle, strindex-num_norm+1, toc="mm"))
                             phstr_no = phstr_no + 1
 
                         if(input[j + 6] == "t" and pulle[int(input[j+8]) - 1].pos_init == 0):
-                            ran_length = random.randint(50, 100)
+                            ran_length = random.randint(50, 70)
                             extra_theta = math.atan(
                                 pulle[int(input[j+8]) - 1].radius / ran_length)
                             total_angle = angle + extra_theta
@@ -497,7 +497,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                         pulle[int(input[j+1]) - 1].pos_init = 1
                         ref_point_set = 1
                     if(input[j + 10] == "b" and block[int(input[j+11]) - 1].pos_init == 0):
-                        ran_length = random.randint(50, 100)
+                        ran_length = random.randint(50, 70)
                         extra_theta = math.atan(
                             pulle[int(input[j+1]) - 1].radius / ran_length)
                         angl = int(input[j+7] + input[j+8] +
@@ -518,7 +518,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                     degree = int(input[j+3] + input[j+4] + input[j+5])
                     if(input[j + 10] == "c" and ceiling[int(input[j+11]) - 1].pos_init == 0):
 
-                        ran_length = random.randint(50, 100)
+                        ran_length = random.randint(50, 70)
                         extra_theta = math.atan(
                             pulle[int(input[j+1]) - 1].radius / ran_length)
                         total_angle = angl + extra_theta
@@ -550,7 +550,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                                     input[j-2]) * (np.pi)/180
                         degree = int(input[j-4] + input[j-3] + input[j-2])
 
-                        ran_length = random.randint(50, 100)
+                        ran_length = random.randint(50, 70)
                         extra_theta = math.atan(
                             pulle[int(input[j+1]) - 1].radius / ran_length)
                         total_angle = angle + extra_theta
@@ -580,7 +580,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                         phstr_no = phstr_no + 1
 
                     if(input[j + 10] == "z" and pulle[int(input[j+12]) - 1].pos_init == 0):
-                        ran_length = random.randint(50, 100)
+                        ran_length = random.randint(50, 70)
                         extra_theta = math.atan(
                             2*pulle[int(input[j+1]) - 1].radius / ran_length)
                         angl = int(input[j+7] + input[j+8] +
@@ -597,7 +597,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                             input[j+1]) - 1], pulle[int(input[j+12]) - 1], angl, strindex-num_norm+1, toc="tz"))
                         phstr_no = phstr_no + 1
                     if(input[j + 10] == "m" and pulle[int(input[j+12]) - 1].pos_init == 0):
-                        ran_length = random.randint(50, 100)
+                        ran_length = random.randint(50, 70)
                         extra_theta = math.atan(
                             pulle[int(input[j+1]) - 1].radius / ran_length)
                         angl = int(input[j+7] + input[j+8] +
@@ -625,7 +625,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                         pulle[int(input[j+1]) - 1].pos_init = 1
                         ref_point_set = 1
                     if(input[j + 10] == "b" and block[int(input[j+11]) - 1].pos_init == 0):
-                        ran_length = random.randint(50, 100)
+                        ran_length = random.randint(50, 70)
                         extra_theta = math.atan(
                             pulle[int(input[j+1]) - 1].radius / ran_length)
                         total_angle = int(
@@ -646,7 +646,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                                     input[j-2]) * (np.pi)/180
                         degree = int(input[j-4] + input[j-3] + input[j-2])
 
-                        ran_length = random.randint(50, 100)
+                        ran_length = random.randint(50, 70)
                         extra_theta = math.atan(
                             pulle[int(input[j+1]) - 1].radius / ran_length)
                         total_angle = angle + extra_theta
@@ -676,7 +676,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
 
                     if(input[j + 10] == "c" and ceiling[int(input[j+11]) - 1].pos_init == 0):
 
-                        ran_length = random.randint(50, 100)
+                        ran_length = random.randint(50, 70)
                         extra_theta = math.atan(
                             pulle[int(input[j+1]) - 1].radius / ran_length)
                         total_angle = angl + extra_theta
@@ -704,7 +704,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                         phstr_no = phstr_no + 1
 
                     if(input[j + 10] == "t" and pulle[int(input[j+12]) - 1].pos_init == 0):
-                        ran_length = random.randint(50, 100)
+                        ran_length = random.randint(50, 70)
                         extra_theta = math.atan(
                             2*pulle[int(input[j+1]) - 1].radius / ran_length)
                         #angl = int( input[j+7] + input[j+8] + input[j+9] ) * (np.pi)/180
@@ -2932,10 +2932,10 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
     all_dick["ceiling dick"] = ceiling_dick
 
     if(level==0):
-        a_file = open("all_dick_" +
+        a_file = open("/Users/akshatanshnayak/Desktop/phyeng/src/components/Que/all_dick_" +
                     str(input_no)+".json", "w")
     else:
-        a_file = open("all_dick_" +
+        a_file = open("/Users/akshatanshnayak/Desktop/phyeng/src/components/Que/all_dick_" +
                     str(70+input_no)+".json", "w")
     a_file = json.dump(all_dick, a_file)
 
@@ -3269,13 +3269,13 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
         temp = ""
         if(i==answer_idx):
             for idx in range(len(answer_values)):
-                temp = temp+answer_terms[idx]+"= "+str(answer_values[idx])+", "
+                temp = temp+answer_terms[idx]+"= "+str(round(answer_values[idx],2))+", "
             temp = temp[:-2]
             answer_options.append(temp)
         else:
             random.shuffle(answer_option)
             for idx in range(len(answer_values)):
-                temp = temp+answer_terms[idx]+"= "+str(random.randint(1,10)*answer_option[idx])+", "
+                temp = temp+answer_terms[idx]+"= "+str(round(random.randint(1,10)*answer_option[idx]))+", "
             temp=temp[:-2]
             answer_options.append(temp)
 
@@ -3988,9 +3988,9 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                 new_substep_dick["question"] = "What are the final accelerations, tensions and normal reactions?"
                 new_substep_dick["options"] = answer_options
                 new_substep_dick["answer"] = answer_idx
-                new_substep_dick["threejsstep"] = "finalanswer"
-                new_substep_dick["threejssubstep"] = 0
-                new_substep_dick["threejssubsubstep"] = 0
+                new_substep_dick["threejsstep"] = "motion"
+                new_substep_dick["threejssubstep"] = 1000
+                new_substep_dick["threejssubsubstep"] = 1000
                 new_substep_dick["show1"] = mallu[0:lent]
                 new_substep_dick["showfc"] = []
                 new_substep_dick["showfcheading"] = []
@@ -4051,6 +4051,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                         
                         new_substep_dick["show1"] = [mallu[0][0: len(step_one_print[0])+8]]
                         mallu[0] = mallu[0] + step_one_print[1]
+                        [mallu[0][0: len(step_one_print[0]) + 8 + len(step_one_print[1])]]
                         
                         new_substep_dick["show2"] = [mallu[0]]
                         new_substep_dick["type"] = "advance"
@@ -4128,10 +4129,9 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                     new_substep_dick["tobeshown"] = 1
 
                     if(len(new_substep_dick["options"]) != 0):
-                        new_substep_dick["show2"].append(step_two_options[substep_count][step_two_correct_option_idx[substep_count]])
+                        new_substep_dick["show2"].append(step_two_force_questions[substep_count//2][49:-17].capitalize() +": "+step_two_options[substep_count][step_two_correct_option_idx[substep_count]])
                         step_actions.append(new_substep_dick)
                     
-
                     #manga starts
                     if (substep_count%2 == 0 or (substep_count % 2 == 1 and check == 0)):
                         if (substep_count//2 < n_b):
@@ -4391,8 +4391,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                     #manga ends
                     
                     if(len(step_two_options[substep_count]) != 0):
-                        mallu.append(step_two_force_questions[substep_count//2][49:-17].capitalize() +": "+step_two_options[substep_count]
-                                    [step_two_correct_option_idx[substep_count]])
+                        mallu.append(step_two_force_questions[substep_count//2][49:-17].capitalize() +": "+step_two_options[substep_count][step_two_correct_option_idx[substep_count]])
                         show_count += 1
 
                     new_substep_dick["show2"] = mallu[0:show_count + 1]
@@ -4432,7 +4431,7 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                     new_substep_dick["threejssubsubstep"] = 300
                     new_substep_dick["show1"] = mallu[0:length]
                     new_substep_dick["show2"] = mallu[0:length]
-                    new_substep_dick["show2"].append(step_four_options[substep_count][step_four_correct_option_idx[substep_count]])
+                    new_substep_dick["show2"].append(step_four_step_questions[substep_count][55:-1].capitalize()+": "+step_four_options[substep_count][step_four_correct_option_idx[substep_count]])
                     new_substep_dick["type"] = "advance"
                     new_substep_dick["showfc"] = advanced_constraint_showfc #30 jun manga
                     new_substep_dick["showfcheading"] = [constraint_showfc[0]] #manga 29 jun
@@ -4628,9 +4627,9 @@ def func(input_no,inputarr,weight,ext_force,dir_ext_force,b_size,c_size,p_radius
                 new_substep_dick["question"]="What are the final accelerations, tensions and normal reactions?"
                 new_substep_dick["options"]=answer_options
                 new_substep_dick["answer"]=answer_idx
-                new_substep_dick["threejsstep"] = "finalanswer"
-                new_substep_dick["threejssubstep"] = 0
-                new_substep_dick["threejssubsubstep"] = 0
+                new_substep_dick["threejsstep"] = "motion"
+                new_substep_dick["threejssubstep"] = 1000
+                new_substep_dick["threejssubsubstep"] = 1000
                 new_substep_dick["show1"] = mallu[0:lent]
                 new_substep_dick["showfc"] = []
                 new_substep_dick["showfcheading"] = []

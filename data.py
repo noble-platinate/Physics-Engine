@@ -699,9 +699,9 @@ ext_force = [0, 0, 0, 0]  # y,x format
 # position of force on block in diagram
 dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
 
-b_size = [[30, 30], [25, 25]]
+b_size = [[22, 22], [18, 18]]
 c_size = [50]
-p_radius = [15, 30]
+p_radius = [11, 22]
 
 bb = bigblocks(number=1, type="tp", rangle=90, langle=90, block={"1": [1, "c", [-30, 0]]},
                rpulley=2, lpulley=0, cpulley=0, mass=(-1), size=[120, 120])
@@ -992,9 +992,9 @@ ext_force = [0, 0, 0, 0]  # y,x format
 # position of force on block in diagram
 dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
 
-b_size = [[30, 30], [25, 25]]
+b_size = [[20, 20], [20, 20]]
 c_size = [150]
-p_radius = [15]
+p_radius = [10]
 
 bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={"1": [1, "l", [-50, -50]]},
                rpulley=0, lpulley=0, cpulley=1, mass=(-1), size=[200, 200])
@@ -1232,9 +1232,9 @@ ext_force = [0, 0, 0, 0]  # y,x format
 # position of force on block in diagram
 dir_ext_force = ['t', 'r', 't', 'r', 't', 'r']
 
-b_size = [[30, 30], [30, 30]]
+b_size = [[20, 20], [20, 20]]
 c_size = [150]
-p_radius = [15, 15]
+p_radius = [10, 10]
 
 bb = bigblocks(number=1, type="tr", rangle=90, langle=45, block={"1": [1, "l", [-50, -50]]},
                rpulley=0, lpulley=0, cpulley=1, mass=(-1), size=[200, 200])
