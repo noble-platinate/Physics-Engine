@@ -1100,7 +1100,7 @@ ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
 # position of force on block in diagram
 dir_ext_force = ['b', 'l', 't', 'r', 't', 'r']
 
-b_size = [[40, 40], [30, 30], [25, 25]]
+b_size = [[30, 30], [30, 30], [25, 25]]
 c_size = []
 p_radius = [15]
 
@@ -1118,7 +1118,7 @@ ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
 # position of force on block in diagram
 dir_ext_force = ['b', 'l', 't', 'r', 't', 'r']
 
-b_size = [[40, 40], [30, 30], [30, 30]]
+b_size = [[30, 30], [30, 30], [30, 30]]
 c_size = []
 p_radius = [15]
 
@@ -1137,7 +1137,7 @@ ext_force = [0, 0, 0, 0, 0, 0]  # y,x format
 # position of force on block in diagram
 dir_ext_force = ['b', 'l', 't', 'r', 't', 'r']
 
-b_size = [[40, 40], [30, 30], [30, 30]]
+b_size = [[30, 30], [30, 30], [30, 30]]
 c_size = []
 p_radius = [15]
 
@@ -1151,7 +1151,7 @@ func(input_no, inputarr, weight, ext_force,
 
 
 input_no = 64 
-inputarr = ["b1u000c1","b1u300c2"]
+inputarr = ["b1u300c1","b1u000c2"]
 weight = [20]
 ext_force = [0, 5]  # y,x format
 # position of force on block in diagram
