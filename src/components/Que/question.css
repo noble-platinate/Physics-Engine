@@ -1,0 +1,106 @@
+.demo {}
+
+.three {
+    width: 20%;
+}
+.mainContainer{
+  justify-content: center;
+}
+.question {
+    margin-bottom: 3%;
+    margin-left: 3%;
+}
+
+.print {
+    border: 1px solid rgb(114, 143, 236);
+    padding: 2%;
+
+}
+
+
+.nextQue {
+    margin-left: 70%;
+    margin-top: 4%
+}
+
+
+/* the below three is for styling animation in right wrong option     heart class  */
+.heart {
+    color: black;
+  
+    visibility: hidden;
+    
+    cursor: pointer;
+  
+   width: 40px;
+  
+   z-index: 123;
+   padding-right: 0px;
+   margin-right: 0px;
+   position: absolute;
+    
+    
+  }
+  .heartb  {
+    /* border: solid 2px green; */
+    visibility: visible;
+    width: 100px;
+   /* height: 100px; */
+  /* transform: rotateY(360deg) ; */
+  transform: scale(2,2);
+    transition-duration: 0.5s;
+    /* transition-delay: 2s; */
+    z-index: 123;
+    padding-right: 0px;
+   margin-right: 0px;
+  }
+  .hearta {
+    /* border: solid 2px green; */
+    visibility: visible;
+    width: 100px;
+   /* height: 100px; */
+  transform: rotateY(360deg) ;
+  /* transform: scale(2,2); */
+    transition-duration: 0.5s;
+    /* transition-delay: 2s; */
+    z-index: 123;
+    padding-right: 0px;
+   margin-right: 0px;
+  
+    
+  }
+  
+ .stepheading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:550
+ }
+ .backstyle {
+
+ } 
+ .backstylehide {
+    visibility: hidden;
+    height: 0px !important;
+ }
+  
+.myRadio {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-style: italic;
+  }
+
+  @media only screen and (max-width: 480px){
+  .questes {
+    /* visibility:hidden; */
+    width: 0px !important;
+  }
+  .quesblk {
+    width: 100vw !important;
+    border: solid 1px black;
+    margin-left: 0px;
+  }
+  .answers {
+    width: 100vw;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  
+}

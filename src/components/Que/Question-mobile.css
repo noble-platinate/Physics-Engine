@@ -1,0 +1,37 @@
+
+@media only screen and (max-width: 600px) {
+    .ant-card {
+    width: 300%;
+    /* border: solid 1px yellow ; */
+    margin-right: 0px;
+}
+.print {
+    width: 300%;
+    /* border: solid 1px yellow ; */
+    margin-right: 0px; 
+}
+.intfc {
+    /* border: solid 1px green ; */
+    border: 1px solid rgb(114, 143, 236);
+    padding: 2%;
+    width: 100%
+}
+.que {
+    margin-bottom: 3%;
+    /* margin-left: 3%; */
+    /* border: solid 1px yellow ; */
+    width: 150%
+    
+}
+.questi {
+    margin-bottom: 3%;
+    margin-left: 3%;
+    /* border: solid 1px yellow ; */
+    width: 90%
+}
+.answers {
+    /* border: solid 1px red ; */
+    width: 87vw;
+    padding-top: 10px;
+}
+}

@@ -1,0 +1,31 @@
+.numbering {
+    color: aliceblue;
+    background-color: blue;
+    font-weight: bold;
+    border-radius: 600px;
+    padding: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+     margin-right: 8px;}
+.forminput {
+         float: right;
+         border: solid 1px blue;
+         border-radius: 5px;
+         padding:6px;
+         color: blue;
+         font-weight: bold;
+     }
+.cancelbtn {
+    background-color: white;
+    border-radius: 5px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    color: darkblue;
+    border-color: darkblue;
+    
+}
+.savebtn {
+    background-color: darkblue;
+    border-radius: 5px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    color: white;
+    border-color: darkblue;
+}

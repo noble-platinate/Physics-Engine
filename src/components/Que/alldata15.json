@@ -1,0 +1,137 @@
+{
+  "block dick": {
+    "1": {
+      "number": 1,
+      "loc": [150, 144.94257952075162],
+      "isbigblock": 0,
+      "acceleration": [0.0, 4.285714285714287],
+      "initvelocity": [0, 0],
+      "forces": [],
+      "size": [15, 15],
+      "textloc": -1.0
+    },
+    "2": {
+      "number": 2,
+      "loc": [258, 138.94257952075162],
+      "isbigblock": 0,
+      "acceleration": [0.0, 4.285714285714287],
+      "initvelocity": [0, 0],
+      "forces": [],
+      "size": [15, 15],
+      "textloc": 1.0
+    },
+    "3": {
+      "number": 3,
+      "loc": [204.1942579980028, 75.0000773646201],
+      "isbigblock": 0,
+      "acceleration": [0.0, -4.285714285714285],
+      "initvelocity": [0, 0],
+      "forces": [],
+      "size": [15, 15],
+      "textloc": -1.0
+    }
+  },
+  "pulley dick": {
+    "1": {
+      "number": 1,
+      "centre": [168.0, 202.94257952075162],
+      "radius": 18,
+      "acceleration": [0.0, -5.551115123125783e-16],
+      "initvelocity": [0, 0],
+      "forces": []
+    },
+    "2": {
+      "number": 2,
+      "centre": [204.10666208759602, 136.0],
+      "radius": 18,
+      "acceleration": [0.0, -4.285714285714285],
+      "initvelocity": [0, 0],
+      "forces": []
+    },
+    "3": {
+      "number": 3,
+      "centre": [240.10666208759602, 220.0],
+      "radius": 18,
+      "acceleration": [0.0, 2.4980018054066022e-15],
+      "initvelocity": [0, 0],
+      "forces": []
+    }
+  },
+  "string dick": {
+    "1": {
+      "number": 1,
+      "first obj": 1,
+      "first obj type": "<class 'blocksclass.blocks'>",
+      "second obj": 1,
+      "second obj type": "<class 'blocksclass.pulleys'>",
+      "angle": 0.0,
+      "str no": 1,
+      "toc": "mt"
+    },
+    "2": {
+      "number": 2,
+      "first obj": 1,
+      "first obj type": "<class 'blocksclass.pulleys'>",
+      "second obj": 2,
+      "second obj type": "<class 'blocksclass.pulleys'>",
+      "angle": 3.14,
+      "str no": 1,
+      "toc": "tz"
+    },
+    "3": {
+      "number": 3,
+      "first obj": 2,
+      "first obj type": "<class 'blocksclass.pulleys'>",
+      "second obj": 3,
+      "second obj type": "<class 'blocksclass.pulleys'>",
+      "angle": 3.14,
+      "str no": 1,
+      "toc": "zt"
+    },
+    "4": {
+      "number": 4,
+      "first obj": 3,
+      "first obj type": "<class 'blocksclass.pulleys'>",
+      "second obj": 2,
+      "second obj type": "<class 'blocksclass.blocks'>",
+      "angle": 3.14,
+      "str no": 1,
+      "toc": "tm"
+    },
+    "5": {
+      "number": 5,
+      "first obj": 2,
+      "first obj type": "<class 'blocksclass.pulleys'>",
+      "second obj": 3,
+      "second obj type": "<class 'blocksclass.blocks'>",
+      "angle": 3.14,
+      "str no": 2,
+      "toc": "mm"
+    },
+    "6": {
+      "number": 6,
+      "first obj": 1,
+      "first obj type": "<class 'blocksclass.pulleys'>",
+      "second obj": 1,
+      "second obj type": "<class 'blocksclass.grounds'>",
+      "angle": 0.0,
+      "str no": 3,
+      "toc": "mm"
+    },
+    "7": {
+      "number": 7,
+      "first obj": 3,
+      "first obj type": "<class 'blocksclass.pulleys'>",
+      "second obj": 2,
+      "second obj type": "<class 'blocksclass.grounds'>",
+      "angle": 0.0,
+      "str no": 4,
+      "toc": "mm"
+    }
+  },
+  "normal dick": {},
+  "ceiling dick": {
+    "1": { "number": 1, "loc": [168.0, 225] },
+    "2": { "number": 2, "loc": [240.10666208759602, 225] }
+  }
+}

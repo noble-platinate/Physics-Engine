@@ -1,0 +1,12 @@
+def my de_decorator(func):
+num2=7
+def inside(*args,**kwargs):
+    ans=num2+func(*args,**kwargs)
+    return ans
+return inside(num2=4)
+
+@my_decorator
+def central(num1,*args):
+    return num1
+
+print(central(5))

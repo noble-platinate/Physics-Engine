@@ -1,0 +1,302 @@
+@font-face{
+    font-family:Goldbugs;
+    src:url(./Goldbugs.ttf);
+  }
+
+
+.linkstl {
+    /* border: solid 1px green; */
+    display: inline-block;
+    width: 10%;
+    
+    align-items: center;
+}
+.gristl {
+    /* border: solid 1px red; */
+   
+
+
+}
+/* .ques {
+    background-image:url("image-from-rawpixel-id-3399774-jpeg.jpg");
+    border: solid 2px black;
+    
+} */
+/* .ant-card-grid {
+    width: 20% !important;
+    height: 10%;
+} */
+.stylen {
+    border: solid 2px green;
+    height: 100%;
+    padding: 2px !important;
+    margin-left: 35px;
+    margin-top: 3px
+    /* direction: row;
+    width: 50%; */
+}
+.stycard {
+    /* border: solid 2px red; */
+  
+    width: 100%; 
+    display: flex !important;
+    flex-direction: column !important;
+ 
+}
+
+.stycardn {
+    display: flex;
+    flex-direction: row;
+    
+}
+.linkstla {
+    /* border: solid 1px green; */
+    display: inline-block;
+    width: 10%;
+    
+    align-items: center;
+    color:rgb(165, 19, 228) !important;
+}
+.maind {
+    /* border: solid 1px black; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./galaxybg.jpg);
+    background-color: rgb(139, 193, 240);
+    background-size: cover;
+}
+.upperd {
+    /* border: solid 1px black; */
+    height: 13%;
+    width: 100vw;
+    color: chartreuse;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: larger;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: rgb(5, 84, 252); */
+
+}
+.menubox {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.upperhead {
+    color: bisque;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* background-color: blue; */
+    
+
+}
+.upperheadbox {
+    padding-bottom: 20px;
+}
+.mainmenu {
+    width: 25%;
+    border: solid 1px white;
+    height: fit-content;
+    color: black;
+    background-color: rgb(239, 239,239);
+
+    /* font-family:Goldbugs; */
+
+}
+.mainmenu:hover{
+    width: 25%;
+    border: solid 1px white;
+    height: fit-content;
+    color: bisque;
+    background-color: blue;
+    
+    /* font-family:Goldbugs; */
+
+}
+.lowerd {
+    /* border: solid 1px black; */
+    height: 87%;
+    width: 100vw;
+    display: flex;
+    /* justify-content: space-around; */
+    flex-wrap:wrap;
+    padding-left: 160px;
+    padding-top: 50px;
+}
+.carddiv {
+    width: 21%;
+    height: 20%;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    /* border: solid 1px red; */
+    border-bottom: solid 8px green;
+    /* background-image: url(./newtonlaw.jpg); */
+    background-color: rgb(252, 249, 235);
+    /* background-size: cover; */
+    border-radius: 20px;
+    /* display: inline-block; */
+    background-size: contain;
+    /* box-shadow: 6px 2px 5px 2px white; */
+    /* opacity: 0.5; */
+}
+.carddiv1 {
+    width: 21%;
+    height: 20%;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    /* border: solid 1px red; */
+    border-bottom: solid 8px rgb(255, 96, 96);
+    /* background-image: url(./newtonlaw.jpg); */
+    background-color: rgb(252, 249, 235);
+    /* background-size: cover; */
+    border-radius: 20px;
+    /* display: inline-block; */
+    background-size: contain;
+    /* box-shadow: 6px 2px 5px 2px white; */
+    /* opacity: 0.5; */
+}
+.carhead {
+    /* border: solid 1px black; */
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    padding: 10px;
+    padding-top: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family:Goldbugs; */
+      color: black;
+    font-size: larger;
+    font-weight: bolder;
+    padding-right: 0px;
+}
+.carbtns {
+    /* border: solid 1px black; */
+    text-align: center;
+    height: 40%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.basicbtn {
+    text-align: center;
+    background-color: white;
+    width: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: black;
+    border-radius: 10px;
+    padding-top: 3px;
+    box-shadow: 0px 0px 10px #5f71b0;
+}
+.status1 {
+    /* border: solid 1px yellow; */
+    float: right;
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    margin-right: 0px;
+    margin-top: -13%;
+    /* padding-bottom: 13%; */
+    padding-top: 2px;
+    border-radius: 100px;
+    z-index: 10;
+
+}
+.status3 {
+    /* border: solid 1px yellow; */
+    float: right;
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    margin-right: 0px;
+    margin-top: -13%;
+    /* padding-bottom: 13%; */
+    padding-top: 2px;
+    border-radius: 100px;
+    z-index: 15;
+
+}
+.status {
+    /* border: solid 1px yellow; */
+    float: right;
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    margin-right: 0px;
+    margin-top: -13%;
+    /* padding-bottom: 13%; */
+    padding-top: 2px;
+    border-radius: 100px;
+    /* z-index: 20; */
+
+}
+@media only screen and (max-width: 480px) {
+    .lowerd {
+     
+      height: 87%;
+      width: 100vw;
+      display: flex;
+      /* justify-content: space-around; */
+      flex-wrap:wrap;
+      padding-left: 0px;
+      padding-top: 10px;
+      /* align-items:center; */
+      justify-content: center;
+      /* border: solid 2px black; */
+    }
+    .carddiv {
+        width: 80%;
+        height: 20%;
+        margin: 10px;
+        /* margin-left: 50px; */
+        /* margin-right: 50px; */
+        /* border: solid 1px red; */
+        border-bottom: solid 8px green;
+        /* background-image: url(./newtonlaw.jpg); */
+        background-color: rgb(252, 249, 235);
+        /* background-size: cover; */
+        border-radius: 20px;
+        /* display: inline-block; */
+        background-size: contain;
+        /* justify-content: center; */
+        
+        /* box-shadow: 6px 2px 5px 2px white; */
+        /* opacity: 0.5; */
+    }
+    .carddiv1 {
+        width: 80%;
+        height: 20%;
+        margin: 10px;
+        /* margin-left: 50px; */
+        /* margin-right: 50px; */
+        /* border: solid 1px red; */
+        border-bottom: solid 8px rgb(255, 96, 96);
+        /* background-image: url(./newtonlaw.jpg); */
+        background-color: rgb(252, 249, 235);
+        /* background-size: cover; */
+        border-radius: 20px;
+        /* display: inline-block; */
+        background-size: contain;
+        /* box-shadow: 6px 2px 5px 2px white; */
+        /* opacity: 0.5; */
+    }
+    .maind {
+        /* border: solid 1px black; */
+        width: 100vw;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        background-image: url(./galaxybg.jpg);
+        background-color: rgb(139, 193, 240);
+        background-size: cover;
+        background-repeat: repeat-x;
+    }
+  }

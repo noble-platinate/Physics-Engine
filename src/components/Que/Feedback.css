@@ -1,0 +1,676 @@
+/* .feedmain {
+    border: solid 1px black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    margin-top: 0px;
+} */
+.feedhead {
+    height: 20vh !important;
+    border: solid 2px yellow;
+}
+.upperdn4 {
+    /* border: solid 1px black; */
+    /* height: 13%; */
+    width: 100vw;
+    color: chartreuse;
+    text-align: center;
+    /* margin-bottom: 10px; */
+    font-size: larger;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    /* margin-top: -40px; */
+    background-color: rgb(5, 84, 252);
+    /* position: absolute; */
+    /* background-color: rgb(5, 84, 252); */
+
+}
+
+.feedbtm {
+    height: 80vh !important;
+    border: solid 2px yellow;
+}
+
+#mainheader {
+    height: 20%;
+}
+
+.centre {
+    position: fixed;
+}
+
+#web1body {
+    margin: 0px;
+    padding: 0px;
+    background-size: cover;
+    width: 100%;
+    height: 120vh;
+    background-repeat: no-repeat;
+    /* background-image: url("realbackbllur.jpg"); */
+}
+
+.navbar li {
+    list-style: none;
+    float: left;
+    padding: 3px 3px;
+    margin-top: 20px;
+    color: white;
+
+    display: block;
+    border: black;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.centre li {
+    float: right;
+    list-style: none;
+    padding: 3px 3px;
+    margin-top: 45px;
+    color: white;
+
+    display: block;
+    border: black;
+    background-color: black;
+    border-radius: 30px;
+}
+
+
+
+.centre li a {
+    text-decoration: none;
+    padding: 3px 20px;
+    margin-top: 5px;
+    color: white;
+    textsize: 20%;
+}
+
+.centre li a :hover {
+    text-decoration: underline;
+
+
+    color: white;
+
+}
+
+.centre li :hover {
+    background-color: rgb(3, 3, 95);
+    border-radius: 30px;
+}
+
+.centre li:focus {
+    background-color: rgb(3, 3, 95);
+    border-radius: 30px;
+}
+
+
+li {
+    display: block;
+    height: 20%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.left {
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.left img {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.centre {
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+#name {
+    color: black;
+    text-align: center;
+    /* background-image: url(cover-image.png); */
+}
+
+.page {
+    width: 48%;
+    display: block;
+    float: left;
+}
+
+#box1 {
+    display: block;
+    /*border: 2px solid red;*/
+    margin-left: 15px;
+    box-sizing: border-box;
+    /*padding-top: 48px;*/
+    padding-left: 145px;
+}
+
+#box2 {
+    /*border: 2px solid yellow;*/
+    margin-left: 15px;
+    display: block;
+    box-sizing: border-box;
+}
+
+#heading {
+    font-size: 48px;
+    color: white;
+    display: block;
+}
+
+#food {
+    color: white;
+    font-size: 20px;
+}
+
+#heading :hover {
+    color: goldenrod;
+
+}
+
+#food :hover {
+    color: red;
+    background-color: rgba(146, 127, 126, 0.5);
+    font-weight: bolder;
+}
+
+#box2head {
+    color: #0631a7;
+    background-color: rgba(146, 127, 126, 0.5);
+}
+
+#form {
+    font-size: 20px;
+    margin: 0px, 0px;
+    padding-top: 0px;
+    display: block;
+
+}
+
+.search {
+    border-radius: 100px;
+    background: rgba(235, 198, 196, 0.3);
+    height: 30px;
+    width: 46%;
+    padding: 0px;
+}
+
+.submit {
+    /* background-image: url(icon.jpg); */
+    width: 40px;
+    height: 40px;
+    margin-top: -7px;
+    margin-bottom: -15px;
+    padding: 0px;
+    border-radius: 100px;
+}
+
+.variety {
+    font-size: 30px;
+    color: white;
+    background-color: rgba(146, 127, 126, 0.5);
+}
+
+#veg:hover {
+    color: rgb(245, 178, 8);
+    font-weight: bold;
+}
+
+#nonveg:hover {
+    color: rgb(245, 178, 8);
+    font-weight: bold;
+}
+
+#d:hover {
+    color: rgb(245, 178, 8);
+    font-weight: bold;
+}
+
+#j:hover {
+    color: rgb(245, 178, 8);
+    font-weight: bold;
+}
+
+#f:hover {
+    color: rgb(245, 178, 8);
+    font-weight: bold;
+}
+
+.form2 {
+    font-size: 20px;
+    border-radius: 100px;
+    background: rgba(235, 198, 196, 0.3);
+    height: 30px;
+    width: 46%;
+    padding: 0px;
+}
+
+#n1:hover {
+    color: rgb(255, 186, 10);
+    font-weight: bold;
+}
+
+#n2:hover {
+    color: rgb(245, 178, 8);
+    font-weight: bold;
+}
+
+#n3:hover {
+    color: rgb(245, 178, 8);
+    font-weight: bold;
+}
+
+#n4:hover {
+    color: rgb(245, 178, 8);
+    font-weight: bold;
+}
+
+#b {
+    color: #0631a7;
+    background-color: rgba(146, 127, 126, 0.5);
+    font-weight: bolder;
+}
+
+.n {
+    font-weight: bolder;
+}
+
+.form2 :hover {
+    color: rgb(245, 178, 8);
+    font-weight: bold;
+}
+
+
+/*............................................WEB2 PAGE.........................................*/
+
+#hd {
+    color: red;
+
+    margin-left: 494px;
+    margin-right: 400px;
+    margin-bottom: 8px;
+    font-weight: bolder;
+    font-size: 50px;
+
+
+}
+
+#web2 {
+    margin-top: -8px;
+    margin: 0px;
+    padding: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* background-image: url("back blur2.jpg"); */
+}
+
+#boxa {
+    display: block;
+    border: 2px solid red;
+    /* margin-left: 15px;*/
+    /*box-sizing: border-box;*/
+    /*padding-top: 48px;*/
+    /*padding-left: 145px;*/
+    border-radius: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    font-size: 20px;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(146, 127, 126, 0.3);
+    ;
+}
+
+#boxa:hover {
+    background-color: rgba(146, 127, 126, 0.5);
+    font-weight: bold;
+}
+
+.bo {
+    /*border: 2px solid blue;*/
+    width: 23%;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    background-color: rgba(146, 127, 126, 0.5);
+}
+
+.bo:hover {
+    border: 2px solid blue;
+}
+
+#boxb {
+    margin-left: 20px;
+    background-color: rgba(146, 127, 126, 0.5);
+}
+
+.boim {
+    width: 100%;
+    height: 60%;
+}
+
+.naan {
+    margin-top: 0px;
+    font-size: 20px;
+    color: blanchedalmond;
+    margin-bottom: 0px;
+}
+
+.item {
+    margin-top: 0px;
+    font-size: 21px;
+    margin-bottom: 1px;
+}
+
+.naan:hover {
+    font-weight: bolder;
+}
+
+.item2 {
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    /*background-color: rgba(255, 235, 205, 0.5);*/
+    display: inline;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.subw {
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 16px;
+    background-color: rgba(255, 235, 205, 0.1);
+    height: 30px;
+    width: 16%;
+    padding: 0px;
+    float: right;
+    margin: 0;
+    padding-right: 0px;
+    display: block;
+}
+
+.subw:focus {
+    background-color: rgb(113, 238, 113);
+}
+
+
+
+
+/*..................................WEBPAGE3DESIGN.,,,,,,,,*/
+#web3 {
+    margin-top: -8px;
+    margin: 0px;
+    padding: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    background-size: cover;
+    width: 100%;
+    height: 120vh;
+    background-repeat: no-repeat;
+    /* background-image: url("back blur2.jpg"); */
+}
+
+#boxf {
+    display: block;
+    /*border: 2px solid red;*/
+    /* margin-left: 15px;*/
+    /*box-sizing: border-box;*/
+    /*padding-top: 48px;*/
+    /*padding-left: 145px;*/
+    border-radius: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    font-size: 20px;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*background-color: rgba(146, 127, 126, 0.3);*/
+    /* margin-bottom: 0px */
+    ;
+}
+
+#boxf:hover {
+    /*background-color: rgba(146, 127, 126, 0.5);*/
+    font-weight: bold;
+}
+
+
+/*...........................web page 4 design ,...........*/
+
+
+
+#header4 {
+    color: rgb(255, 102, 0);
+    font-size: 40px;
+    display: block;
+    padding-left: 45%;
+    padding-right: 45%;
+    margin-top: 0px;
+}
+
+#we4 {
+    background-size: cover;
+    width: 100%;
+    height: 195vh;
+    background-repeat: no-repeat;
+
+    margin-top: 40px;
+}
+
+#b4a {
+    border: 2px solid red;
+    background-color: rgba(146, 127, 126, 0.5);
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding-top: 40px;
+    color: rgb(255, 183, 0);
+}
+
+#b4a:hover {
+    font-weight: bold;
+    color: white;
+}
+
+#b4b {
+    width: 55%;
+    border-radius: 20px;
+    background-color: rgba(146, 127, 126, 0.5);
+     border: 2px solid red; 
+    margin-left: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+#b4c {
+    width: 60%;
+    background-color: rgba(146, 127, 126, 0.5);
+    border: 2px solid blue;
+    height: 100%;
+    margin-top: 0px;
+    border-radius: 20px;
+    /* margin-right: 10px; */
+    margin-left: 20%;
+    /* box-sizing: border-box; */
+    padding-top: 10px;
+    padding-left: 15px;
+    color: aliceblue;
+
+}
+
+.tit4 {color:wheat;
+background-color:rgba(146, 127, 126, 0.7); 
+font-family: Georgia, 'Times New Roman', Times, serif;}
+.tit4:hover {font-weight: bold;
+color: gold;}
+
+.profimg {width: 90%;
+}
+ 
+ .prof {width: 25%;
+     float: left;
+     /* border: 2px solid red ; */
+ }
+ .plus {width: 70%;
+ float: left;
+ /* border: 2px solid blue ; */
+ font-size: 20px;
+ padding: 10px;
+ margin-left: 10px;
+ border-radius: 20px;
+ margin-bottom: 10px;
+ background-color: rgba(211, 196, 195, 0.5);
+ }
+
+ .plus:hover {background-color:rgba(146, 127, 126, 0.7);
+ color: white;}
+
+ .profimg:hover { border-color: blue;border-style: groove;}
+ 
+/* ..............form style........... */
+
+.f4 {
+    font-size: 20px;
+ color: whitesmoke;
+
+
+}
+ .fno4 {font-size: 20px;
+ color: whitesmoke;
+display: flex;
+
+}
+  
+ .f5 {width: 90%;
+    background-color: blue;
+    opacity: 0.2;
+    /* background-color: rgba(146, 127, 126, 0.1); */
+    border-radius: 20px;
+    border-color: white;
+    border-style: groove;
+margin: 10px;
+color: azure !important;
+
+
+} 
+.reviewin {
+    width: 90%;
+    background-color: blue;
+    opacity: 0.2;
+    /* background-color: rgba(146, 127, 126, 0.1); */
+    border-radius: 20px;
+    border-color: white;
+    border-style: groove;
+margin: 10px;
+color: azure !important;
+height: 27vh;
+
+}
+.f6 {width: 50%;
+    background-color: rgba(146, 127, 126, 0.1);
+    border-radius: 20px;
+    border-color: white;
+    border-style: groove;
+margin: 10px;
+background-color: blue;
+
+
+} 
+/* ..............footer............. */
+  .fobox {border: 2px solid ; border-color: tomato;
+  font-size: 20px;
+  margin-top: 20px;
+  padding-left: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: rgba(146, 127, 126, 0.6);
+  border-radius: 20px;}
+
+  .fobox :hover{ font-weight: bold;
+  color: white;}
+  
+
+  .con {font-size: 25px;
+  color: white;}
+
+  .sm {width: 18%;
+  float: left;
+  margin: 10px;
+  /* border:  2px solid blue ; */
+  }
+
+  .smi {width: 70%;}
+
+  .btnn { background-color:rgba(146, 127, 126, 0.0);
+  }
+
+  .btnn :hover { background-color:rgba(146, 127, 126, 0.5);
+  }
+  .feedmain {
+     
+      background-color: rgb(112, 146, 190);
+      align-items: center;
+      /* display: flex; */
+      justify-content: center;
+      width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #like {
+    background-color: #0631a7;
+    margin-left: 10px;
+  }
+  .easyin {
+    color: white !important;
+    width: 90%;
+    background-color: blue;
+    opacity: 0.2;
+    /* background-color: rgba(146, 127, 126, 0.1); */
+    border-radius: 20px;
+    border-color: white;
+    border-style: groove;
+margin: 10px;
+/* color: azure !important; */
+  }
+  @media only screen and (max-width: 480px) {
+    #b4c {
+        width: 90%;
+        background-color: rgba(146, 127, 126, 0.5);
+        border: 2px solid blue;
+        height: 100%;
+        margin-top: 5px;
+        border-radius: 20px;
+        /* margin-right: 10px; */
+        margin-left: 5%;
+        /* box-sizing: border-box; */
+        padding-top: 10px;
+        padding-left: 10px;
+        color: aliceblue;
+    }
+  }

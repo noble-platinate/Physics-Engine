@@ -1,0 +1,88 @@
+{
+    "block dick": {
+        "1": {
+            "number": 1,
+            "loc": [
+                150,
+                155.0
+            ],
+            "isbigblock": 0,
+            "acceleration": [
+                0.0,
+                3.3333333333333353
+            ],
+            "initvelocity": [
+                0,
+                0
+            ],
+            "forces": [],
+            "size": [
+                15,
+                15
+            ]
+        },
+        "2": {
+            "number": 2,
+            "loc": [
+                186,
+                140.0
+            ],
+            "isbigblock": 0,
+            "acceleration": [
+                0.0,
+                -3.333333333333332
+            ],
+            "initvelocity": [
+                0,
+                0
+            ],
+            "forces": [],
+            "size": [
+                15,
+                15
+            ]
+        }
+    },
+    "pulley dick": {
+        "1": {
+            "number": 1,
+            "centre": [
+                168.0,
+                220.0
+            ],
+            "radius": 18,
+            "acceleration": [
+                0.0,
+                0.0
+            ],
+            "initvelocity": [
+                0,
+                0
+            ],
+            "forces": []
+        }
+    },
+    "string dick": {
+        "1": {
+            "number": 1,
+            "first obj": 1,
+            "first obj type": "<class 'blocksclass.blocks'>",
+            "second obj": 1,
+            "second obj type": "<class 'blocksclass.pulleys'>",
+            "angle": 0.0,
+            "str no": 1,
+            "toc": "mm"
+        },
+        "2": {
+            "number": 2,
+            "first obj": 1,
+            "first obj type": "<class 'blocksclass.pulleys'>",
+            "second obj": 2,
+            "second obj type": "<class 'blocksclass.blocks'>",
+            "angle": 3.14,
+            "str no": 1,
+            "toc": "mm"
+        }
+    },
+    "normal dick": {}
+}

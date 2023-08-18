@@ -1,0 +1,78 @@
+.presentmain {
+    /* border: solid 2px black; */
+    width: 100vw;
+    height: 100vh;
+    
+    background-image: url(../galaxybg1.jpg);
+  
+    background-repeat: no-repeat;
+  background-size: cover;
+    opacity: 0.99;
+}
+.headname {
+    /* border: solid 2px black; */
+    height: 17%;
+    text-align: center;
+    color: bisque;
+    font-size: xx-large;
+    padding-top: 2%;
+}
+.chapname {
+    /* border: solid 2px black; */
+    height: 15%;
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    
+}
+.chname {
+    background-color: rgb(8, 68, 156);
+    color: white;
+    width: 33%;
+    font-size: xx-large;
+    height: 65%;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.presques {
+    border: solid 2px black;
+    height: 60%;
+}
+.ant-card-grid {
+    margin-bottom: 10px !important;
+}
+.gristl {
+    color: rgb(112, 255, 255);
+}
+@media only screen and (max-width: 480px) {
+    .chname {
+        background-color: rgb(8, 68, 156);
+        color: white;
+        width: 50%;
+        font-size: large;
+        height: 30%;
+        text-align: center;
+        padding-top: 8px;
+    
+    }
+    .chapname {
+        /* border: solid 2px black; */
+        height: fit-content;
+        /* align-items: center; */
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+        
+    }
+    .headname {
+        /* border: solid 2px black; */
+        height: 8%;
+        text-align: center;
+        color: bisque;
+        font-size: xx-large;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}

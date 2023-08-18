@@ -1,0 +1,71 @@
+
+@import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;1,300;1,500&display=swap');
+
+$dumb-color: saturate(mix(red,darken(purple,10),30),100);
+
+*{
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    color: #124395 !important;
+    font-family: sans-serif;
+  }
+  .question{
+    margin-top: 2%;
+  }
+  .ant-layout-header {
+    height: 64px;
+    padding: 0 50px;
+    line-height: 64px;
+    color: aqua !important;
+    background: #124395 !important;
+    text-align: center !important;
+    font-size: 25px !important;
+    border: 1px solid white;
+}
+/* bordered code */
+
+/* bordered code */
+
+.bg-image {
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+      /* color: white; */
+
+    /* border: 3px solid #f1f1f1; */
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+    /* width: 80%; */
+    text-align: center;
+}
+
+.hello{
+  margin-left: 100px;
+}
+
+.ques .ant-card-grid{
+  width: 30% !important;
+  border-radius: 50% !important;
+  margin: 1%;
+  /* border: solid 2px yellow; */
+  /* height: 3px !important; */
+  text-align: center;
+}

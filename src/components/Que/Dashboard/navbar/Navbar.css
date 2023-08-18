@@ -1,0 +1,60 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-bottom: solid 1px grey ;
+    height: 11%;
+    width: 99vw;
+    
+    /* border: solid 2px blue ; */
+}
+.navbarleft {
+    /* border: solid 2px red ; */
+    padding-top: 0.6rem;
+    width: 15%;
+}
+.navbarmid {
+    /* border: solid 2px red ; */
+    width: 70%;
+}
+.navbarright {
+    /* border: solid 2px red ; */
+    /* width: 10%; */
+    border: solid 1px grey;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    margin-right: 30px;
+}
+.profileimg {
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+}
+.upperdn2 {
+    /* border: solid 1px black; */
+    height: 10%;
+    width: 100vw;
+    color: chartreuse;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: larger;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px !important;
+    /* margin-top: 0px; */
+    background-color: rgb(5, 84, 252);
+
+}
+.mainmenuch {
+    width: 25%;
+    border: solid 1px white;
+    height: fit-content;
+    color: white;
+    background-color: rgb(239, 239,239);
+
+    background-color: blue;
+}
