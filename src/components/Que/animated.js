@@ -47,6 +47,25 @@ import paanch from './gaurav_audios/paanch.mp3'
 import che from './gaurav_audios/che.mp3'
 import gauravaudio from './audio-trial-2.mp3'
 import steponepone from './AUDIOS/stepOne/neaudiostep1.m4a'
+import steponepone2 from './AUDIOS/rekindlyfindthecodeattached/Recording (2).m4a'
+import steponepone4 from './AUDIOS/rekindlyfindthecodeattached/Recording (4).m4a'
+import well from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (27).m4a'
+import steponepone3 from './AUDIOS/rekindlyfindthecodeattached/Recording (3).m4a'
+import steptwo1 from './AUDIOS/rekindlyfindthecodeattached/Recording (5).m4a'
+import steptwo2 from './AUDIOS/rekindlyfindthecodeattached/Recording (9).m4a'
+import steptwo4 from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (30).m4a'
+import steptwo5 from './AUDIOS/rekindlyfindthecodeattached/Recording (11).m4a'
+import steptwo6 from './AUDIOS/rekindlyfindthecodeattached/Recording (13).m4a'
+import mtv from './AUDIOS/rekindlyfindthecodeattached/Recording (14).m4a'
+import steptwo8 from './AUDIOS/rekindlyfindthecodeattached/Recording (15).m4a'
+import constr from './AUDIOS/rekindlyfindthecodeattached/Recording (19).m4a'
+import constr1 from './AUDIOS/rekindlyfindthecodeattached/Recording (21).m4a'
+
+import stepwedge from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (22).m4a'
+import stepwedge1 from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (25).m4a'
+
+import steptwo3 from './AUDIOS/rekindlyfindthecodeattached/Recording (6).m4a'
+
 // import steponepone from './AUDIOS/stepOne/step_one_audiopart1.mp3'
 import steponeptwo from './AUDIOS/stepOne/step_one_audiopart2.mp3'
 import steponepthree from './AUDIOS/stepOne/step_one_audiopart3.mp3'
@@ -468,7 +487,84 @@ const TestThree = (props) => {
             }
           });
         
-        if (step == "motion" && substep == 0  ) {
+        if (alld_question_no>60 && step == "motion" && substep == 0  && subsubstep == (-1)) {
+            let pyplayer = document.getElementById('radio');
+ 
+            pyplayer.src = steponepone3;
+            // setTimeout( ()=>{ pyplayer.pause();
+            //                        },50000 );
+
+            gplayer.src = steponepone;
+            gplayer.play();
+            
+            gplayer.addEventListener('ended', playSecondAudio); // Add an event listener for the 'ended' event
+            // gplayer.play();
+
+            // Function to play the second audio
+            function playSecondAudio() {
+                // Uncomment the following lines to play the second audio
+                gplayer.src = steponepone2;
+                gplayer.play();
+
+                // Remove the event listener to prevent it from playing the second audio repeatedly
+                gplayer.removeEventListener('ended', playSecondAudio);
+            }
+             // this audiofunction by gaurav on 15
+            //  
+            //  start();
+            // audioncount++;}
+            // if (answerClicked == 1 && iscorrect == 1) this is converted on 17june 
+            if ( iscorrect == 1) {
+                 if(totalunknowns == 0){ totalunknowns=totalunknowns+t;
+                    console.log(totalunknowns);
+                    count++;
+                }
+            
+                // if (answerClicked == 1 && iscorrect != 1 ) {
+                //     const alldata = require("./all_dick_1.json");
+                // }
+                
+                let player = document.getElementById('radio');
+                // player.pause()
+                // player.src = unka_audio[0];
+                // player.play()
+                //code added by gaurav on 16june for audio starts 
+
+                // setTimeout( ()=>{ player.pause();
+                //                    answerdone();},6800 )
+                //code added by gaurav on 16june for audio ends 
+                pyplayer.currentTime=0;
+                pyplayer.play();
+                //  pyplayer.play();
+                 setTimeout( ()=>{ pyplayer.pause();
+                    // pyanswerdone(t);
+                 },50000 );
+                gplayer.pause();
+                // soundacc.play();
+                // ganswerdone(t);
+                // gplayer.src = steponeptwo;
+                // gplayer.play();
+            //   setTimeout(
+                    
+            //         function(){
+                     
+                        
+            //             setTimeout(function(){
+            //                 gplayer.src = steponepthree;
+            //                 gplayer.currentTime = 0.35;
+            //     gplayer.play();
+            //             },1450)
+            //         }
+            //         ,4000); 
+                
+
+
+
+                
+                
+            }
+        }
+        else if (step == "motion" && substep == 0  ) {
             let player = document.getElementById('radio');
             player.src = unkb_audio[0];
             // player.play();
@@ -561,7 +657,72 @@ const TestThree = (props) => {
                 ganswerdonetension(t);
             }
           });
-        if (step == "motion" && substep == 1) {
+        if (alld_question_no>60 && step == "motion" && substep == 1 && subsubstep == 0) {
+            gplayer.pause();
+            let pyplayer = document.getElementById('radio');
+            // player.pause();
+            // player.src = unkb_audio[1];
+            // player.play()
+            // Nextstep();
+
+            pyplayer.src = steptwo1;
+            pyplayer.currentTime = 0;
+            pyplayer.play();
+            
+           // if (answerClicked == 1 && iscorrect == 1) this is converted on 17june 
+            if ( iscorrect == 1) {
+                pyplayer.pause();
+                if(count==1){
+                    totalunknowns=totalunknowns+t;
+                    count++;
+                }
+                let player = document.getElementById('radio');
+                player.src = well;
+                player.play();
+                // player.pause()
+                // player.src = unka_audio[1];
+                // // player.play()
+                // pyplayer.currentTime=75.5;
+                // // pyplayer.play();
+                // setTimeout( ()=>{ pyplayer.pause();
+                // //    pyanswerdone(t);
+                // },4000 );
+                // setTimeout(
+                //     function(){
+                //         // player.pause();
+                //         pyplayer.src =pyaudio;
+                //         pyplayer.currentTime = 80;
+                //         // pyplayer.play();
+                //     },6000); 
+                // setTimeout(
+                //     function(){
+                //         pyplayer.pause();
+                //         console.log(totalunknowns);
+                //         // pyanswerdone(totalunknowns);
+                //     },9500); 
+
+                    
+                //     // gplayer.src = steponepfive;
+                //     // gplayer.play();
+                //     // ganswerdonetension(t);
+                //     gplayer.pause();
+                //     // soundtension.play();
+                //     // setTimeout(
+                //     //     function(){
+                            
+                //     //         ganswerdone(t);
+                //     //         setTimeout(function(){
+                //     //             gplayer.src = steponepsix;
+                //     //           gplayer.play();
+                //     //               setTimeout(function(){
+                //     //                 gplayer.src = steponepseven;
+                //     //              gplayer.play();
+                //     //                },3200);
+                //     //         },1450)
+                //     //     },4000);   
+            }
+        }
+        else if (step == "motion" && substep == 1) {
             let player = document.getElementById('radio');
             player.pause();
             player.src = unkb_audio[1];
@@ -636,14 +797,53 @@ const TestThree = (props) => {
             src: motivate[ranval]
             
           });
+        if (alld_question_no>60 && step == "motion" && substep == 0 && subsubstep == 4) {
+            gplayer.pause();
+            let pyplayer = document.getElementById('radio');
+            // player.pause();
+            // player.src = unkb_audio[1];
+            // player.play()
+            // Nextstep();
+
+            pyplayer.src = stepwedge;
+            pyplayer.currentTime = 0;
+            pyplayer.play();
+            
+           // if (answerClicked == 1 && iscorrect == 1) this is converted on 17june 
+            if ( iscorrect == 1) {
+                pyplayer.pause();
+                if(count==1){
+                    totalunknowns=totalunknowns+t;
+                    count++;
+                }
+                let player = document.getElementById('radio');
+                player.src = stepwedge1;
+                player.play()
+            }
+        }
+
+        if (alld_question_no>60 && step == "motion" && substep == 0 && subsubstep == 3) {
+            
+           // if (answerClicked == 1 && iscorrect == 1) this is converted on 17june 
+            if ( iscorrect == 1) {
+                pyplayer.pause();
+                if(count==1){
+                    totalunknowns=totalunknowns+t;
+                    count++;
+                }
+                let player = document.getElementById('radio');
+                player.src = stepwedge1;
+                player.play()
+            }
+        }
+
+        
 
         if (step == "motion" && substep == 2) {
-            gplayer.src = steponepseven;
-                                 gplayer.play();
-                                 if ( iscorrect == 1) {
-                                    gplayer.pause();
-                                    soundfbd.play();
-                                 }
+            if ( iscorrect == 1) {
+                gplayer.src = steptwo3
+                gplayer.play();
+            }
         }
 
         // if (step == "fbd" && subsubstep == -100) {
@@ -708,7 +908,7 @@ const TestThree = (props) => {
     //  audio for step2
     var soundfbd = new Howl({
             
-        src: motivate[ranval],
+        src: well,
         // autoplay: true,
         // loop: true,
         // volume: 0.5,
@@ -722,25 +922,24 @@ const TestThree = (props) => {
 
 
 
-   {for(let flag = 1 ; flag <= n_b ; flag++) {
+   {for(let flag = 1 ; flag <= n_b + 1; flag++) {
       
     if(step == "fbd" && substep == flag && subsubstep == -200){
         soundtension.pause();
         //this is red block 
-        gplayer.src = steponepseven;
-                                 gplayer.play();
-                                 if ( iscorrect == 1) {
-                                    gplayer.pause();
-                                    soundfbd.play();
-                                 }
-                              
+        gplayer.src = steptwo5;
+        gplayer.play();
+        if ( iscorrect == 1) {
+            gplayer.pause();
+            soundfbd.play();
+        }               
       }
 
       if(step == "fbd" && substep == flag && subsubstep == -100){
         
         //this is red block 
         gplayer.pause();
-            gplayer.src = cut_aud[flag];
+            gplayer.src = steptwo5;
                               gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
@@ -758,10 +957,10 @@ const TestThree = (props) => {
         //this is t1 upwards or downwards 
         gplayer.pause();
         if(flag==1){
-            gplayer.src = steptwoptwo;
+            gplayer.src = steptwo4;
         }
         if(flag>1) {
-            gplayer.src = iscutf;
+            gplayer.src = steptwo4;
         }
             
                               gplayer.play();
@@ -775,10 +974,10 @@ const TestThree = (props) => {
         //this is t1 upwards or downwards 
         gplayer.pause();
         if(flag==1){
-            gplayer.src = steptwoptwo;
+            gplayer.src = steptwo6;
         }
         if(flag>1) {
-            gplayer.src = iscutf;
+            gplayer.src = steptwo6;
         }
             
                               gplayer.play();
@@ -791,7 +990,7 @@ const TestThree = (props) => {
       if(step == "fbd" && substep == flag && subsubstep == 100   && blockdata[flag].acceleration[1]>0){
         soundtension.pause();
         gplayer.pause();
-            gplayer.src = up_eqn[flag];
+            gplayer.src = steptwo8;
                               gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
@@ -802,7 +1001,7 @@ const TestThree = (props) => {
       if(step == "fbd" && substep == flag && subsubstep == 100  && blockdata[flag].acceleration[1]<0){
         soundtension.pause();
         gplayer.pause();
-            gplayer.src = down_eqn[flag];
+            gplayer.src = steptwo8;
                               gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
@@ -814,11 +1013,11 @@ const TestThree = (props) => {
 
 // for advance step audio starts 
 
-{for(let flag = 1 ; flag <= n_b ; flag++) {
+{for(let flag = 1 ; flag <= n_b + 1; flag++) {
       
     if(step == "fbd" && substep == flag && subsubstep == -200){
         //this is red block 
-        gplayer.src = steponepseven;
+        gplayer.src = steptwo5;
                                  gplayer.play();
                                  if ( iscorrect == 1) {
                                     gplayer.pause();
@@ -830,7 +1029,7 @@ const TestThree = (props) => {
       if(step == "fbd" && substep == flag && subsubstep == -100){
         //this is red block 
         gplayer.pause();
-            gplayer.src = cut_aud[flag];
+            gplayer.src = steptwo5;
                               gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
@@ -848,10 +1047,10 @@ const TestThree = (props) => {
         //this is t1 upwards or downwards 
         gplayer.pause();
         if(flag==1){
-            gplayer.src = steptwoptwo;
+            gplayer.src = steptwo4;
         }
         if(flag>1) {
-            gplayer.src = iscutf;
+            gplayer.src = steptwo4;
         }
             
                               gplayer.play();
@@ -865,10 +1064,10 @@ const TestThree = (props) => {
         //this is t1 upwards or downwards 
         gplayer.pause();
         if(flag==1){
-            gplayer.src = steptwoptwo;
+            gplayer.src = steptwo6;
         }
         if(flag>1) {
-            gplayer.src = iscutf;
+            gplayer.src = steptwo6;
         }
             
                               gplayer.play();
@@ -950,7 +1149,7 @@ if (answerClicked > 0 && iscorrect != 1) {
         if(step == "fbd" && substep == flag && subsubstep == -100){
           //this is pulley cut 
           gplayer.pause();
-              gplayer.src = pulleycut;
+              gplayer.src = steptwo5;
                                 gplayer.play();
                                 if ( iscorrect == 1) {
                                   gplayer.pause();
@@ -961,7 +1160,7 @@ if (answerClicked > 0 && iscorrect != 1) {
         if(step == "fbd" && substep == flag && subsubstep == 1){
           //this is t1 upwards or downwards 
           gplayer.pause();
-          gplayer.src = iscutf;
+          gplayer.src = steptwo6;
                                 gplayer.play();
                                 if ( iscorrect == 1) {
                                   gplayer.pause();
@@ -972,7 +1171,7 @@ if (answerClicked > 0 && iscorrect != 1) {
         if(step == "fbd" && substep == flag && subsubstep == 2){
             //this is t1 upwards or downwards 
             gplayer.pause();
-                gplayer.src = iscutf;
+                gplayer.src = steptwo6;
                                   gplayer.play();
                                   if ( iscorrect == 1) {
                                     gplayer.pause();
@@ -983,7 +1182,7 @@ if (answerClicked > 0 && iscorrect != 1) {
           if(step == "fbd" && substep == flag && subsubstep == 3){
             //this is t1 upwards or downwards 
             gplayer.pause();
-                gplayer.src = iscutf;
+            gplayer.src = steptwo6;
                                   gplayer.play();
                                   if ( iscorrect == 1) {
                                     gplayer.pause();
@@ -993,7 +1192,7 @@ if (answerClicked > 0 && iscorrect != 1) {
           }
         if(step == "fbd" && substep == flag && subsubstep == 100 ){
           gplayer.pause();
-              gplayer.src = pulleyeqn;
+              gplayer.src = steptwo8;
                                 gplayer.play();
                                 if ( iscorrect == 1) {
                                   gplayer.pause();
@@ -1144,7 +1343,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                     var blocloc_y = (blockdata[bigblockdata.block[1][0]].loc[1] - 150)/15
 
                     //bigblockdata.block[1][2][0/20]
-
+                    
                     meshbb.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
                     meshbb.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
                 
@@ -3471,7 +3670,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == -300)) {
                     scene.add(chotasphere[cs_count]);
-                    if (subsubstep != -100) {
+                    if (alld_question_no>60 && subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
@@ -3480,13 +3679,13 @@ if (answerClicked > 0 && iscorrect != 1) {
                         // player.play()
 
                     }
-                    if (subsubstep == -100) {
+                    if (alld_question_no>60 && subsubstep == -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
                         player.pause()
-                        player.src = fbdi_audio[i - 1];
-                        // player.play()
+                        player.src = steptwo5;
+                        player.play()
                         if (answerClicked > 0 && iscorrect == 1) {
 
                             let player = document.getElementById('radio');
@@ -3974,7 +4173,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1 || subsubstep == -300)) {
                     scene.add(chotasphere[cs_count]);
-                    if (subsubstep != -100) {
+                    if (bigblockdata.mass>0 && subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
@@ -3983,13 +4182,13 @@ if (answerClicked > 0 && iscorrect != 1) {
                         // player.play()
 
                     }
-                    if (subsubstep == -100) {
+                    if (bigblockdata.mass>0 && subsubstep == -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
                         player.pause()
-                        player.src = fbdi_audio[i + n_b - 1];
-                        // player.play()
+                        player.src = steptwo4;
+                        player.play()
                         if (answerClicked > 0 && iscorrect == 1) {
 
                             let player = document.getElementById('radio');
@@ -4032,11 +4231,12 @@ if (answerClicked > 0 && iscorrect != 1) {
         
          if (step == "constraint" && substep == 1 && subsubstep == -1) {
             gplayer.pause();
-            gplayer.src= pinkstringlenchange;
+            gplayer.src= constr;
             gplayer.play();
             if ( iscorrect == 1) {
                 gplayer.pause();
-                soundfbd.play();
+                gplayer.src=constr1;
+                gplayer.play();
              }
              
          }
@@ -4189,9 +4389,12 @@ if (answerClicked > 0 && iscorrect != 1) {
                     animation_on = 1;
                 }
 
+                
+
                 for (i = 1; i < n_b + 1; i++) {
 
                     time_main = elapsedTime - Time_tillnow;
+
 
 
                      // 22June change code starts manglik
@@ -4318,7 +4521,12 @@ if (answerClicked > 0 && iscorrect != 1) {
                             if (stringdata[sc]["first obj"] == i) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                                 meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
-        
+                                if(alld_question_no>60){
+                                    if(i==1 && bigblockdata.mass>0){
+                                        meshbb.position.x=meshp[i - 1].position.x-3.8;
+                                    }
+                                }
+                                
 
                             }
                         }
@@ -4326,7 +4534,11 @@ if (answerClicked > 0 && iscorrect != 1) {
                             if (stringdata[sc]["second obj"] == i) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
-
+                        if(alld_question_no>60){
+                            if(i==1 && bigblockdata.mass>0){
+                                meshbb.position.x=meshp[i - 1].position.x-3.8;
+                            }
+                        }
 
                             }
                         }
@@ -4335,13 +4547,14 @@ if (answerClicked > 0 && iscorrect != 1) {
             }
             // 22June change code ends manglik
 
-
-
-
-
                     if (step == "motion" || (step == "constraint" && subsubstep == -1)) {
                         meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
+                        if(alld_question_no>60){
+                            if(i==1 && bigblockdata.mass>0){
+                                meshbb.position.x=meshp[i - 1].position.x-3.8;
+                            }
+                        }
                     }
 
                     if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.pulleys'>")) {
@@ -4349,6 +4562,11 @@ if (answerClicked > 0 && iscorrect != 1) {
                             if (stringdata[substep]["first obj"] == i && (subsubstep == 1 || subsubstep == 100)) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                                 meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
+                                if(alld_question_no>60){
+                                    if(i==1 && bigblockdata.mass>0){
+                                        meshbb.position.x=meshp[i - 1].position.x-3.8;
+                                    }
+                                }
                             }
                         }
 
@@ -4356,14 +4574,14 @@ if (answerClicked > 0 && iscorrect != 1) {
                             if (stringdata[substep]["second obj"] == i && (subsubstep == 2 || subsubstep == 100)) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                                 meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
+                                if(alld_question_no>60){
+                                    if(i==1 && bigblockdata.mass>0){
+                                        meshbb.position.x=meshp[i - 1].position.x-3.8;
+                                    }
+                                }
                             }
                         }
-
-
                     }
-
-
-
                 }
 
                 /*

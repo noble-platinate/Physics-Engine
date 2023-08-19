@@ -1,0 +1,65 @@
+For Wedge steps:
+
+Main questions( in GPT ): What is the acceleration of the block ?
+
+subquestion: Whats the acceleration of block in terms of acceleration of wedge ?
+
+Before Question - Jab bhi hum kisi object jo ki movable wedge pe hai, ka acceleration likhte hain, to hum uska acceleration 
+likhne ke liye wedge constraint lagate hain jiska simple matlab hai ki acceleration of the object is acceleration of object wrt wedge 
+plus acceleration of wedge wrt ground. To acceleration ki equation kya hogi ? 
+
+Answer = ( if acceleration of wedge is a4 and acceleration of block wrt wedge is a1 )
+a1 ( up the incline ) + a4 ( right ) 
+
+After Question - Well done. Ab hum iss acceleration ko up the incline and perpendicular to the incline resolve karenge. 
+
+
+Next subquestion: Whats the accelration resolution up and perpendicular to the incline ?
+Before Question - A1 ka component to poora poora along the incline hai, a4 ko resolve kariye bass. 
+Answer: a1 + a4 cos( theta )  
+
+Main Question( in GPT ) - Whats the F=ma equation of the red block ?
+
+subquestion: How many cuts on the imaginary sphere ?
+
+Before question: F=ma equation lagane k liye hume block pe forces nikaalna hai. Gola banake dekhiye kahan string ko 
+cut kar raha hai aur block kitni surfaces touch kar raha hai. To bataiye kitni jageh cut hai ?
+
+After: well done
+
+subquestion: iss cut pe kya force hai ?
+
+...
+...
+
+Subquestion: Ab bataiye jitni jageh cuts hain ?
+
+....
+....
+
+subquestion: iss touch k karan kya force ayega  
+
+...
+...
+
+subquestion: What are the forces on the block along and perp to incline ?
+
+Before: T poora poora along the incline hai aur N poora poora perp to incline hai - bass mg ko resolve karna hai 
+After: Humne acceleration aur forces likh liya hai. Ab bass F= ma lagan hai 
+
+
+Subquestion: Apply F=ma along and perp to incline 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 

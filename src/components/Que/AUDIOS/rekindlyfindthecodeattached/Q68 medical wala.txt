@@ -1,0 +1,60 @@
+How many objects are there ?
+
+Voice - .... kitne unknown accelerations hain aur kitne unknown forces hain ( alreday there )
+Before question - 
+[ Kitne unknown accelerations hain, ye pata chalega kitne moving objects hain isse - to bataiye kitne moving objects hain ]
+
+After Question - 
+[ Bahut badhiya - [3] moving objects ka matlab 3 unknown accelerations - to maine aapke liye [3] accelerations likh diye hain a1, a2, a3 ] 
+
+How many strings are there in the problem ?
+
+Before Questions - Ab aate hain unknown forces ki taref. [ recording 5 ] 
+
+After Questions - 
+
+[ Recording 8 ] 
+
+"Remove the contact surface wala question - irrelevant for medical"    
+
+Question asked - F=ma of red block 
+
+Before Question - F=ma equation lagane k liye hume block pe forces nikaalna hai. Uske liye bass block ke around gola banaiye, 
+dekhiye wo gola kahan kahan cut kar raha hai, aur har cut pe tension force away from system laga dijiye. To fatafat bataiye 
+gola kitni jageh cut kar raha hai. 
+
+After Question - Badhiya. 
+
+[Before question - [ Recording 13 ]
+
+After Question - Well done] for the cut 
+
+Before Question( when applying F= ma ) - [ Recording 15 ] [ Gaurav wala recording upar jaa raha hai, niche jaa raha hai ].
+
+After Question - [ Bass humare reportoire me ek aur equation add ho gayi ]
+
+Can you help me with constraint equation for yellow string ?
+Answer( substep 1 ): Kisi bhi constraint equation ko likhne ke liye, unko parts me divide kariye aur har part kitni tezi se badal raha hai wo likh dijiye. total string ki length to badlegi nahi.
+Hence total badalna to zero hoga. Chaliye parts me divide karke solve karte hain. To bataiye ki isko kitne parts me divide kar sakte. 
+
+Answer( right ) - bahut badhiya. Ab har part kis tezi se badlega ye nikaalte hain. 
+
+Answer( substep 1,2,3 ) 
+
+
+  
+
+
+
+
+
+
+
+
+ 
+
+
+       
+
+
+

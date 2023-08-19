@@ -51181,13 +51181,9 @@ export const questionData = [
     chapterName: "Newton's law",
     steps: [
       { stepName: "Find no.of unknowns", stepStatus: "active", stepNumber: 1 },
+      { stepName: "Wedge Constraints", stepStatus: "inactive", stepNumber: 2 },
       {
         stepName: "Use F= ma for each object",
-        stepStatus: "inactive",
-        stepNumber: 2,
-      },
-      {
-        stepName: "Understanding Constraint equation",
         stepStatus: "inactive",
         stepNumber: 3,
       },
@@ -51198,7 +51194,1023 @@ export const questionData = [
       {
         questionNumber: 68,
         questionDesc:
-          "A red block and yellow block, both of mass 1 kg are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
+          "A red block of mass 3 kg and yellow block of mass 4 kg are in motion as follows. Determine the acceleration of the masses, tension in the string and normal reaction exerted on the big block. Ignore the normal reaction between wedge and ground.",
+        steps: [
+          {
+            stepName: "Identify Motion of objects",
+            stepNumber: 1,
+            stepQuestions: [
+              {
+                question: "How many moving objects are present?",
+                options: [4, 6, 1, 3],
+                answer: 0,
+                threejsstep: "motion",
+                threejssubstep: 0,
+                threejssubsubstep: -1,
+                show1: [""],
+                show2: ["Unknowns: a\u2081, a\u2082, a\u2083, a\u2084"],
+                showfc: [],
+                type: "basic",
+                showfcheading: [],
+              },
+              {
+                question: "How many strings are there?",
+                options: [2, 1, 0, 5],
+                answer: 0,
+                threejsstep: "motion",
+                threejssubstep: 1,
+                threejssubsubstep: 0,
+                show1: ["Unknowns: a\u2081, a\u2082, a\u2083, a\u2084"],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, ",
+                ],
+                showfc: [],
+                type: "basic",
+                showfcheading: [],
+              },
+              {
+                question: "How many contacting surfaces are there? Ignore contact between wedge and ground",
+                options: [3, 1, 2, 0],
+                answer: 1,
+                threejsstep: "motion",
+                threejssubstep: 2,
+                threejssubsubstep: 0,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+            ],
+          },
+          {
+                stepName: "Wedge Constraints",
+                stepNumber: 2,
+                stepQuestions: [
+                {
+                    question:
+                    "What is the acceleration of the red block in terms of acceleration of wedge ?",
+                    options: ["a\u2081 ( down the incline ) - a\u2084 ( left )" , "a\u2081 ( up the incline ) + a\u2084 ( right )", "a\u2081 ( down the incline ) + a\u2084 ( right )", "a\u2081 ( up the incline ) - a\u2084 ( left )"],
+                    answer: 1,
+                    threejsstep: "motion",
+                    threejssubstep: 0,
+                    threejssubsubstep: 4,
+                    show1: [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                    ],
+                    show2: [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                    "Acceleration of Red Block wrt Wedge:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                    ],
+                    type: "basic",
+                    showfc: [],
+                    showfcheading: ["Wedge and Red Block"],
+                },
+                {
+                    question:
+                    "What is the acceleration resolution of the red block up and perpendicular to the incline ?",
+                    options: ["a\u2081+a\u2084cos(45\u00b0), -a\u2084sin(45\u00b0)", "a\u2081-a\u2084sin(45\u00b0), a\u2084cos(45\u00b0)", "a\u2081-a\u2084cos(45\u00b0), a\u2084sin(45\u00b0)", "-a\u2081-a\u2084sin(45\u00b0), a\u2084cos(45\u00b0)"],
+                    answer: 0,
+                    threejsstep: "motion",
+                    threejssubstep: 0,
+                    threejssubsubstep: 3,
+                    show1: [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                    "Acceleration of Red Block wrt Wedge: a\u2081 ( up the incline ) + a\u2084 ( right )",
+                    ],
+                    show2: [
+                        "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                    ],
+                    type: "basic",
+                    showfc: [],
+                    showfcheading: ["Wedge and Red Block"],
+                },
+            ],
+          },
+          {
+            stepName: "Write FBD equation for each Moving block",
+            stepNumber: 3,
+            stepQuestions: [
+              {
+                question:
+                  "At how many points does the imaginary sphere for red block cuts the strings",
+                options: [0, 1, 2, 3],
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: -100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                type: "basic",
+                showfc: [
+                  "Upward Perpendicular Forces: ",
+                  "Downward Perpendicular Forces: ",
+                  "Forces up the incline: ",
+                  "Forces down the incline: ",
+                ],
+                showfcheading: ["Red block"],
+                answer: 1,
+              },
+              {
+                question:
+                  "How many surfaces are in contact with the red block?",
+                options: [2, 1, 3, 4],
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: -200,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                type: "basic",
+                answer: 1,
+                showfc: [
+                  "Upward Perpendicular Forces: ",
+                  "Downward Perpendicular Forces: ",
+                  "Forces up the incline: ",
+                  "Forces down the incline: ",
+                ],
+                showfcheading: ["Red block"],
+              },
+              {
+                question:
+                  "What is the direction of normal reaction on block 1 due to B?",
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: 1,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                type: "basic",
+                answer: 0,
+                showfc: [
+                  "Upward Perpendicular Forces: ",
+                  "Downward Perpendicular Forces: ",
+                  "Forces up the incline: ",
+                  "Forces down the incline: ",
+                ],
+                showfcheading: ["Red block"],
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on red block?",
+                options: [
+                  "T\u2081 down the incline ",
+                  "T\u2081 up the incline ",
+                ],
+                answer: 1,
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: 2,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                type: "basic",
+                showfc: [
+                  "Upward Perpendicular Forces: ",
+                  "Downward Perpendicular Forces: ",
+                  "Forces up the incline: ",
+                  "Forces down the incline: ",
+                ],
+                showfcheading: ["Red block"],
+              },
+              {
+                question:
+                  "Whats the FBD equation of red block along the incline?",
+                options: [
+                  "+T\u2081+30sin(45\u00b0)=3a\u2081",
+                  "+T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "-T\u2081+30sin(45\u00b0)=3a\u2081",
+                  "-T\u2081-30sin(45\u00b0)=3a\u2081",
+                ],
+                answer: 1,
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: 100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                showfc: [
+                  "Upward Perpendicular Forces: N1, ",
+                  "Downward Perpendicular Forces: 30cos(45\u00b0)",
+                  "Forces up the incline: T\u2081, ",
+                  "Forces down the incline: 30sin(45\u00b0)",
+                ],
+                showfcheading: ["Red block"],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                ],
+                type: "basic",
+              },
+              {
+                question:
+                  "Whats the FBD equation of red block perpendicular to the incline?",
+                options: [
+                  "+N\u2081-30cos(45\u00b0)=0",
+                  "-N\u2081-30cos(45\u00b0)=0",
+                ],
+                answer: 0,
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: 100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                ],
+                showfc: [
+                  "Upward Perpendicular Forces: N1, ",
+                  "Downward Perpendicular Forces: 30cos(45\u00b0)",
+                  "Forces up the incline: T\u2081, ",
+                  "Forces down the incline: 30sin(45\u00b0)",
+                ],
+                showfcheading: ["Red block"],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                type: "basic",
+              },
+              {
+                question:
+                  "At how many points does the imaginary sphere for yellow block cuts the strings",
+                options: [0, 1, 2, 3],
+                threejsstep: "fbd",
+                threejssubstep: 2,
+                threejssubsubstep: -100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                type: "basic",
+                showfc: [
+                  "Upward Forces: ",
+                  "Downward Forces: ",
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                ],
+                showfcheading: ["Yellow block"],
+                answer: 1,
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on yellow block?",
+                options: ["T\u2082 upwards", "T\u2082 downwards"],
+                answer: 0,
+                threejsstep: "fbd",
+                threejssubstep: 2,
+                threejssubsubstep: 2,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                type: "basic",
+                showfc: [
+                  "Upward Forces: ",
+                  "Downward Forces: ",
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                ],
+                showfcheading: ["Yellow block"],
+              },
+              {
+                question:
+                  "Whats the FBD equation of yellow block in the y-direction",
+                options: [
+                  "+60-T\u2082=6a\u2082",
+                  "+60+T\u2082=6a\u2082",
+                  "-60+T\u2082=6a\u2082",
+                  "-60-T\u2082=6a\u2082",
+                ],
+                answer: 0,
+                threejsstep: "fbd",
+                threejssubstep: 2,
+                threejssubsubstep: 100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                showfc: [
+                  "Upward Forces: T\u2082, ",
+                  "Downward Forces: 60",
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                ],
+                showfcheading: ["Yellow block"],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                type: "basic",
+              },
+              {
+                question:
+                  "At how many points does the imaginary sphere for third pulley cuts the strings",
+                options: [0, 1, 2, 3],
+                threejsstep: "fbd",
+                threejssubstep: 5,
+                threejssubsubstep: -100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                type: "basic",
+                showfc: [
+                  "Upward Forces: ",
+                  "Downward Forces: ",
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                ],
+                showfcheading: ["Third pulley"],
+                answer: 3,
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on third pulley?",
+                options: ["T\u2081 upwards ", "T\u2081 downwards "],
+                answer: 0,
+                threejsstep: "fbd",
+                threejssubstep: 5,
+                threejssubsubstep: 1,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                type: "basic",
+                showfc: [
+                  "Upward Forces: ",
+                  "Downward Forces: ",
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                ],
+                showfcheading: ["Third pulley"],
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on third pulley?",
+                options: ["T\u2082 upwards ", "T\u2082 downwards "],
+                answer: 1,
+                threejsstep: "fbd",
+                threejssubstep: 5,
+                threejssubsubstep: 2,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                type: "basic",
+                showfc: [
+                  "Upward Forces: T\u2081, ",
+                  "Downward Forces: ",
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                ],
+                showfcheading: ["Third pulley"],
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on third pulley?",
+                options: ["T\u2081 downwards ", "T\u2081 upwards "],
+                answer: 1,
+                threejsstep: "fbd",
+                threejssubstep: 5,
+                threejssubsubstep: 3,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                type: "basic",
+                showfc: [
+                  "Upward Forces: T\u2081, ",
+                  "Downward Forces: T\u2082",
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                ],
+                showfcheading: ["Third pulley"],
+              },
+              {
+                question:
+                  "Whats the FBD equation of third pulley in the y-direction",
+                options: ["T\u2082-2T\u2081=0", "T\u2082+2T\u2081=0"],
+                answer: 0,
+                threejsstep: "fbd",
+                threejssubstep: 5,
+                threejssubsubstep: 100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                ],
+                showfc: [
+                  "Upward Forces: T\u2081, T\u2081, ",
+                  "Downward Forces: T\u2082, ",
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                ],
+                showfcheading: ["Third pulley"],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Third pulley: T\u2082-2T\u2081=0",
+                ],
+                type: "basic",
+              },
+              {
+                question:
+                  "How many surfaces are in contact with the big block?",
+                options: [2, 1, 3, 4],
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: -200,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                type: "basic",
+                answer: 1,
+                showfc: [
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                  "Forces perpendicular to the incline: ",
+                  "Forces along the incline: ",
+                ],
+                showfcheading: ["Big Block"],
+              },
+              {
+                question:
+                  "What is the direction of normal reaction on big block due to red block?",
+                options: ["N\u2081 into the plane", "N\u2081 out of the plane"],
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: 1,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                ],
+                type: "basic",
+                answer: 0,
+                showfc: [
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                  "Forces perpendicular to the incline: ",
+                  "Forces along the incline: ",
+                ],
+                showfcheading: ["Big Block"],
+              },
+              {
+                question:
+                  "At how many points does the imaginary sphere for first pulley on the big block cuts the strings",
+                options: [0, 1, 2, 3],
+                threejsstep: "fbd",
+                threejssubstep: 3,
+                threejssubsubstep: -100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                type: "basic",
+                showfc: [
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                  "Forces perpendicular to the incline: N\u2081",
+                  "Forces along the incline: ",
+                ],
+                showfcheading: ["Big Block"],
+                answer: 2,
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on the pulley?",
+                options: ["T\u2081 up the incline", "T\u2081 down the incline"],
+                answer: 1,
+                threejsstep: "fbd",
+                threejssubstep: 3,
+                threejssubsubstep: 1,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                type: "basic",
+                showfc: [
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                  "Forces perpendicular to the incline: N\u2081",
+                  "Forces along the incline: ",
+                ],
+                showfcheading: ["Big Block"],
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on the pulley?",
+                options: ["T\u2081 rightwards", "T\u2081 leftwards"],
+                answer: 0,
+                threejsstep: "fbd",
+                threejssubstep: 3,
+                threejssubsubstep: 2,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                type: "basic",
+                showfc: [
+                  "Rightward Forces: ",
+                  "Leftward Forces: ",
+                  "Forces perpendicular to the incline: N\u2081",
+                  "Forces along the incline: T\u2081",
+                ],
+                showfcheading: ["Big Block"],
+              },
+              {
+                question:
+                  "Whats the FBD equation of big block in the x-direction",
+                options: [
+                  "Ncos(45\u00b0)+T\u2081cos(45\u00b0)-T\u2081=6a\u2084",
+                  "Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Nsin(45\u00b0)-T\u2081sin(45\u00b0)+T\u2081=6a\u2084",
+                  "Ncos(45\u00b0)+T\u2081cos(45\u00b0)-T\u2081=6a\u2084",
+                ],
+                answer: 1,
+                threejsstep: "fbd",
+                threejssubstep: 2,
+                threejssubsubstep: 100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                ],
+                showfc: [
+                  "Rightward Forces: T\u2081",
+                  "Leftward Forces: ",
+                  "Forces perpendicular to the incline: N\u2081",
+                  "Forces along the incline: T\u2081",
+                ],
+                showfcheading: ["Big Block"],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084"
+                ],
+                type: "basic",
+              },
+            ],
+          },
+          {
+            stepName: "Constraint Equations",
+            stepNumber: 4,
+            stepQuestions: [
+              {
+                question:
+                  "What is the number of parts which change length in the pink string?",
+                options: [6, 5, 3, 4],
+                answer: 3,
+                threejsstep: "constraint",
+                threejssubstep: 1,
+                threejssubsubstep: -1,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: ["Pink string"],
+              },
+              {
+                question:
+                  "What is double derivative of change in l\u2081 for pink string due to red block?",
+                options: ["+a\u2081", "-a\u2081"],
+                answer: 1,
+                threejsstep: "constraint",
+                threejssubstep: 1,
+                threejssubsubstep: 1,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                ],
+                type: "basic",
+                showfc: ["l\u2081 + l\u2082 + l\u2083 = constant"],
+                showfcheading: ["Pink string"],
+              },
+              {
+                question:
+                  "What is double derivative of change in l\u2082 for pink string due to the third pulley?",
+                options: ["+a\u2083", "-a\u2083"],
+                answer: 0,
+                threejsstep: "constraint",
+                threejssubstep: 3,
+                threejssubsubstep: 2,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                ],
+                type: "basic",
+                showfc: ["l\u2081 + l\u2082 + l\u2083 = constant"],
+                showfcheading: ["Pink string"],
+              },
+              {
+                question:
+                  "What is double derivative of change in l\u2083 for pink string due to the third pulley?",
+                options: ["+a\u2083", "-a\u2083"],
+                answer: 0,
+                threejsstep: "constraint",
+                threejssubstep: 5,
+                threejssubsubstep: 1,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                ],
+                type: "basic",
+                showfc: ["l\u2081 + l\u2082 + l\u2083 = constant"],
+                showfcheading: ["Pink string"],
+              },
+              {
+                question: "What is the constraint equation for pink string?",
+                options: [
+                  "+a\u2081+2a\u2083=0",
+                  "+a\u2081-2a\u2083=0",
+                  "-a\u2081+2a\u2083=0",
+                  "-a\u2081-2a\u2083=0",
+                ],
+                answer: 2,
+                threejsstep: "constraint",
+                threejssubstep: 1,
+                threejssubsubstep: 300,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
+                ],
+                type: "basic",
+                showfc: [
+                  "l\u2081 + l\u2082 + l\u2083 = constant",
+                  "l\u2081'' = -a\u2081",
+                  "l\u2082'' = +a\u2083",
+                  "l\u2083'' = +a\u2083",
+                ],
+                showfcheading: ["Pink string"],
+              },
+              {
+                question:
+                  "What is double derivative of change in l\u2081 for red string due to the third pulley?",
+                options: ["+a\u2083", "-a\u2083"],
+                answer: 1,
+                threejsstep: "constraint",
+                threejssubstep: 4,
+                threejssubsubstep: 1,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
+                ],
+                type: "basic",
+                showfc: ["l\u2081 = constant"],
+                showfcheading: ["Red string"],
+              },
+              {
+                question:
+                  "What is double derivative of change in l\u2081 for red string due to yellow block?",
+                options: ["+a\u2082", "-a\u2082"],
+                answer: 0,
+                threejsstep: "constraint",
+                threejssubstep: 4,
+                threejssubsubstep: 2,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
+                ],
+                type: "basic",
+                showfc: ["l\u2081 = constant"],
+                showfcheading: ["Red string"],
+              },
+              {
+                question: "What is the constraint equation for red string?",
+                options: [
+                  "+a\u2082+a\u2083=0",
+                  "+a\u2082-a\u2083=0",
+                  "-a\u2082+a\u2083=0",
+                  "-a\u2082-a\u2083=0",
+                ],
+                answer: 1,
+                threejsstep: "constraint",
+                threejssubstep: 2,
+                threejssubsubstep: 300,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
+                  "Red string: +a\u2082-a\u2083=0",
+                ],
+                type: "basic",
+                showfc: ["l\u2081 = constant", "l\u2081'' = -a\u2083 +a\u2082"],
+                showfcheading: ["Red string"],
+              },
+            ],
+          },
+          {
+            stepName: "Final Answers",
+            stepNumber: 5,
+            stepQuestions: [
+              {
+                question:
+                  "What are the final accelerations, tensions and normal reactions?",
+                options: [
+                  "a\u2081 = 1.952, a\u2082= -0.9763, a\u2083= -0.9763, T\u2081= 27.07, T\u2082= 54.14, N\u2081= 21.21",
+                  "a\u2081= 162.18, a\u2082= 540.5, a\u2083= -2.97, T\u2081= -5.94, T\u2082= 9.85, N\u2081= 105.65",
+                  "a\u2081= 17.73, a\u2082= 540.5, a\u2083= 105.65, T\u2081= -7.92, T\u2082= -6.93, N\u2081= 108.12",
+                  "a\u2081= 63.39, a\u2082= 19.7, a\u2083= -1.98, T\u2081= 270.3, T\u2082= 378.35, N\u2081= -9.9",
+                ],
+                answer: 0,
+                threejsstep: "motion",
+                threejssubstep: 0,
+                threejssubsubstep: 2,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
+                  "Red string: +a\u2082-a\u2083=0",
+                ],
+                showfc: [],
+                showfcheading: [],
+                tobeshown: 1,
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
+                  "Yellow block: +60-T\u2082=6a\u2082",
+                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
+                  "Red string: +a\u2082-a\u2083=0",
+                  "Final Answers: a\u2081 = 1.952, a\u2082= -0.9763, a\u2083= -0.9763, T\u2081= 27.07, T\u2082= 54.14, N\u2081= 21.21",
+                ],
+              },
+            ],
+          },
+      ],
+      },
+    ],
+  },
+  {
+    chapterNumber: 1,
+    chapterName: "Newton's law",
+    steps: [
+      { stepName: "Find no.of unknowns", stepStatus: "active", stepNumber: 1 },
+      {
+        stepName: "Use F= ma for each object",
+        stepStatus: "inactive",
+        stepNumber: 2,
+      },
+      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 3 },
+      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 4 },
+    ],
+    questions: [
+      {
+        questionNumber: 69,
+        questionDesc:
+        "A red block of mass 3 kg and yellow block of mass 4 kg are in motion as follows. Determine the acceleration of the masses, tension in the string and normal reaction. The wedge is fixed",
         steps: [
           {
             stepName: "Identify Motion of objects",
@@ -51257,7 +52269,7 @@ export const questionData = [
             stepQuestions: [
               {
                 question:
-                  "How many surfaces are in contact with the red block?",
+                  ". How many surfaces are in contact with the red block?",
                 options: [2, 1, 3, 4],
                 threejsstep: "fbd",
                 threejssubstep: 1,
@@ -51280,7 +52292,7 @@ export const questionData = [
               },
               {
                 question:
-                  "What is the direction of normal reaction on block 1 due to B?",
+                  ". What is the direction of normal reaction on block 1 due to B?",
                 options: ["N1 perpendicular up", "N1 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
@@ -51497,10 +52509,10 @@ export const questionData = [
               },
               {
                 question:
-                  "At how many points does the imaginary sphere for second pulley cuts the strings",
+                  "At how many points does the imaginary sphere for third pulley cuts the strings",
                 options: [0, 1, 2, 3],
                 threejsstep: "fbd",
-                threejssubstep: 4,
+                threejssubstep: 5,
                 threejssubsubstep: -100,
                 show1: [
                   "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
@@ -51521,16 +52533,16 @@ export const questionData = [
                   "Rightward Forces: ",
                   "Leftward Forces: ",
                 ],
-                showfcheading: ["Second pulley"],
+                showfcheading: ["Third pulley"],
                 answer: 3,
               },
               {
                 question:
-                  "What is the force at this point of intersection on second pulley?",
+                  "What is the force at this point of intersection on third pulley?",
                 options: ["T\u2081 upwards ", "T\u2081 downwards "],
                 answer: 0,
                 threejsstep: "fbd",
-                threejssubstep: 4,
+                threejssubstep: 5,
                 threejssubsubstep: 1,
                 show1: [
                   "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
@@ -51551,15 +52563,15 @@ export const questionData = [
                   "Rightward Forces: ",
                   "Leftward Forces: ",
                 ],
-                showfcheading: ["Second pulley"],
+                showfcheading: ["Third pulley"],
               },
               {
                 question:
                   "What is the force at this point of intersection on second pulley?",
-                options: ["T\u2081 upwards ", "T\u2081 downwards "],
-                answer: 0,
+                options: ["T\u2082 upwards ", "T\u2082 downwards "],
+                answer: 1,
                 threejsstep: "fbd",
-                threejssubstep: 4,
+                threejssubstep: 5,
                 threejssubsubstep: 2,
                 show1: [
                   "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
@@ -51580,15 +52592,15 @@ export const questionData = [
                   "Rightward Forces: ",
                   "Leftward Forces: ",
                 ],
-                showfcheading: ["Second pulley"],
+                showfcheading: ["Third pulley"],
               },
               {
                 question:
-                  "What is the force at this point of intersection on second pulley?",
-                options: ["T\u2082 downwards ", "T\u2082 upwards "],
-                answer: 0,
+                  "What is the force at this point of intersection on third pulley?",
+                options: ["T\u2081 downwards ", "T\u2081 upwards "],
+                answer: 1,
                 threejsstep: "fbd",
-                threejssubstep: 4,
+                threejssubstep: 5,
                 threejssubsubstep: 3,
                 show1: [
                   "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
@@ -51604,20 +52616,20 @@ export const questionData = [
                 ],
                 type: "basic",
                 showfc: [
-                  "Upward Forces: T\u2081, T\u2081, ",
-                  "Downward Forces: ",
+                  "Upward Forces: T\u2081, ",
+                  "Downward Forces: T\u2082",
                   "Rightward Forces: ",
                   "Leftward Forces: ",
                 ],
-                showfcheading: ["Second pulley"],
+                showfcheading: ["Third pulley"],
               },
               {
                 question:
                   "Whats the FBD equation of second pulley in the y-direction",
-                options: ["-2T\u2081+T\u2082=0", "2T\u2081+T\u2082=0"],
+                options: ["T\u2082-2T\u2081=0", "T\u2082+2T\u2081=0"],
                 answer: 0,
                 threejsstep: "fbd",
-                threejssubstep: 4,
+                threejssubstep: 5,
                 threejssubsubstep: 100,
                 show1: [
                   "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
@@ -51631,307 +52643,21 @@ export const questionData = [
                   "Rightward Forces: ",
                   "Leftward Forces: ",
                 ],
-                showfcheading: ["Second pulley"],
+                showfcheading: ["Third pulley"],
                 show2: [
                   "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Second pulley: -2T\u2081+T\u2082=0",
+                  "Third pulley: T\u2082-2T\u2081=0",
                 ],
                 type: "basic",
-              },
-            ],
-          },
-          {
-            stepName: "Constraint Understanding",
-            stepNumber: 3,
-            stepQuestions: [
-              {
-                question:
-                  "What is the rate of change of the length of string if the dog is moving towards right with speed 5 m/s",
-                options: [5, -5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 1,
-                threejssubsubstep: [0, 5],
-                show1: [],
-                show2: ["Rate of change of length of the string is 5 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string if the dog is moving towards left with speed 5 m/s",
-                options: [5, -5],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 2,
-                threejssubsubstep: [0, -5],
-                show1: [],
-                show2: ["Rate of change of length of the string is -5 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string if the human is moving towards right with speed 3 m/s",
-                options: [-3, 3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 3,
-                threejssubsubstep: [3, 0],
-                show1: [],
-                show2: ["Rate of change of length of the string is -3 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string if the human is moving towards left with speed 3 m/s",
-                options: [-3, 3],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 4,
-                threejssubsubstep: [-3, 0],
-                show1: [],
-                show2: ["Rate of change of length of the string is 3 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
-                options: [5, -5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 5,
-                threejssubsubstep: [3, 5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 6,
-                threejssubsubstep: [3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
-                options: [-8, 2, 8, -2],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 7,
-                threejssubsubstep: [3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is 2m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
-                options: [5, -5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 8,
-                threejssubsubstep: [-3, 5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 9,
-                threejssubsubstep: [-3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
-                options: [-2, 2, 8, -8],
-                answer: 2,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 10,
-                threejssubsubstep: [-3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is 8m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
-                options: [-5, 5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 11,
-                threejssubsubstep: [3, -5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
-                options: [-3, 3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 12,
-                threejssubsubstep: [3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
-                options: [2, -8, 8, -2],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 13,
-                threejssubsubstep: [3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is -8m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
-                options: [-5, 5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 14,
-                threejssubsubstep: [-3, -5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 15,
-                threejssubsubstep: [-3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
-                options: [-2, -8, 2, 8],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 16,
-                threejssubsubstep: [-3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is -2m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
               },
             ],
           },
           {
             stepName: "Constraint Equations",
-            stepNumber: 4,
+            stepNumber: 3,
             stepQuestions: [
               {
                 question:
@@ -51987,11 +52713,11 @@ export const questionData = [
               },
               {
                 question:
-                  "What is double derivative of change in l\u2082 for pink string due to the first pulley?",
+                  "What is double derivative of change in l\u2082 for pink string due to the third pulley?",
                 options: ["+a\u2083", "-a\u2083"],
                 answer: 0,
                 threejsstep: "constraint",
-                threejssubstep: 2,
+                threejssubstep: 3,
                 threejssubsubstep: 2,
                 show1: [
                   "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
@@ -52013,11 +52739,11 @@ export const questionData = [
               },
               {
                 question:
-                  "What is double derivative of change in l\u2083 for pink string due to the first pulley?",
+                  "What is double derivative of change in l\u2083 for pink string due to the third pulley?",
                 options: ["+a\u2083", "-a\u2083"],
                 answer: 0,
                 threejsstep: "constraint",
-                threejssubstep: 3,
+                threejssubstep: 5,
                 threejssubsubstep: 1,
                 show1: [
                   "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
@@ -52075,7 +52801,7 @@ export const questionData = [
               },
               {
                 question:
-                  "What is double derivative of change in l\u2081 for red string due to the first pulley?",
+                  "What is double derivative of change in l\u2081 for red string due to the third pulley?",
                 options: ["+a\u2083", "-a\u2083"],
                 answer: 1,
                 threejsstep: "constraint",
@@ -52103,7 +52829,7 @@ export const questionData = [
               },
               {
                 question:
-                  "What is double derivative of change in l\u2081 for red string due to yellowblock?",
+                  "What is double derivative of change in l\u2081 for red string due to yellow block?",
                 options: ["+a\u2082", "-a\u2082"],
                 answer: 0,
                 threejsstep: "constraint",
@@ -52166,21 +52892,21 @@ export const questionData = [
           },
           {
             stepName: "Final Answers",
-            stepNumber: 5,
+            stepNumber: 4,
             stepQuestions: [
               {
                 question:
                   "What are the final accelerations, tensions and normal reactions?",
                 options: [
                   "a\u2081= 1.97, a\u2082= -0.99, a\u2083= -0.99, T\u2081= 27.03, T\u2082= 54.05, N\u2081= 21.13",
-                  "a\u2081= 162.18, a\u2082= 540.5, a\u2083= -2.9699999999999998, T\u2081= -5.9399999999999995, T\u2082= 9.85, N\u2081= 105.64999999999999",
-                  "a\u2081= 17.73, a\u2082= 540.5, a\u2083= 105.64999999999999, T\u2081= -7.92, T\u2082= -6.93, N\u2081= 108.12",
-                  "a\u2081= 63.39, a\u2082= 19.7, a\u2083= -1.98, T\u2081= 270.3, T\u2082= 378.34999999999997, N\u2081= -9.9",
+                  "a\u2081= 162.18, a\u2082= 540.5, a\u2083= -2.97, T\u2081= -5.94, T\u2082= 9.85, N\u2081= 105.65",
+                  "a\u2081= 17.73, a\u2082= 540.5, a\u2083= 105.65, T\u2081= -7.92, T\u2082= -6.93, N\u2081= 108.12",
+                  "a\u2081= 63.39, a\u2082= 19.7, a\u2083= -1.98, T\u2081= 270.3, T\u2082= 378.35, N\u2081= -9.9",
                 ],
                 answer: 0,
                 threejsstep: "finalanswer",
                 threejssubstep: 0,
-                threejssubsubstep: 0,
+                threejssubsubstep: 2,
                 show1: [
                   "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
@@ -52206,7 +52932,7 @@ export const questionData = [
               },
             ],
           },
-        ],
+      ],
       },
     ],
   },
@@ -52220,1872 +52946,818 @@ export const questionData = [
         stepStatus: "inactive",
         stepNumber: 2,
       },
-      {
-        stepName: "Understanding Constraint equation",
-        stepStatus: "inactive",
-        stepNumber: 3,
-      },
-      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 4 },
-      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 5 },
-    ],
-    questions: [
-      {
-        questionNumber: 69,
-        questionDesc:
-          "A red block and yellow block, both of mass 1 kg are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
-        steps: [
-          {
-            stepName: "Identify Motion of objects",
-            stepNumber: 1,
-            stepQuestions: [
-              {
-                question: "How many moving objects are present?",
-                options: [5, 2, 3, 0],
-                answer: 1,
-                threejsstep: "motion",
-                threejssubstep: 0,
-                threejssubsubstep: -1,
-                show1: [""],
-                show2: ["Unknowns: a\u2081, a\u2082"],
-                showfc: [],
-                type: "basic",
-                showfcheading: [],
-              },
-              {
-                question: "How many strings are there?",
-                options: [3, 0, 4, 1],
-                answer: 3,
-                threejsstep: "motion",
-                threejssubstep: 1,
-                threejssubsubstep: 0,
-                show1: ["Unknowns: a\u2081, a\u2082"],
-                show2: ["Unknowns: a\u2081, a\u2082, T\u2081, "],
-                showfc: [],
-                type: "basic",
-                showfcheading: [],
-              },
-              {
-                question: "How many contacting surfaces are there?",
-                options: [0, 1, 2, 4],
-                answer: 1,
-                threejsstep: "motion",
-                threejssubstep: 2,
-                threejssubsubstep: 0,
-                show1: ["Unknowns: a\u2081, a\u2082, T\u2081"],
-                show2: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-            ],
-          },
-          {
-            stepName: "Write FBD equation for each Moving block",
-            stepNumber: 2,
-            stepQuestions: [
-              {
-                question:
-                  "How many surfaces are in contact with the red block?",
-                options: [1, 0, 4, 2],
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: -200,
-                show1: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                show2: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                type: "basic",
-                answer: 0,
-                showfc: [
-                  "Upward Perpendicular Forces: ",
-                  "Downward Perpendicular Forces: ",
-                  "Forces up the incline: ",
-                  "Forces down the incline: ",
-                ],
-                showfcheading: ["Red block"],
-              },
-              {
-                question:
-                  "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: 1,
-                show1: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                show2: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                type: "basic",
-                answer: 0,
-                showfc: [
-                  "Upward Perpendicular Forces: ",
-                  "Downward Perpendicular Forces: ",
-                  "Forces up the incline: ",
-                  "Forces down the incline: ",
-                ],
-                showfcheading: ["Red block"],
-              },
-              {
-                question:
-                  "At how many points does the imaginary sphere for red block cuts the strings",
-                options: [0, 1, 2, 3],
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: -100,
-                show1: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                show2: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                type: "basic",
-                showfc: [
-                  "Upward Perpendicular Forces: ",
-                  "Downward Perpendicular Forces: ",
-                  "Forces up the incline: ",
-                  "Forces down the incline: ",
-                ],
-                showfcheading: ["Red block"],
-                answer: 1,
-              },
-              {
-                question:
-                  "What is the force at this point of intersection on red block?",
-                options: [
-                  "T\u2081 up the incline ",
-                  "T\u2081 down the incline ",
-                ],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: 2,
-                show1: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                show2: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                type: "basic",
-                showfc: [
-                  "Upward Perpendicular Forces: ",
-                  "Downward Perpendicular Forces: ",
-                  "Forces up the incline: ",
-                  "Forces down the incline: ",
-                ],
-                showfcheading: ["Red block"],
-              },
-              {
-                question:
-                  "Whats the FBD equation of red block along the incline?",
-                options: [
-                  "+T\u2081+30sin(45\u00b0)=3a\u2081",
-                  "+T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "-T\u2081+30sin(45\u00b0)=3a\u2081",
-                  "-T\u2081-30sin(45\u00b0)=3a\u2081",
-                ],
-                answer: 1,
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: 100,
-                show1: ["Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, "],
-                showfc: [
-                  "Upward Perpendicular Forces: N1, ",
-                  "Downward Perpendicular Forces: 30cos(45\u00b0)",
-                  "Forces up the incline: T\u2081, ",
-                  "Forces down the incline: 30sin(45\u00b0)",
-                ],
-                showfcheading: ["Red block"],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                ],
-                type: "basic",
-              },
-              {
-                question:
-                  "Whats the FBD equation of red block perpendicular to the incline?",
-                options: [
-                  "+N\u2081-30cos(45\u00b0)=0",
-                  "-N\u2081-30cos(45\u00b0)=0",
-                ],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: 100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                ],
-                showfc: [
-                  "Upward Perpendicular Forces: N1, ",
-                  "Downward Perpendicular Forces: 30cos(45\u00b0)",
-                  "Forces up the incline: T\u2081, ",
-                  "Forces down the incline: 30sin(45\u00b0)",
-                ],
-                showfcheading: ["Red block"],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                ],
-                type: "basic",
-              },
-              {
-                question:
-                  "At how many points does the imaginary sphere for yellow block cuts the strings",
-                options: [0, 1, 2, 3],
-                threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: -100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Yellow block"],
-                answer: 1,
-              },
-              {
-                question:
-                  "What is the force at this point of intersection on yellow block?",
-                options: ["T\u2081 upwards", "T\u2081 downwards"],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: 1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Yellow block"],
-              },
-              {
-                question:
-                  "Whats the FBD equation of yellow block in the y-direction",
-                options: [
-                  "+60+T\u2081=6a\u2082",
-                  "-60-T\u2081=6a\u2082",
-                  "-60+T\u2081=6a\u2082",
-                  "+60-T\u2081=6a\u2082",
-                ],
-                answer: 3,
-                threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: 100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                ],
-                showfc: [
-                  "Upward Forces: T\u2081, ",
-                  "Downward Forces: 60",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Yellow block"],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                  "Yellow block: +60-T\u2081=6a\u2082",
-                ],
-                type: "basic",
-              },
-            ],
-          },
-          {
-            stepName: "Constraint Understanding",
-            stepNumber: 3,
-            stepQuestions: [
-              {
-                question:
-                  "What is the rate of change of the length of string if the dog is moving towards right with speed 5 m/s",
-                options: [5, -5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 1,
-                threejssubsubstep: [0, 5],
-                show1: [],
-                show2: ["Rate of change of length of the string is 5 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string if the dog is moving towards left with speed 5 m/s",
-                options: [5, -5],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 2,
-                threejssubsubstep: [0, -5],
-                show1: [],
-                show2: ["Rate of change of length of the string is -5 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string if the human is moving towards right with speed 3 m/s",
-                options: [3, -3],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 3,
-                threejssubsubstep: [3, 0],
-                show1: [],
-                show2: ["Rate of change of length of the string is -3 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string if the human is moving towards left with speed 3 m/s",
-                options: [3, -3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 4,
-                threejssubsubstep: [-3, 0],
-                show1: [],
-                show2: ["Rate of change of length of the string is 3 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
-                options: [-5, 5],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 5,
-                threejssubsubstep: [3, 5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 6,
-                threejssubsubstep: [3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
-                options: [-8, 8, -2, 2],
-                answer: 3,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 7,
-                threejssubsubstep: [3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is 2m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
-                options: [-5, 5],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 8,
-                threejssubsubstep: [-3, 5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 9,
-                threejssubsubstep: [-3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
-                options: [2, 8, -2, -8],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 10,
-                threejssubsubstep: [-3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is 8m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
-                options: [5, -5],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 11,
-                threejssubsubstep: [3, -5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 12,
-                threejssubsubstep: [3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
-                options: [2, 8, -8, -2],
-                answer: 2,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 13,
-                threejssubsubstep: [3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is -8m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
-                options: [5, -5],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 14,
-                threejssubsubstep: [-3, -5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 15,
-                threejssubsubstep: [-3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
-                options: [-2, 8, -8, 2],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 16,
-                threejssubsubstep: [-3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is -2m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-            ],
-          },
-          {
-            stepName: "Constraint Equations",
-            stepNumber: 4,
-            stepQuestions: [
-              {
-                question:
-                  "What is the number of parts which change length in the pink string?",
-                options: [7, 6, 4, 5],
-                answer: 2,
-                threejsstep: "constraint",
-                threejssubstep: 1,
-                threejssubsubstep: -1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                  "Yellow block: +60-T\u2081=6a\u2082",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                  "Yellow block: +60-T\u2081=6a\u2082",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: ["Pink string"],
-              },
-              {
-                question:
-                  "What is double derivative of change in l\u2081 for pink string due to red block?",
-                options: ["+a\u2081", "-a\u2081"],
-                answer: 1,
-                threejsstep: "constraint",
-                threejssubstep: 1,
-                threejssubsubstep: 1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                  "Yellow block: +60-T\u2081=6a\u2082",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                  "Yellow block: +60-T\u2081=6a\u2082",
-                ],
-                type: "basic",
-                showfc: ["l\u2081 + l\u2082 = constant"],
-                showfcheading: ["Pink string"],
-              },
-              {
-                question: "What is the constraint equation for pink string?",
-                options: [
-                  "+a\u2081+a\u2082=0",
-                  "+a\u2081-a\u2082=0",
-                  "-a\u2081+a\u2082=0",
-                  "-a\u2081-a\u2082=0",
-                ],
-                answer: 2,
-                threejsstep: "constraint",
-                threejssubstep: 1,
-                threejssubsubstep: 300,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                  "Yellow block: +60-T\u2081=6a\u2082",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                  "Yellow block: +60-T\u2081=6a\u2082",
-                  "Pink string: -a\u2081+a\u2082=0",
-                ],
-                type: "basic",
-                showfc: [
-                  "l\u2081 + l\u2082 = constant",
-                  "l\u2081'' = -a\u2081",
-                  "l\u2082'' =",
-                ],
-                showfcheading: ["Pink string"],
-              },
-            ],
-          },
-          {
-            stepName: "Final Answers",
-            stepNumber: 5,
-            stepQuestions: [
-              {
-                question:
-                  "What are the final accelerations, tensions and normal reactions?",
-                options: [
-                  "a\u2081= 21.549999999999997, a\u2082= 476.21000000000004, T\u2081= 68.02, T\u2082= 126.78, T\u2083= 340.15, N\u2081= -4.33",
-                  "a\u2081= 12.93, a\u2082= 612.27, T\u2081= 408.18, T\u2082= 306.09, T\u2083= -8.66, N\u2081= 211.29999999999998",
-                  "a\u2081= 4.31, a\u2082= -4.33, T\u2081= 34.01, T\u2082= 68.03, T\u2083= 68.03, N\u2081= 21.13",
-                  "a\u2081= 126.78, a\u2082= 136.06, T\u2081= -21.65, T\u2082= 38.79, T\u2083= 680.3, N\u2081= 204.06",
-                ],
-                answer: 2,
-                threejsstep: "finalanswer",
-                threejssubstep: 0,
-                threejssubsubstep: 0,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                  "Yellow block: +60-T\u2081=6a\u2082",
-                  "Pink string: -a\u2081+a\u2082=0",
-                ],
-                showfc: [],
-                showfcheading: [],
-                tobeshown: 1,
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, T\u2081, N\u2081, ",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
-                  "Red block: +N\u2081-30cos(45\u00b0)=0",
-                  "Yellow block: +60-T\u2081=6a\u2082",
-                  "Pink string: -a\u2081+a\u2082=0",
-                  "Final Answers: a\u2081= 4.31, a\u2082= -4.33, T\u2081= 34.01, T\u2082= 68.03, T\u2083= 68.03, N\u2081= 21.13",
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    chapterNumber: 1,
-    chapterName: "Newton's law",
-    steps: [
-      { stepName: "Find no.of unknowns", stepStatus: "active", stepNumber: 1 },
-      {
-        stepName: "Use F= ma for each object",
-        stepStatus: "inactive",
-        stepNumber: 2,
-      },
-      {
-        stepName: "Understanding Constraint equation",
-        stepStatus: "inactive",
-        stepNumber: 3,
-      },
-      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 4 },
-      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 5 },
+      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 3 },
+      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 4 },
     ],
     questions: [
       {
         questionNumber: 70,
         questionDesc:
-          "A red block and yellow block, both of mass 1 kg are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
+          "A red block of 3 kg and yellow block of 4 kg are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
         steps: [
           {
-            stepName: "Identify Motion of objects",
-            stepNumber: 1,
-            stepQuestions: [
-              {
-                question: "How many moving objects are present?",
-                options: [2, 1, 3, 6],
-                answer: 2,
-                threejsstep: "motion",
-                threejssubstep: 0,
-                threejssubsubstep: -1,
-                show1: [""],
-                show2: ["Unknowns: a\u2081, a\u2082, a\u2083"],
-                showfc: [],
-                type: "basic",
-                showfcheading: [],
-              },
-              {
-                question: "How many strings are there?",
-                options: [1, 0, 5, 2],
-                answer: 3,
-                threejsstep: "motion",
-                threejssubstep: 1,
-                threejssubsubstep: 0,
-                show1: ["Unknowns: a\u2081, a\u2082, a\u2083"],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
-                ],
-                showfc: [],
-                type: "basic",
-                showfcheading: [],
-              },
-              {
-                question: "How many contacting surfaces are there?",
-                options: [3, 1, 0, 2],
-                answer: 3,
-                threejsstep: "motion",
-                threejssubstep: 2,
-                threejssubsubstep: 0,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-            ],
+              "stepName": "Identify Motion of objects",
+              "stepNumber": 1,
+              "stepQuestions": [
+                  {
+                      "question": "How many moving objects are present?",
+                      "options": [
+                          0,
+                          3,
+                          2,
+                          4
+                      ],
+                      "answer": 1,
+                      "threejsstep": "motion",
+                      "threejssubstep": 0,
+                      "threejssubsubstep": -1,
+                      "show1": [
+                          ""
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083"
+                      ],
+                      "showfc": [],
+                      "type": "basic",
+                      "showfcheading": []
+                  },
+                  {
+                      "question": "How many strings are there?",
+                      "options": [
+                          2,
+                          3,
+                          5,
+                          1
+                      ],
+                      "answer": 0,
+                      "threejsstep": "motion",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": 0,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, "
+                      ],
+                      "showfc": [],
+                      "type": "basic",
+                      "showfcheading": []
+                  },
+                  {
+                      "question": "How many contacting surfaces are there?",
+                      "options": [
+                          4,
+                          0,
+                          1,
+                          2
+                      ],
+                      "answer": 2,
+                      "threejsstep": "motion",
+                      "threejssubstep": 2,
+                      "threejssubsubstep": 0,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "type": "basic",
+                      "showfc": [],
+                      "showfcheading": []
+                  }
+              ]
           },
           {
-            stepName: "Write FBD equation for each Moving block",
-            stepNumber: 2,
-            stepQuestions: [
-              {
-                question:
-                  "How many surfaces are in contact with the red block?",
-                options: [0, 2, 3, 1],
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: -200,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                type: "basic",
-                answer: 3,
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Red block"],
-              },
-              {
-                question:
-                  "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: 1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                type: "basic",
-                answer: 0,
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Red block"],
-              },
-              {
-                question:
-                  "At how many points does the imaginary sphere for red block cuts the strings",
-                options: [0, 1, 2, 3],
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: -100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Red block"],
-                answer: 1,
-              },
-              {
-                question:
-                  "What is the force at this point of intersection on red block?",
-                options: ["T\u2081 rightwards", "T\u2081 leftwards"],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: 2,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Red block"],
-              },
-              {
-                question:
-                  "Whats the FBD equation of red block in the y-direction",
-                options: ["+N\u2081-10=0", "-N\u2081-10=0"],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: 100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                ],
-                showfc: [
-                  "Upward Forces: N1, ",
-                  "Downward Forces: 10",
-                  "Rightward Forces: T\u2081, ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Red block"],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                ],
-                type: "basic",
-              },
-              {
-                question:
-                  "Whats the FBD equation of red block in the x-direction",
-                options: ["+T\u2081=a\u2081", "-T\u2081=a\u2081"],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 1,
-                threejssubsubstep: 100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                ],
-                showfc: [
-                  "Upward Forces: N1, ",
-                  "Downward Forces: 10",
-                  "Rightward Forces: T\u2081, ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Red block"],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                type: "basic",
-              },
-              {
-                question:
-                  "How many surfaces are in contact with the yellow block?",
-                options: [0, 1, 4, 3],
-                threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: -200,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                type: "basic",
-                answer: 1,
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Yellow block"],
-              },
-              {
-                question:
-                  "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
-                threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: 1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                type: "basic",
-                answer: 0,
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Yellow block"],
-              },
-              {
-                question:
-                  "At how many points does the imaginary sphere for yellow block cuts the strings",
-                options: [0, 1, 2, 3],
-                threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: -100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Yellow block"],
-                answer: 1,
-              },
-              {
-                question:
-                  "What is the force at this point of intersection on yellow block?",
-                options: ["T\u2082 rightwards", "T\u2082 leftwards"],
-                answer: 1,
-                threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: 2,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["Yellow block"],
-              },
-              {
-                question:
-                  "Whats the FBD equation of yellow block in the y-direction",
-                options: ["+N\u2082-10=0", "-N\u2082-10=0"],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: 100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                ],
-                showfc: [
-                  "Upward Forces: N2, ",
-                  "Downward Forces: 10",
-                  "Rightward Forces: ",
-                  "Leftward Forces: T\u2082, ",
-                ],
-                showfcheading: ["Yellow block"],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                ],
-                type: "basic",
-              },
-              {
-                question:
-                  "Whats the FBD equation of yellow block in the x-direction",
-                options: [
-                  "+T\u2082+10=a\u2082",
-                  "-T\u2082+10=a\u2082",
-                  "+T\u2082-10=a\u2082",
-                  "-T\u2082-10=a\u2082",
-                ],
-                answer: 1,
-                threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: 100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                ],
-                showfc: [
-                  "Upward Forces: N2, ",
-                  "Downward Forces: 10",
-                  "Rightward Forces: ",
-                  "Leftward Forces: T\u2082, ",
-                ],
-                showfcheading: ["Yellow block"],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                type: "basic",
-              },
-              {
-                question:
-                  "At how many points does the imaginary sphere for first pulley cuts the strings",
-                options: [0, 1, 2, 3],
-                threejsstep: "fbd",
-                threejssubstep: 3,
-                threejssubsubstep: -100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["First pulley"],
-                answer: 3,
-              },
-              {
-                question:
-                  "What is the force at this point of intersection on first pulley?",
-                options: ["T\u2081 leftwards", "T\u2081 rightwards"],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 3,
-                threejssubsubstep: 1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: ",
-                ],
-                showfcheading: ["First pulley"],
-              },
-              {
-                question:
-                  "What is the force at this point of intersection on first pulley?",
-                options: ["T\u2081 leftwards", "T\u2081 rightwards"],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 3,
-                threejssubsubstep: 2,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: T\u2081, ",
-                ],
-                showfcheading: ["First pulley"],
-              },
-              {
-                question:
-                  "What is the force at this point of intersection on first pulley?",
-                options: ["T\u2082 rightwards", "T\u2082 leftwards"],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 3,
-                threejssubsubstep: 3,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                type: "basic",
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: ",
-                  "Leftward Forces: T\u2081, T\u2081, ",
-                ],
-                showfcheading: ["First pulley"],
-              },
-              {
-                question:
-                  "Whats the FBD equation of first pulley in the x-direction",
-                options: ["-2T\u2081+T\u2082=0", "2T\u2081+T\u2082=0"],
-                answer: 0,
-                threejsstep: "fbd",
-                threejssubstep: 3,
-                threejssubsubstep: 100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                ],
-                showfc: [
-                  "Upward Forces: ",
-                  "Downward Forces: ",
-                  "Rightward Forces: T\u2082, ",
-                  "Leftward Forces: T\u2081, T\u2081, ",
-                ],
-                showfcheading: ["First pulley"],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                type: "basic",
-              },
-            ],
+              "stepName": "Write FBD equation for each Moving block",
+              "stepNumber": 2,
+              "stepQuestions": [
+                  {
+                      "question": "How many surfaces are in contact with the red block?",
+                      "options": [
+                          4,
+                          3,
+                          1,
+                          0
+                      ],
+                      "threejsstep": "fbd",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": -200,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "type": "basic",
+                      "answer": 2,
+                      "showfc": [
+                          "Upward Perpendicular Forces: ",
+                          "Downward Perpendicular Forces: ",
+                          "Forces up the incline: ",
+                          "Forces down the incline: "
+                      ],
+                      "showfcheading": [
+                          "Red block"
+                      ]
+                  },
+                  {
+                      "question": "What is the direction of normal reaction on block 1 due to B?",
+                      "options": [
+                          "N1 perpendicular up",
+                          "N1 perpendicular down"
+                      ],
+                      "threejsstep": "fbd",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": 1,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "type": "basic",
+                      "answer": 0,
+                      "showfc": [
+                          "Upward Perpendicular Forces: ",
+                          "Downward Perpendicular Forces: ",
+                          "Forces up the incline: ",
+                          "Forces down the incline: "
+                      ],
+                      "showfcheading": [
+                          "Red block"
+                      ]
+                  },
+                  {
+                      "question": "At how many points does the imaginary sphere for red block cuts the strings",
+                      "options": [
+                          0,
+                          1,
+                          2,
+                          3
+                      ],
+                      "threejsstep": "fbd",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": -100,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "Upward Perpendicular Forces: ",
+                          "Downward Perpendicular Forces: ",
+                          "Forces up the incline: ",
+                          "Forces down the incline: "
+                      ],
+                      "showfcheading": [
+                          "Red block"
+                      ],
+                      "answer": 1
+                  },
+                  {
+                      "question": "What is the force at this point of intersection on red block?",
+                      "options": [
+                          "T\u2081 down the incline ",
+                          "T\u2081 up the incline "
+                      ],
+                      "answer": 1,
+                      "threejsstep": "fbd",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": 2,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "Upward Perpendicular Forces: ",
+                          "Downward Perpendicular Forces: ",
+                          "Forces up the incline: ",
+                          "Forces down the incline: "
+                      ],
+                      "showfcheading": [
+                          "Red block"
+                      ]
+                  },
+                  {
+                      "question": "Whats the FBD equation of red block along the incline?",
+                      "options": [
+                          "+30sin(45\u00b0)+T\u2081=3a\u2081",
+                          "-30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "-30sin(45\u00b0)+T\u2081=3a\u2081",
+                          "+30sin(45\u00b0)-T\u2081=3a\u2081"
+                      ],
+                      "answer": 3,
+                      "threejsstep": "fbd",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": 100,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
+                      ],
+                      "showfc": [
+                          "Upward Perpendicular Forces: N1, ",
+                          "Downward Perpendicular Forces: 30cos(45\u00b0)",
+                          "Forces up the incline: T\u2081, ",
+                          "Forces down the incline: 30sin(45\u00b0)"
+                      ],
+                      "showfcheading": [
+                          "Red block"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081"
+                      ],
+                      "type": "basic"
+                  },
+                  {
+                      "question": "Whats the FBD equation of red block perpendicular to the incline?",
+                      "options": [
+                          "+N\u2081-30cos(45\u00b0)=0",
+                          "-N\u2081-30cos(45\u00b0)=0"
+                      ],
+                      "answer": 0,
+                      "threejsstep": "fbd",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": 100,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081"
+                      ],
+                      "showfc": [
+                          "Upward Perpendicular Forces: N1, ",
+                          "Downward Perpendicular Forces: 30cos(45\u00b0)",
+                          "Forces up the incline: T\u2081, ",
+                          "Forces down the incline: 30sin(45\u00b0)"
+                      ],
+                      "showfcheading": [
+                          "Red block"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0"
+                      ],
+                      "type": "basic"
+                  },
+                  {
+                      "question": "At how many points does the imaginary sphere for yellow block cuts the strings",
+                      "options": [
+                          0,
+                          1,
+                          2,
+                          3
+                      ],
+                      "threejsstep": "fbd",
+                      "threejssubstep": 2,
+                      "threejssubsubstep": -100,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "Upward Forces: ",
+                          "Downward Forces: ",
+                          "Rightward Forces: ",
+                          "Leftward Forces: "
+                      ],
+                      "showfcheading": [
+                          "Yellow block"
+                      ],
+                      "answer": 1
+                  },
+                  {
+                      "question": "What is the force at this point of intersection on yellow block?",
+                      "options": [
+                          "T\u2082 upwards",
+                          "T\u2082 downwards"
+                      ],
+                      "answer": 0,
+                      "threejsstep": "fbd",
+                      "threejssubstep": 2,
+                      "threejssubsubstep": 1,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "Upward Forces: ",
+                          "Downward Forces: ",
+                          "Rightward Forces: ",
+                          "Leftward Forces: "
+                      ],
+                      "showfcheading": [
+                          "Yellow block"
+                      ]
+                  },
+                  {
+                      "question": "Whats the FBD equation of yellow block in the y-direction",
+                      "options": [
+                          "+T\u2082+40=4a\u2082",
+                          "+T\u2082-40=4a\u2082",
+                          "-T\u2082+40=4a\u2082",
+                          "-T\u2082-40=4a\u2082"
+                      ],
+                      "answer": 1,
+                      "threejsstep": "fbd",
+                      "threejssubstep": 2,
+                      "threejssubsubstep": 100,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0"
+                      ],
+                      "showfc": [
+                          "Upward Forces: T\u2082, ",
+                          "Downward Forces: 40",
+                          "Rightward Forces: ",
+                          "Leftward Forces: "
+                      ],
+                      "showfcheading": [
+                          "Yellow block"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "type": "basic"
+                  },
+                  {
+                      "question": "At how many points does the imaginary sphere for second pulley cuts the strings",
+                      "options": [
+                          0,
+                          1,
+                          2,
+                          3
+                      ],
+                      "threejsstep": "fbd",
+                      "threejssubstep": 4,
+                      "threejssubsubstep": -100,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "Upward Forces: ",
+                          "Downward Forces: ",
+                          "Rightward Forces: ",
+                          "Leftward Forces: "
+                      ],
+                      "showfcheading": [
+                          "Second pulley"
+                      ],
+                      "answer": 3
+                  },
+                  {
+                      "question": "What is the force at this point of intersection on second pulley?",
+                      "options": [
+                          "T\u2081 upwards ",
+                          "T\u2081 downwards "
+                      ],
+                      "answer": 0,
+                      "threejsstep": "fbd",
+                      "threejssubstep": 4,
+                      "threejssubsubstep": 1,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "Upward Forces: ",
+                          "Downward Forces: ",
+                          "Rightward Forces: ",
+                          "Leftward Forces: "
+                      ],
+                      "showfcheading": [
+                          "Second pulley"
+                      ]
+                  },
+                  {
+                      "question": "What is the force at this point of intersection on second pulley?",
+                      "options": [
+                          "T\u2081 downwards ",
+                          "T\u2081 upwards "
+                      ],
+                      "answer": 1,
+                      "threejsstep": "fbd",
+                      "threejssubstep": 4,
+                      "threejssubsubstep": 2,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "Upward Forces: T\u2081, ",
+                          "Downward Forces: ",
+                          "Rightward Forces: ",
+                          "Leftward Forces: "
+                      ],
+                      "showfcheading": [
+                          "Second pulley"
+                      ]
+                  },
+                  {
+                      "question": "What is the force at this point of intersection on second pulley?",
+                      "options": [
+                          "T\u2082 upwards ",
+                          "T\u2082 downwards "
+                      ],
+                      "answer": 1,
+                      "threejsstep": "fbd",
+                      "threejssubstep": 4,
+                      "threejssubsubstep": 3,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "Upward Forces: T\u2081, T\u2081, ",
+                          "Downward Forces: ",
+                          "Rightward Forces: ",
+                          "Leftward Forces: "
+                      ],
+                      "showfcheading": [
+                          "Second pulley"
+                      ]
+                  },
+                  {
+                      "question": "Whats the FBD equation of second pulley in the y-direction",
+                      "options": [
+                          "+2T\u2081-T\u2082=0",
+                          "-2T\u2081-T\u2082=0"
+                      ],
+                      "answer": 0,
+                      "threejsstep": "fbd",
+                      "threejssubstep": 4,
+                      "threejssubsubstep": 100,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082"
+                      ],
+                      "showfc": [
+                          "Upward Forces: T\u2081, T\u2081, ",
+                          "Downward Forces: T\u2082, ",
+                          "Rightward Forces: ",
+                          "Leftward Forces: "
+                      ],
+                      "showfcheading": [
+                          "Second pulley"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0"
+                      ],
+                      "type": "basic"
+                  }
+              ]
           },
           {
-            stepName: "Constraint Understanding",
-            stepNumber: 3,
-            stepQuestions: [
-              {
-                question:
-                  "What is the rate of change of the length of string if the dog is moving towards right with speed 5 m/s",
-                options: [-5, 5],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 1,
-                threejssubsubstep: [0, 5],
-                show1: [],
-                show2: ["Rate of change of length of the string is 5 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string if the dog is moving towards left with speed 5 m/s",
-                options: [-5, 5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 2,
-                threejssubsubstep: [0, -5],
-                show1: [],
-                show2: ["Rate of change of length of the string is -5 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string if the human is moving towards right with speed 3 m/s",
-                options: [-3, 3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 3,
-                threejssubsubstep: [3, 0],
-                show1: [],
-                show2: ["Rate of change of length of the string is -3 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string if the human is moving towards left with speed 3 m/s",
-                options: [-3, 3],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 4,
-                threejssubsubstep: [-3, 0],
-                show1: [],
-                show2: ["Rate of change of length of the string is 3 m/s"],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
-                options: [5, -5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 5,
-                threejssubsubstep: [3, 5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 6,
-                threejssubsubstep: [3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
-                options: [2, 8, -2, -8],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 7,
-                threejssubsubstep: [3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is 2m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
-                options: [-5, 5],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 8,
-                threejssubsubstep: [-3, 5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 9,
-                threejssubsubstep: [-3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
-                options: [-8, -2, 2, 8],
-                answer: 3,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 10,
-                threejssubsubstep: [-3, 5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is 8m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
-                options: [-5, 5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 11,
-                threejssubsubstep: [3, -5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 1,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 12,
-                threejssubsubstep: [3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
-                options: [2, 8, -2, -8],
-                answer: 3,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 13,
-                threejssubsubstep: [3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is -8m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
-                options: [-5, 5],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 14,
-                threejssubsubstep: [-3, -5],
-                show1: [],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
-                options: [3, -3],
-                answer: 0,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 15,
-                threejssubsubstep: [-3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-              {
-                question:
-                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
-                options: [2, -8, -2, 8],
-                answer: 2,
-                threejsstep: "constraint Understanding",
-                threejssubstep: 16,
-                threejssubsubstep: [-3, -5],
-                show1: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                ],
-                show2: [
-                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
-                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
-                  "Total Rate of change of length of the string due motion of both human and dog is -2m/s",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: [],
-              },
-            ],
+              "stepName": "Constraint Equations",
+              "stepNumber": 3,
+              "stepQuestions": [
+                  {
+                      "question": "What is the number of parts which change length in the pink string?",
+                      "options": [
+                          5,
+                          4,
+                          2,
+                          3
+                      ],
+                      "answer": 2,
+                      "threejsstep": "constraint",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": -1,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0"
+                      ],
+                      "type": "basic",
+                      "showfc": [],
+                      "showfcheading": [
+                          "Pink string"
+                      ]
+                  },
+                  {
+                      "question": "What is double derivative of change in l\u2081 for pink string due to red block?",
+                      "options": [
+                          "+a\u2081",
+                          "-a\u2081"
+                      ],
+                      "answer": 0,
+                      "threejsstep": "constraint",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": 1,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "l\u2081 + l\u2082 = constant"
+                      ],
+                      "showfcheading": [
+                          "Pink string"
+                      ]
+                  },
+                  {
+                      "question": "What is double derivative of change in l\u2082 for pink string due to the first pulley?",
+                      "options": [
+                          "+a\u2083",
+                          "-a\u2083"
+                      ],
+                      "answer": 1,
+                      "threejsstep": "constraint",
+                      "threejssubstep": 2,
+                      "threejssubsubstep": 2,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "l\u2081 + l\u2082 = constant"
+                      ],
+                      "showfcheading": [
+                          "Pink string"
+                      ]
+                  },
+                  {
+                      "question": "What is the constraint equation for pink string?",
+                      "options": [
+                          "+a\u2081+2a\u2083=0",
+                          "+a\u2081-2a\u2083=0",
+                          "-a\u2081+2a\u2083=0",
+                          "-a\u2081-2a\u2083=0"
+                      ],
+                      "answer": 1,
+                      "threejsstep": "constraint",
+                      "threejssubstep": 1,
+                      "threejssubsubstep": 300,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0",
+                          "Pink string: +a\u2081-2a\u2083=0"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "l\u2081 + l\u2082 = constant",
+                          "l\u2081'' = +a\u2081",
+                          "l\u2082'' = -a\u2083"
+                      ],
+                      "showfcheading": [
+                          "Pink string"
+                      ]
+                  },
+                  {
+                      "question": "What is double derivative of change in l\u2081 for red string due to the first pulley?",
+                      "options": [
+                          "+a\u2083",
+                          "-a\u2083"
+                      ],
+                      "answer": 0,
+                      "threejsstep": "constraint",
+                      "threejssubstep": 3,
+                      "threejssubsubstep": 1,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0",
+                          "Pink string: +a\u2081-2a\u2083=0"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0",
+                          "Pink string: +a\u2081-2a\u2083=0"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "l\u2081 = constant"
+                      ],
+                      "showfcheading": [
+                          "Red string"
+                      ]
+                  },
+                  {
+                      "question": "What is double derivative of change in l\u2081 for red string due to yellowblock?",
+                      "options": [
+                          "+a\u2082",
+                          "-a\u2082"
+                      ],
+                      "answer": 1,
+                      "threejsstep": "constraint",
+                      "threejssubstep": 3,
+                      "threejssubsubstep": 2,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0",
+                          "Pink string: +a\u2081-2a\u2083=0"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0",
+                          "Pink string: +a\u2081-2a\u2083=0"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "l\u2081 = constant"
+                      ],
+                      "showfcheading": [
+                          "Red string"
+                      ]
+                  },
+                  {
+                      "question": "What is the constraint equation for red string?",
+                      "options": [
+                          "+a\u2082+a\u2083=0",
+                          "+a\u2082-a\u2083=0",
+                          "-a\u2082+a\u2083=0",
+                          "-a\u2082-a\u2083=0"
+                      ],
+                      "answer": 2,
+                      "threejsstep": "constraint",
+                      "threejssubstep": 2,
+                      "threejssubsubstep": 300,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0",
+                          "Pink string: +a\u2081-2a\u2083=0"
+                      ],
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0",
+                          "Pink string: +a\u2081-2a\u2083=0",
+                          "Red string: -a\u2082+a\u2083=0"
+                      ],
+                      "type": "basic",
+                      "showfc": [
+                          "l\u2081 = constant",
+                          "l\u2081'' = +a\u2083 -a\u2082"
+                      ],
+                      "showfcheading": [
+                          "Red string"
+                      ]
+                  }
+              ]
           },
           {
-            stepName: "Constraint Equations",
-            stepNumber: 4,
-            stepQuestions: [
-              {
-                question:
-                  "What is the number of parts which change length in the pink string?",
-                options: [5, 4, 2, 3],
-                answer: 2,
-                threejsstep: "constraint",
-                threejssubstep: 1,
-                threejssubsubstep: -1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                type: "basic",
-                showfc: [],
-                showfcheading: ["Pink string"],
-              },
-              {
-                question:
-                  "What is double derivative of change in l\u2081 for pink string due to the first pulley?",
-                options: ["+a\u2083", "-a\u2083"],
-                answer: 0,
-                threejsstep: "constraint",
-                threejssubstep: 1,
-                threejssubsubstep: 1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                type: "basic",
-                showfc: ["l\u2081 + l\u2082 = constant"],
-                showfcheading: ["Pink string"],
-              },
-              {
-                question:
-                  "What is double derivative of change in l\u2081 for pink string due to redblock?",
-                options: ["+a\u2081", "-a\u2081"],
-                answer: 1,
-                threejsstep: "constraint",
-                threejssubstep: 1,
-                threejssubsubstep: 2,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                type: "basic",
-                showfc: ["l\u2081 + l\u2082 = constant"],
-                showfcheading: ["Pink string"],
-              },
-              {
-                question:
-                  "What is net double derivative of change in l\u2081 for pink string:",
-                options: [
-                  "+a\u2083+a\u2081",
-                  "-a\u2083-a\u2081",
-                  "-a\u2083+a\u2081",
-                  "+a\u2083-a\u2081",
-                ],
-                answer: [3],
-                threejsstep: "constraint",
-                threejssubstep: 1,
-                threejssubsubstep: 100,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                type: "basic",
-                showfc: ["l\u2081 + l\u2082 = constant"],
-                showfcheading: ["Pink string"],
-              },
-              {
-                question:
-                  "What is double derivative of change in l\u2082 for pink string due to the first pulley?",
-                options: ["+a\u2083", "-a\u2083"],
-                answer: 0,
-                threejsstep: "constraint",
-                threejssubstep: 2,
-                threejssubsubstep: 1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                type: "basic",
-                showfc: ["l\u2081 + l\u2082 = constant"],
-                showfcheading: ["Pink string"],
-              },
-              {
-                question: "What is the constraint equation for pink string?",
-                options: [
-                  "+a\u2081+2a\u2083=0",
-                  "+a\u2081-2a\u2083=0",
-                  "-a\u2081+2a\u2083=0",
-                  "-a\u2081-2a\u2083=0",
-                ],
-                answer: 2,
-                threejsstep: "constraint",
-                threejssubstep: 1,
-                threejssubsubstep: 300,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083=0",
-                ],
-                type: "basic",
-                showfc: [
-                  "l\u2081 + l\u2082 = constant",
-                  "l\u2081'' = +a\u2083-a\u2081",
-                  "l\u2082'' = +a\u2083",
-                ],
-                showfcheading: ["Pink string"],
-              },
-              {
-                question:
-                  "What is double derivative of change in l\u2081 for red string due to the first pulley?",
-                options: ["+a\u2083", "-a\u2083"],
-                answer: 1,
-                threejsstep: "constraint",
-                threejssubstep: 3,
-                threejssubsubstep: 1,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083=0",
-                ],
-                type: "basic",
-                showfc: ["l\u2081 = constant"],
-                showfcheading: ["Red string"],
-              },
-              {
-                question:
-                  "What is double derivative of change in l\u2081 for red string due to yellowblock?",
-                options: ["+a\u2082", "-a\u2082"],
-                answer: 0,
-                threejsstep: "constraint",
-                threejssubstep: 3,
-                threejssubsubstep: 2,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083=0",
-                ],
-                type: "basic",
-                showfc: ["l\u2081 = constant"],
-                showfcheading: ["Red string"],
-              },
-              {
-                question: "What is the constraint equation for red string?",
-                options: [
-                  "+a\u2082+a\u2083=0",
-                  "+a\u2082-a\u2083=0",
-                  "-a\u2082+a\u2083=0",
-                  "-a\u2082-a\u2083=0",
-                ],
-                answer: 1,
-                threejsstep: "constraint",
-                threejssubstep: 2,
-                threejssubsubstep: 300,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083=0",
-                  "Red string: +a\u2082-a\u2083=0",
-                ],
-                type: "basic",
-                showfc: ["l\u2081 = constant", "l\u2081'' = -a\u2083 +a\u2082"],
-                showfcheading: ["Red string"],
-              },
-            ],
-          },
-          {
-            stepName: "Final Answers",
-            stepNumber: 5,
-            stepQuestions: [
-              {
-                question:
-                  "What are the final accelerations, tensions and normal reactions?",
-                options: [
-                  "a\u2081= 20.0, a\u2082= 2.0, a\u2083= 16.0, T\u2081= 72.0, T\u2082= 80.0, N\u2081= 14.0, N\u2082= 20.0",
-                  "a\u2081= 90.0, a\u2082= 32.0, a\u2083= 8.0, T\u2081= 90.0, T\u2082= 24.0, N\u2081= 4.0, N\u2082= 14.0",
-                  "a\u2081= 4.0, a\u2082= 2.0, a\u2083= 2.0, T\u2081= 4.0, T\u2082= 8.0, N\u2081= 10.0, N\u2082= 10.0",
-                  "a\u2081= 36.0, a\u2082= 16.0, a\u2083= 10.0, T\u2081= 40.0, T\u2082= 14.0, N\u2081= 40.0, N\u2082= 4.0",
-                ],
-                answer: 2,
-                threejsstep: "finalanswer",
-                threejssubstep: 0,
-                threejssubsubstep: 0,
-                show1: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083=0",
-                  "Red string: +a\u2082-a\u2083=0",
-                ],
-                showfc: [],
-                showfcheading: [],
-                tobeshown: 1,
-                show2: [
-                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, N\u2082, ",
-                  "Red block: +N\u2081-10=0",
-                  "Red block: +T\u2081=a\u2081",
-                  "Yellow block: +N\u2082-10=0",
-                  "Yellow block: -T\u2082+10=a\u2082",
-                  "First pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083=0",
-                  "Red string: +a\u2082-a\u2083=0",
-                  "Final Answers: a\u2081= 4.0, a\u2082= 2.0, a\u2083= 2.0, T\u2081= 4.0, T\u2082= 8.0, N\u2081= 10.0, N\u2082= 10.0",
-                ],
-              },
-            ],
-          },
-        ],
+              "stepName": "Final Answers",
+              "stepNumber": 4,
+              "stepQuestions": [
+                  {
+                      "question": "What are the final accelerations, tensions and normal reactions?",
+                      "options": [
+                          "a\u2081= -0.28, a\u2082= 0.14, a\u2083= 0.14, T\u2081= 20.28, T\u2082= 40.57, N\u2081= 21.13",
+                          "a\u2081= -2, a\u2082= 169, a\u2083= 0, T\u2081= 0, T\u2082= 365, N\u2081= 183",
+                          "a\u2081= 106, a\u2082= 0, a\u2083= 365, T\u2081= 0, T\u2082= 0, N\u2081= 81",
+                          "a\u2081= -3, a\u2082= 127, a\u2083= 1, T\u2081= 122, T\u2082= 81, N\u2081= 1"
+                      ],
+                      "answer": 0,
+                      "threejsstep": "motion",
+                      "threejssubstep": 0,
+                      "threejssubsubstep": 2,
+                      "show1": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0",
+                          "Pink string: +a\u2081-2a\u2083=0",
+                          "Red string: -a\u2082+a\u2083=0"
+                      ],
+                      "showfc": [],
+                      "showfcheading": [],
+                      "tobeshown": 1,
+                      "show2": [
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                          "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
+                          "Red block: +N\u2081-30cos(45\u00b0)=0",
+                          "Yellow block: +T\u2082-40=4a\u2082",
+                          "Second pulley: +2T\u2081-T\u2082=0",
+                          "Pink string: +a\u2081-2a\u2083=0",
+                          "Red string: -a\u2082+a\u2083=0",
+                          "Final Answers: a\u2081= -0.28, a\u2082= 0.14, a\u2083= 0.14, T\u2081= 20.28, T\u2082= 40.57, N\u2081= 21.13"
+                      ]
+                  }
+              ]
+          }
+      ],
       },
     ],
   },
