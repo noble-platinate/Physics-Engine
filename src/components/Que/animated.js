@@ -487,7 +487,7 @@ const TestThree = (props) => {
             }
           });
         
-        if (alld_question_no>60 && step == "motion" && substep == 0  && subsubstep == (-1)) {
+        if (step == "motion" && substep == 0  && subsubstep == (-1)) {
             let pyplayer = document.getElementById('radio');
  
             pyplayer.src = steponepone3;
@@ -564,88 +564,88 @@ const TestThree = (props) => {
                 
             }
         }
-        else if (step == "motion" && substep == 0  ) {
-            let player = document.getElementById('radio');
-            player.src = unkb_audio[0];
-            // player.play();
+        // else if (step == "motion" && substep == 0  ) {
+        //     let player = document.getElementById('radio');
+        //     player.src = unkb_audio[0];
+        //     // player.play();
  
-            pyplayer.src = pyaudio;
-            // pyplayer.play();
-            setTimeout( ()=>{ pyplayer.pause();
-                                   },50000 );
+        //     pyplayer.src = pyaudio;
+        //     // pyplayer.play();
+        //     setTimeout( ()=>{ pyplayer.pause();
+        //                            },50000 );
 
-            gplayer.src = steponepone;
-            gplayer.play();
+        //     gplayer.src = steponepone;
+        //     gplayer.play();
             
 
 
-             // this audiofunction by gaurav on 15
-            //  
-            //  start();
-            // audioncount++;}
-            // if (answerClicked == 1 && iscorrect == 1) this is converted on 17june 
-            if ( iscorrect == 1) {
-                 if(totalunknowns == 0){ totalunknowns=totalunknowns+t;
-                    console.log(totalunknowns);
-                    count++;
-                }
+        //      // this audiofunction by gaurav on 15
+        //     //  
+        //     //  start();
+        //     // audioncount++;}
+        //     // if (answerClicked == 1 && iscorrect == 1) this is converted on 17june 
+        //     if ( iscorrect == 1) {
+        //          if(totalunknowns == 0){ totalunknowns=totalunknowns+t;
+        //             console.log(totalunknowns);
+        //             count++;
+        //         }
             
-                // if (answerClicked == 1 && iscorrect != 1 ) {
-                //     const alldata = require("./all_dick_1.json");
-                // }
+        //         // if (answerClicked == 1 && iscorrect != 1 ) {
+        //         //     const alldata = require("./all_dick_1.json");
+        //         // }
                 
-                let player = document.getElementById('radio');
-                // player.pause()
-                // player.src = unka_audio[0];
-                // player.play()
-                //code added by gaurav on 16june for audio starts 
+        //         let player = document.getElementById('radio');
+        //         // player.pause()
+        //         // player.src = unka_audio[0];
+        //         // player.play()
+        //         //code added by gaurav on 16june for audio starts 
 
-                // setTimeout( ()=>{ player.pause();
-                //                    answerdone();},6800 )
-                //code added by gaurav on 16june for audio ends 
-                pyplayer.currentTime=50;
-                //  pyplayer.play();
-                 setTimeout( ()=>{ pyplayer.pause();
-                    // pyanswerdone(t);
-                 },4500 );
-                 setTimeout(
-                    function(){
-                        // player.pause();
-                        pyplayer.src =pyaudio;
-                        pyplayer.currentTime = 57;
-                        // pyplayer.play();
-                    },5750); 
-                setTimeout(
-                    function(){
-                        pyplayer.pause();
+        //         // setTimeout( ()=>{ player.pause();
+        //         //                    answerdone();},6800 )
+        //         //code added by gaurav on 16june for audio ends 
+        //         pyplayer.currentTime=50;
+        //         //  pyplayer.play();
+        //          setTimeout( ()=>{ pyplayer.pause();
+        //             // pyanswerdone(t);
+        //          },4500 );
+        //          setTimeout(
+        //             function(){
+        //                 // player.pause();
+        //                 pyplayer.src =pyaudio;
+        //                 pyplayer.currentTime = 57;
+        //                 // pyplayer.play();
+        //             },5750); 
+        //         setTimeout(
+        //             function(){
+        //                 pyplayer.pause();
                      
-                        },7750);
+        //                 },7750);
 
-                gplayer.pause();
-                soundacc.play();
-                // ganswerdone(t);
-                // gplayer.src = steponeptwo;
-                // gplayer.play();
-            //   setTimeout(
+        //         gplayer.pause();
+        //         soundacc.play();
+        //         // ganswerdone(t);
+        //         // gplayer.src = steponeptwo;
+        //         // gplayer.play();
+        //     //   setTimeout(
                     
-            //         function(){
+        //     //         function(){
                      
                         
-            //             setTimeout(function(){
-            //                 gplayer.src = steponepthree;
-            //                 gplayer.currentTime = 0.35;
-            //     gplayer.play();
-            //             },1450)
-            //         }
-            //         ,4000); 
+        //     //             setTimeout(function(){
+        //     //                 gplayer.src = steponepthree;
+        //     //                 gplayer.currentTime = 0.35;
+        //     //     gplayer.play();
+        //     //             },1450)
+        //     //         }
+        //     //         ,4000); 
                 
 
 
 
                 
                 
-            }
-        }
+        //     }
+        // }
         
         var soundtension = new Howl({
             
@@ -657,7 +657,8 @@ const TestThree = (props) => {
                 ganswerdonetension(t);
             }
           });
-        if (alld_question_no>60 && step == "motion" && substep == 1 && subsubstep == 0) {
+        if (step == "motion" && substep == 1 && subsubstep == 0) {
+            
             gplayer.pause();
             let pyplayer = document.getElementById('radio');
             // player.pause();
@@ -722,74 +723,74 @@ const TestThree = (props) => {
                 //     //     },4000);   
             }
         }
-        else if (step == "motion" && substep == 1) {
-            let player = document.getElementById('radio');
-            player.pause();
-            player.src = unkb_audio[1];
-            // player.play()
-            // Nextstep();
+        // else if (step == "motion" && substep == 1) {
+        //     let player = document.getElementById('radio');
+        //     player.pause();
+        //     player.src = unkb_audio[1];
+        //     // player.play()
+        //     // Nextstep();
 
-            pyplayer.src = pyaudio;
-            pyplayer.currentTime = 59;
-            // pyplayer.play();
-            setTimeout( ()=>{ pyplayer.pause();
-                                   },16500 );
+        //     pyplayer.src = pyaudio;
+        //     pyplayer.currentTime = 59;
+        //     // pyplayer.play();
+        //     setTimeout( ()=>{ pyplayer.pause();
+        //                            },16500 );
 
-                    gplayer.pause();
-                    gplayer.src = steponepfour;
-                    gplayer.play();
+        //             gplayer.pause();
+        //             gplayer.src = steponepfour;
+        //             gplayer.play();
 
             
-           // if (answerClicked == 1 && iscorrect == 1) this is converted on 17june 
-            if ( iscorrect == 1) {
-                if(count==1){
-                    totalunknowns=totalunknowns+t;
-                    count++;
-                }
-                let player = document.getElementById('radio');
-                player.pause()
-                player.src = unka_audio[1];
-                // player.play()
-                pyplayer.currentTime=75.5;
-                // pyplayer.play();
-                setTimeout( ()=>{ pyplayer.pause();
-                //    pyanswerdone(t);
-                },4000 );
-                setTimeout(
-                    function(){
-                        // player.pause();
-                        pyplayer.src =pyaudio;
-                        pyplayer.currentTime = 80;
-                        // pyplayer.play();
-                    },6000); 
-                setTimeout(
-                    function(){
-                        pyplayer.pause();
-                        console.log(totalunknowns);
-                        // pyanswerdone(totalunknowns);
-                    },9500); 
+        //    // if (answerClicked == 1 && iscorrect == 1) this is converted on 17june 
+        //     if ( iscorrect == 1) {
+        //         if(count==1){
+        //             totalunknowns=totalunknowns+t;
+        //             count++;
+        //         }
+        //         let player = document.getElementById('radio');
+        //         player.pause()
+        //         player.src = unka_audio[1];
+        //         // player.play()
+        //         pyplayer.currentTime=75.5;
+        //         // pyplayer.play();
+        //         setTimeout( ()=>{ pyplayer.pause();
+        //         //    pyanswerdone(t);
+        //         },4000 );
+        //         setTimeout(
+        //             function(){
+        //                 // player.pause();
+        //                 pyplayer.src =pyaudio;
+        //                 pyplayer.currentTime = 80;
+        //                 // pyplayer.play();
+        //             },6000); 
+        //         setTimeout(
+        //             function(){
+        //                 pyplayer.pause();
+        //                 console.log(totalunknowns);
+        //                 // pyanswerdone(totalunknowns);
+        //             },9500); 
 
                     
-                    // gplayer.src = steponepfive;
-                    // gplayer.play();
-                    // ganswerdonetension(t);
-                    gplayer.pause();
-                    soundtension.play();
-                    // setTimeout(
-                    //     function(){
+        //             // gplayer.src = steponepfive;
+        //             // gplayer.play();
+        //             // ganswerdonetension(t);
+        //             gplayer.pause();
+        //             soundtension.play();
+        //             // setTimeout(
+        //             //     function(){
                             
-                    //         ganswerdone(t);
-                    //         setTimeout(function(){
-                    //             gplayer.src = steponepsix;
-                    //           gplayer.play();
-                    //               setTimeout(function(){
-                    //                 gplayer.src = steponepseven;
-                    //              gplayer.play();
-                    //                },3200);
-                    //         },1450)
-                    //     },4000);   
-            }
-        }
+        //             //         ganswerdone(t);
+        //             //         setTimeout(function(){
+        //             //             gplayer.src = steponepsix;
+        //             //           gplayer.play();
+        //             //               setTimeout(function(){
+        //             //                 gplayer.src = steponepseven;
+        //             //              gplayer.play();
+        //             //                },3200);
+        //             //         },1450)
+        //             //     },4000);   
+        //     }
+        // }
 
 
         var soundfbd = new Howl({
@@ -797,7 +798,7 @@ const TestThree = (props) => {
             src: motivate[ranval]
             
           });
-        if (alld_question_no>60 && step == "motion" && substep == 0 && subsubstep == 4) {
+        if (step == "motion" && substep == 0 && subsubstep == 4) {
             gplayer.pause();
             let pyplayer = document.getElementById('radio');
             // player.pause();
@@ -822,7 +823,7 @@ const TestThree = (props) => {
             }
         }
 
-        if (alld_question_no>60 && step == "motion" && substep == 0 && subsubstep == 3) {
+        if (step == "motion" && substep == 0 && subsubstep == 3) {
             
            // if (answerClicked == 1 && iscorrect == 1) this is converted on 17june 
             if ( iscorrect == 1) {
@@ -4231,6 +4232,7 @@ if (answerClicked > 0 && iscorrect != 1) {
         
          if (step == "constraint" && substep == 1 && subsubstep == -1) {
             gplayer.pause();
+            pyplayer.pause();
             gplayer.src= constr;
             gplayer.play();
             if ( iscorrect == 1) {
@@ -4242,6 +4244,7 @@ if (answerClicked > 0 && iscorrect != 1) {
          }
          if (step == "constraint" && (subsubstep == 1 || subsubstep ==2)) {
             gplayer.pause();
+            pyplayer.pause();
             gplayer.src= lendoublederi;
             gplayer.play();
             if ( iscorrect == 1) {
@@ -4251,6 +4254,7 @@ if (answerClicked > 0 && iscorrect != 1) {
          }
          if (step == "constraint" && subsubstep == 300) {
             gplayer.pause();
+            pyplayer.pause();
             gplayer.src= stringconsteqn;
             gplayer.play();
             if ( iscorrect == 1) {
@@ -4266,6 +4270,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
          if (step == "finalanswer" ) {
             gplayer.pause();
+            pyplayer.pause();
             gplayer.src= finalstepaudio;
             gplayer.play();
             if ( iscorrect == 1) {
