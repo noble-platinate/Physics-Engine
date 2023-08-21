@@ -487,6 +487,7 @@ const TestThree = (props) => {
             }
           });
         
+         
         if (step == "motion" && substep == 0  && subsubstep == (-1)) {
             let pyplayer = document.getElementById('radio');
  
@@ -939,11 +940,16 @@ const TestThree = (props) => {
       if(step == "fbd" && substep == flag && subsubstep == -100){
         
         //this is red block 
+        soundtension.pause();
+        let xy = document.getElementById('radio');
+
         gplayer.pause();
-            gplayer.src = steptwo5;
-                              gplayer.play();
+            xy.src = steptwo5;
+                              xy.play();
                               if ( iscorrect == 1) {
-                                gplayer.pause();
+                                let x = document.getElementById('radio');
+                                xy.pause();
+                                x.source=well;
                                 soundfbd.play();
                                 // sund.play("track01");
                                 // sund.on('end', function(){
@@ -961,7 +967,7 @@ const TestThree = (props) => {
             gplayer.src = steptwo4;
         }
         if(flag>1) {
-            gplayer.src = steptwo4;
+            gplayer.src = steptwo6;
         }
             
                               gplayer.play();
@@ -1029,12 +1035,16 @@ const TestThree = (props) => {
 
       if(step == "fbd" && substep == flag && subsubstep == -100){
         //this is red block 
+        let xy = document.getElementById('radio');
+
         gplayer.pause();
-            gplayer.src = steptwo5;
-                              gplayer.play();
+        xy.src = steptwo5;
+        xy.play();
                               if ( iscorrect == 1) {
-                                gplayer.pause();
-                                soundfbd.play();
+                                let x = document.getElementById('radio');
+                                xy.pause();
+                                x.source=well;
+                                x.play();
                                 // sund.play("track01");
                                 // sund.on('end', function(){
                                     // sund.play("track02");
@@ -1051,7 +1061,7 @@ const TestThree = (props) => {
             gplayer.src = steptwo4;
         }
         if(flag>1) {
-            gplayer.src = steptwo4;
+            gplayer.src = steptwo6;
         }
             
                               gplayer.play();
@@ -1150,11 +1160,14 @@ if (answerClicked > 0 && iscorrect != 1) {
         if(step == "fbd" && substep == flag && subsubstep == -100){
           //this is pulley cut 
           gplayer.pause();
-              gplayer.src = steptwo5;
-                                gplayer.play();
+          let xy = document.getElementById('radio');
+          xy.src = steptwo5;
+          xy.play();
                                 if ( iscorrect == 1) {
-                                  gplayer.pause();
-                                  soundfbd.play();
+                                    let x = document.getElementById('radio');
+                                    xy.pause();
+                                x.source=well;
+                                x.play();
                                   // ganswerdone(t);
                                 }
         }
@@ -1294,6 +1307,9 @@ if (answerClicked > 0 && iscorrect != 1) {
             var bigblockdata = alldata["bigblock dick"]
             
             var meshbb;
+            var meshbb1;
+            var meshbb2;
+            var meshbb3;
             var bb_ini_pos_x;
             var bb_ini_pos_y;
         
@@ -1339,7 +1355,15 @@ if (answerClicked > 0 && iscorrect != 1) {
                     meshbb = new THREE.Mesh(
                         new THREE.BoxGeometry(x_size, y_size, bigblockdata.size[1] / 100000), 
                         material_bb);
-           
+                    meshbb1 = new THREE.Mesh(
+                        new THREE.BoxGeometry(x_size, y_size, bigblockdata.size[1] / 100000), 
+                        material_bb);
+                    meshbb2 = new THREE.Mesh(
+                        new THREE.BoxGeometry(x_size, y_size, bigblockdata.size[1] / 100000), 
+                        material_bb);
+                    meshbb3 = new THREE.Mesh(
+                        new THREE.BoxGeometry(x_size, y_size, bigblockdata.size[1] / 100000), 
+                        material_bb);
                     var blocloc_x = (blockdata[bigblockdata.block[1][0]].loc[0] - 150)/15
                     var blocloc_y = (blockdata[bigblockdata.block[1][0]].loc[1] - 150)/15
 
@@ -1347,7 +1371,15 @@ if (answerClicked > 0 && iscorrect != 1) {
                     
                     meshbb.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
                     meshbb.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
-                
+                        
+                    meshbb1.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
+                    meshbb1.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
+
+                    meshbb2.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
+                    meshbb2.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
+
+                    meshbb3.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
+                    meshbb3.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
                     camera_avg_x = camera_avg_x + meshbb.position.x
                     camera_avg_y = camera_avg_y + meshbb.position.y
                     num_of_obj = num_of_obj + 1 
@@ -1386,8 +1418,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                     const y_tr = ploc_y;
 
                     var dist = Math.pow (Math.pow((left_mid_x - ploc_x), 2) + Math.pow((left_mid_y - ploc_y), 2), 0.5)
-                    var po2x = ploc_x - 3*Math.cos(langle)*dist 
-                    var po2y = ploc_y - 3*Math.sin(langle)*dist
+                    var po2x = ploc_x - 3*Math.cos(langle)*dist/1.5
+                    var po2y = ploc_y - 3*Math.sin(langle)*dist/1.5
                     var po3y = po2y
                     var po3x = ploc_x + (ploc_y - po2y)/Math.tan(rangle)
                     
@@ -1414,7 +1446,10 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                     const material_tr = new THREE.MeshBasicMaterial( { color: 0x009900 } );
                     meshbb = new THREE.Mesh( TriangleGeometry, material_tr ) ;
-            
+                    meshbb1 = new THREE.Mesh( TriangleGeometry, material_tr ) ;
+                    meshbb2 = new THREE.Mesh( TriangleGeometry, material_tr ) ;
+                    meshbb3 = new THREE.Mesh( TriangleGeometry, material_tr ) ;
+                    
                     bb_ini_pos_x = 0;
                     bb_ini_pos_y = 0;
                 
@@ -1431,9 +1466,22 @@ if (answerClicked > 0 && iscorrect != 1) {
                     }
                 
                 }
-        
-                if (!step.includes("constraint"))
-                    scene.add(meshbb);
+                
+                if (!step.includes("constraint")){
+                    if(alld_question_no==68 && subsubstep>=3 && substep==0){
+                        meshbb1.position.y=meshbb1.position.y+5
+                        meshbb2.position.y=meshbb2.position.y+5
+                        meshbb3.position.y=meshbb3.position.y-3
+                        
+                        scene.add(meshbb1);
+                        scene.add(meshbb2);
+                        scene.add(meshbb3);
+                    }
+                    else{
+                        scene.add(meshbb);
+                    }
+                }
+                    
                 if (step == "constraint" && (subsubstep == -1 ||subsubstep == 0))
                     scene.add(meshbb);
             }
@@ -1447,8 +1495,11 @@ if (answerClicked > 0 && iscorrect != 1) {
       // manglick code for alld que > 54 ends
 
         var meshk = new Array(n_b);
+        var temp1, temp2, temp3;
+        var pl1, pl2, eq1, eq2;
         var meshpl = new Array(n_c);
         var block_ini_pos_x = new Array(n_b);
+        var x1,x2,x3,y1,y2,y3;
         var block_ini_pos_y = new Array(n_b);
         var pulley_ini_pos_x = new Array(n_p);
         var pulley_ini_pos_y = new Array(n_p);
@@ -1483,6 +1534,7 @@ if (answerClicked > 0 && iscorrect != 1) {
         var acc_arrow_length
         var acc_arrowHelper = new Array(n_b + n_p)
         var acc_cone = new Array(n_b + n_p)
+        var box1,wedge1,box2,wedge2;
         const geometryc = new THREE.ConeGeometry(0.15, 0.25, 32); //changed from 0.1, 0.2 to 0.15, 0.25 on 20th June
         const materialc = new THREE.MeshBasicMaterial({ color: 0xffffff });
 
@@ -1497,27 +1549,84 @@ if (answerClicked > 0 && iscorrect != 1) {
             
             //const material = new THREE.MeshNormalMaterial()
             const materialx = new THREE.MeshBasicMaterial({color: clr[(i-1)%4]}) //added by mangalik
+            const materials = new THREE.MeshBasicMaterial({color: 0xffffff}) //added by mangalik
+
             //const material2 = new THREE.MeshMatcapMaterial()
             //materialx.map = texture
             //materialx.color = new THREE.Color(clr[i - 1])
+            if(i==1){
+                temp1 = new THREE.Mesh(
+                    new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 100000), //added by mangalik
+                    materialx);
+                temp2 = new THREE.Mesh(
+                    new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 100000), //added by mangalik
+                    materialx);
+                temp3 = new THREE.Mesh(
+                    new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 100000), //added by mangalik
+                    materialx);
+                pl1 = new THREE.Mesh(
+                    new THREE.BoxGeometry(blockdata[i].size[0] / 15 - 0.5, blockdata[i].size[0] / 15  - 1.5, blockdata[i].size[1] / 100000), //added by mangalik
+                    materials);
+                pl2 = new THREE.Mesh(
+                    new THREE.BoxGeometry(blockdata[i].size[0] / 15 - 0.5, blockdata[i].size[0] / 15  - 1.5, blockdata[i].size[1] / 100000), //added by mangalik
+                    materials);
+                eq1 = new THREE.Mesh(
+                    new THREE.BoxGeometry(blockdata[i].size[0] / 15 - 1.5, blockdata[i].size[0] / 15  - 0.5, blockdata[i].size[1] / 100000), //added by mangalik
+                    materials);
+                eq2 = new THREE.Mesh(
+                    new THREE.BoxGeometry(blockdata[i].size[0] / 15 - 1.5, blockdata[i].size[0] / 15  - 0.5, blockdata[i].size[1] / 100000), //added by mangalik
+                    materials);
+            }
             meshk[i - 1] = new THREE.Mesh(
                 new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 100000), //added by mangalik
                 materialx); //where does the division by 15 come from?
             //debugger
             if (!step.includes("constraint") || (step == "constraint" && (subsubstep == 0 || subsubstep == -1))) {
                 //scene.add(meshk[i - 1])
-                scene.add(meshk[i-1])
-
+                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                    scene.add(meshk[i-1])
+                }
+                if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
+                    scene.add(pl1);
+                    scene.add(eq1);
+                    scene.add(pl2);
+                    scene.add(eq2);
+                    scene.add(temp1);
+                    scene.add(temp2);
+                    scene.add(temp3);
+                }
             }
             if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>")&& subsubstep !=300) {
                 if (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>") {
                     if (stringdata[substep]["first obj"] == i) {
-                        scene.add(meshk[i - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(meshk[i-1])
+                        }
+                        if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
+                            scene.add(pl1);
+                            scene.add(eq1);
+                            scene.add(pl2);
+                            scene.add(eq2);
+                            scene.add(temp1);
+                            scene.add(temp2);
+                            scene.add(temp3);
+                        }
                     }
                 }
                 if (stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>") {
                     if (stringdata[substep]["second obj"] == i) {
-                        scene.add(meshk[i - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(meshk[i-1])
+                        }
+                        if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
+                            scene.add(pl1);
+                            scene.add(eq1);
+                            scene.add(pl2);
+                            scene.add(eq2);
+                            scene.add(temp1);
+                            scene.add(temp2);
+                            scene.add(temp3);
+                        }
                     }
                 }
             }
@@ -1529,12 +1638,34 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
                         if (stringdata[sc]["first obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[sc]["first obj"] == i) {
-                                scene.add(meshk[i - 1])
+                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                                    scene.add(meshk[i-1])
+                                }
+                                if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
+                                    scene.add(pl1);
+                                    scene.add(eq1);
+                                    scene.add(pl2);
+                                    scene.add(eq2);
+                                    scene.add(temp1);
+                                    scene.add(temp2);
+                                    scene.add(temp3);
+                                }
                             }
                         }
                         if (stringdata[sc]["second obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[sc]["second obj"] == i) {
-                                scene.add(meshk[i - 1])
+                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                                    scene.add(meshk[i-1])
+                                }
+                                if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
+                                    scene.add(pl1);
+                                    scene.add(eq1);
+                                    scene.add(pl2);
+                                    scene.add(eq2);
+                                    scene.add(temp1);
+                                    scene.add(temp2);
+                                    scene.add(temp3);
+                                }
                             }
                         }
                     }
@@ -1542,6 +1673,32 @@ if (answerClicked > 0 && iscorrect != 1) {
             }
             // 22June change code ends manglik
             //changed from /20 to /15 on 20th June
+            if(i==1){
+                temp1.position.x = 8+(blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
+                temp1.position.y = 5.72+(blockdata[i].loc[1] - 150) / 15;
+                temp1.rotation.z = block_angle[i - 1]
+
+                temp2.position.x = 0.7+(blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
+                temp2.position.y = 5.72+(blockdata[i].loc[1] - 150) / 15;
+                temp2.rotation.z = block_angle[i - 1]
+
+                temp3.position.x = 4.5+(blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
+                temp3.position.y = -2.28+(blockdata[i].loc[1] - 150) / 15;
+                temp3.rotation.z = block_angle[i - 1]
+
+                pl1.position.x = 6.5+(blockdata[i].loc[0] - 150) / 15;
+                pl1.position.y = 4.72+(blockdata[i].loc[1] - 150) / 15;
+                pl2.position.x = 6.5+(blockdata[i].loc[0] - 150) / 15;
+                pl2.position.y = 4.72+(blockdata[i].loc[1] - 150) / 15;
+                pl2.rotation.z = block_angle[i - 1]*2;
+                eq1.position.x = 6.5+(blockdata[i].loc[0] - 150) / 15+0.25;
+                eq2.position.x = 6.5+(blockdata[i].loc[0] - 150) / 15-0.25;
+                eq2.position.y +=2.5;
+                eq1.position.y +=2.5;
+                // eq2.rotation.z = block_angle[i - 1]*2
+                // eq1.rotation.z = block_angle[i - 1]*2
+            }
+            
             meshk[i - 1].position.x = (blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
             meshk[i - 1].position.y = (blockdata[i].loc[1] - 150) / 15;
             meshk[i - 1].rotation.z = block_angle[i - 1]
@@ -1550,6 +1707,12 @@ if (answerClicked > 0 && iscorrect != 1) {
             camera_avg_y = camera_avg_y + meshk[i - 1].position.y //added by mangalik
             num_of_obj = num_of_obj + 1 //added by mangalik
             //meshk[i - 1].position.z = -0.5
+            x1=temp1.position.x;
+            x2=temp2.position.x;
+            x3=temp3.position.x;
+            y1=temp1.position.y;
+            y2=temp2.position.y;
+            y3=temp3.position.y;
             block_ini_pos_x[i - 1] = meshk[i - 1].position.x;
             block_ini_pos_y[i - 1] = meshk[i - 1].position.y;
             text_loc_x[i - 1] = meshk[i - 1].position.x + 0.8 * blockdata[i].textloc
@@ -1642,26 +1805,58 @@ if (answerClicked > 0 && iscorrect != 1) {
             //mangalik code ends
 
             var arr_points = []
+            var boxl1 = []
 
             arr_points.push(acc_arrow_from)
             arr_points.push(acc_arrow_to)
+            
+            // if(i==1 && alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3){
+            //     boxl1.push(new THREE.Vector3(temp3.position.x - l*Math.sin(arr_ang) - lr2*Math.cos(3*Math.PI/4 - arr_ang) - 0.8, temp3.position.y + l*(Math.cos(arr_ang)) +lr2*(Math.sin(3*Math.PI/4 - arr_ang)) -0.5, 0))
+            //     boxl1.push(new THREE.Vector3(boxl1[0].x - arr_len*Math.cos(arr_ang)-0.8, boxl1[0].y - arr_len*Math.sin(arr_ang)-0.5))
+            //     const acc_geometry1 = new THREE.BufferGeometry().setFromPoints(boxl1)
+            //     var acc_mat1 = new THREE.MeshBasicMaterial({ color: clr[(i-1)%4] })
+    
+            //     var acc_line1 = new THREE.Line(acc_geometry1, acc_mat1);
+            //     scene.add(acc_line1);
 
-            const acc_geometry = new THREE.BufferGeometry().setFromPoints(arr_points)
-            var acc_mat = new THREE.MeshBasicMaterial({ color: clr[(i-1)%4] })
+            //     box1 = new THREE.Mesh(geometryc, materialx);
+            //     box2 = new THREE.Mesh(geometryc, materialx);
+            //     wedge1 = new THREE.Mesh(geometryc, materialx);
+            //     wedge2 = new THREE.Mesh(geometryc, materialx);
 
-            var acc_line = new THREE.Line(acc_geometry, acc_mat);
+            //     box1.position.x=acc_arrow_to.x+temp3.position.x-meshk[i-1].position.x-0.8;
+            //     box1.position.y=acc_arrow_to.y+temp3.position.y-meshk[i-1].position.y-0.5;
+
+            //     box1.rotation.z=Math.PI/4;
+            //     box2.rotation.z=block_angle[i - 1]-Math.PI/2;
+            //     scene.add(box1);
+            // }
+            // boxl1.push(new THREE.Vector3(meshk[0].position.x + l*Math.cos(arr_ang) + lr2*Math.cos(Math.PI/4 + arr_ang), meshk[i - 1].position.y + l*(Math.sin(arr_ang)) + lr2*Math.sin(Math.PI/4 + arr_ang) , 0))
+            // boxl1.push(new THREE.Vector3(temp2.position.x-1.6,temp2.position.y,0))
+
+           
+            
             //acc_arrow_direction = acc_arrow_to.clone().sub(acc_arrow_from);
             //acc_arrow_length = acc_arrow_direction.length();
             //acc_arrowHelper[i - 1] = new THREE.ArrowHelper(acc_arrow_direction.normalize(), acc_arrow_from, acc_arrow_length, clr[i - 1]); //colour added by mangalik
             acc_cone[i - 1] = new THREE.Mesh(geometryc, materialx);
+            box1 = new THREE.Mesh(geometryc, materialx);
+            box2 = new THREE.Mesh(geometryc, materialx);
+            wedge1 = new THREE.Mesh(geometryc, materialx);
+            wedge2 = new THREE.Mesh(geometryc, materialx);
 
-
+            box1.position.x=temp2.position.x-0.6;
+            box1.position.y=temp2.position.y+1.1;
+            // scene.add(box1);
             //acc_cone[i - 1].position.x = meshk[i - 1].position.x + (blockdata[i].size[0]/15)*blockdata[i].textloc[0] + (blockdata[i].size[0]/15)*0.5 * blockdata[i].arrdir[0];
             //acc_cone[i - 1].position.y = meshk[i - 1].position.y + (blockdata[i].size[0]/15)*blockdata[i].textloc[1] + 0.5 * (blockdata[i].size[0]/15)*blockdata[i].arrdir[1];
             acc_cone[i - 1].position.x = acc_arrow_to.x //added by mangalik               //meshk[i - 1].position.x + (blockdata[i].size[0]/15)*blockdata[i].textloc[0] + (blockdata[i].size[0]/15)*0.5 * blockdata[i].arrdir[0];
             acc_cone[i - 1].position.y = acc_arrow_to.y //added by mangalik                //meshk[i - 1].position.y + (blockdata[i].size[0]/15)*blockdata[i].textloc[1] + 0.5 * (blockdata[i].size[0]/15)*blockdata[i].arrdir[1];
 
+            const acc_geometry = new THREE.BufferGeometry().setFromPoints(arr_points)
+            var acc_mat = new THREE.MeshBasicMaterial({ color: clr[(i-1)%4] })
 
+            var acc_line = new THREE.Line(acc_geometry, acc_mat);
             //mangalik code starts
 
             // fixing the position of the arrowhead, also the direction it faces
@@ -1695,10 +1890,23 @@ if (answerClicked > 0 && iscorrect != 1) {
             else if (xacc > 0 && yacc < 0) {
                 acc_cone[i - 1].rotation.z = block_angle[i - 1] - Math.PI/2
             }
+
+            box1.rotation.z=Math.PI/4;
+            box2.rotation.z=block_angle[i - 1]-Math.PI/2;
+
+            wedge1.rotation.z=Math.PI/2;
+            wedge2.rotation.z=Math.PI/2;
+
+            // scene.add(box1);
+            // if(alld_question_no==68 && step=="motion" && substep==0 && substepstep>=3){
+            //     acc_cone[i - 1]
+            // }
             if ((blockdata[i].acceleration[0] != 0) || (blockdata[i].acceleration[1] != 0)) {
                 if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")){
-                    scene.add(acc_line)
-                    scene.add(acc_cone[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(acc_line)
+                        scene.add(acc_cone[i - 1])
+                    }
                 }
             }
 
@@ -1889,9 +2097,10 @@ if (answerClicked > 0 && iscorrect != 1) {
                     }
                     //14th June Starts
                     if (step == "motion") {
-                        
-                        scene.add(force_line_y[i - 1])
-                        scene.add(force_cone_y[i - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(force_line_y[i - 1])
+                            scene.add(force_cone_y[i - 1])
+                        }
                     }
                     //14th June ends
                     
@@ -1952,8 +2161,10 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                     //14th June Starts
                     if (step == "motion") {
-                        scene.add(force_line_x[i - 1])
-                        scene.add(force_cone_x[i - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(force_line_x[i - 1])
+                            scene.add(force_cone_x[i - 1])
+                        }
                     }
                     //14th June ends
                 }
@@ -2019,9 +2230,10 @@ if (answerClicked > 0 && iscorrect != 1) {
                     }
                     //14th June Starts
                     if (step == "motion") {
-                        
-                        scene.add(force_line_y[i - 1])
-                        scene.add(force_cone_y[i - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(force_line_y[i - 1])
+                            scene.add(force_cone_y[i - 1])
+                        }
                     }
                     //14th June ends   
                 }
@@ -2084,8 +2296,10 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                     //14th June Starts
                     if (step == "motion") {
-                        scene.add(force_line_x[i - 1])
-                        scene.add(force_cone_x[i - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(force_line_x[i - 1])
+                            scene.add(force_cone_x[i - 1])
+                        }
                     }
                     //14th June ends
                 }
@@ -2141,17 +2355,23 @@ if (answerClicked > 0 && iscorrect != 1) {
             
 
             if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")) {
-                scene.add(meshpl[x - 1])
+                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                    scene.add(meshpl[x-1])
+                }
             }
             if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.grounds'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.grounds'>") && subsubstep !=300 ) {
                 if (stringdata[substep]["first obj type"] == "<class 'blocksclass.grounds'>") {
                     if (stringdata[substep]["first obj"] == x) {
-                        scene.add(meshpl[x - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(meshpl[x-1])
+                        }
                     }
                 }
                 if (stringdata[substep]["second obj type"] == "<class 'blocksclass.grounds'>") {
                     if (stringdata[substep]["second obj"] == x) {
-                        scene.add(meshpl[x - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(meshpl[x-1])
+                        }
                     }
                 }
             }
@@ -2165,12 +2385,16 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
                         if (stringdata[sc]["first obj type"] == "<class 'blocksclass.grounds'>") {
                             if (stringdata[sc]["first obj"] == x) {
-                                scene.add(meshpl[x - 1])
+                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                                    scene.add(meshpl[x-1])
+                                }
                             }
                         }
                         if (stringdata[sc]["second obj type"] == "<class 'blocksclass.grounds'>") {
                             if (stringdata[sc]["second obj"] == x) {
-                                scene.add(meshpl[x - 1])
+                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                                    scene.add(meshpl[x-1])
+                                }
                             }
                         }
                     }
@@ -2263,19 +2487,25 @@ if (answerClicked > 0 && iscorrect != 1) {
             )
             //debugger
             if (!step.includes("constraint") || (step == "constraint" && (subsubstep == 0 || subsubstep == -1))) {
-                scene.add(meshp[i - 1])
+                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                    scene.add(meshp[i-1])
+                }
             }
             if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.pulleys'>")&& subsubstep !=300) {
                 if (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>") {
                     if (stringdata[substep]["first obj"] == i) {
-                        scene.add(meshp[i - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(meshp[i-1])
+                        }
                     }
 
 
                 }
                 if (stringdata[substep]["second obj type"] == "<class 'blocksclass.pulleys'>") {
                     if (stringdata[substep]["second obj"] == i) {
-                        scene.add(meshp[i - 1])
+                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                            scene.add(meshp[i-1])
+                        }
                     }
 
 
@@ -2289,12 +2519,16 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
                         if (stringdata[sc]["first obj type"] == "<class 'blocksclass.pulleys'>") {
                             if (stringdata[sc]["first obj"] == i) {
-                                scene.add(meshp[i - 1])
+                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                                    scene.add(meshp[i-1])
+                                }
                             }
                         }
                         if (stringdata[sc]["second obj type"] == "<class 'blocksclass.pulleys'>") {
                             if (stringdata[sc]["second obj"] == i) {
-                                scene.add(meshp[i - 1])
+                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                                    scene.add(meshp[i-1])
+                                }
                             }
                         }
                     }
@@ -2431,8 +2665,10 @@ if (answerClicked > 0 && iscorrect != 1) {
 
          if (pulleydata[i].acceleration[1] != 0 || pulleydata[i].acceleration[0] != 0) {
              if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")) {
-                 scene.add(acc_cone[i + n_b - 1])
+                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                    scene.add(acc_cone[i + n_b - 1])
                  scene.add(acc_arrowHelper[i + n_b - 1])
+                }
              }
          }
          //mangalik code ends
@@ -2770,13 +3006,19 @@ if (answerClicked > 0 && iscorrect != 1) {
                 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
                 if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
             }
 
@@ -2828,16 +3070,22 @@ if (answerClicked > 0 && iscorrect != 1) {
                 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
                 // if (step == "constraint" && i == substep) {
                 //     scene.add(linestr[i - 1])
                 // }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
                 if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
             }
 
@@ -2896,7 +3144,9 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -2965,7 +3215,9 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -3039,7 +3291,9 @@ if (answerClicked > 0 && iscorrect != 1) {
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 //scene.add(linestr[i-1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -3086,7 +3340,9 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -3191,7 +3447,9 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    scene.add(linestr[i - 1])
+                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
+                        scene.add(linestr[i - 1])
+                    }
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -3670,7 +3928,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                 }
 
                 if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == -300)) {
-                    scene.add(chotasphere[cs_count]);
+                    // scene.add(chotasphere[cs_count]);
                     if (alld_question_no>60 && subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
@@ -3687,11 +3945,11 @@ if (answerClicked > 0 && iscorrect != 1) {
                         player.pause()
                         player.src = steptwo5;
                         player.play()
-                        if (answerClicked > 0 && iscorrect == 1) {
+                        if (iscorrect == 1) {
 
-                            let player = document.getElementById('radio');
+                            let pplayer = document.getElementById('radio');
                             player.pause()
-                            player.src = fbdi_audio_after[i - 1];
+                            pplayer.src = fbdi_audio_after[i - 1];
                             // player.play()
                         }
                     }
@@ -4173,8 +4431,8 @@ if (answerClicked > 0 && iscorrect != 1) {
 
 
                 if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1 || subsubstep == -300)) {
-                    scene.add(chotasphere[cs_count]);
-                    if (bigblockdata.mass>0 && subsubstep != -100) {
+                    // scene.add(chotasphere[cs_count]);
+                    if (bigblockdata.mass!=0 && subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
@@ -4183,19 +4441,18 @@ if (answerClicked > 0 && iscorrect != 1) {
                         // player.play()
 
                     }
-                    if (bigblockdata.mass>0 && subsubstep == -100) {
+                    if (bigblockdata.mass!=0 && subsubstep == -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
-                        player.pause()
-                        player.src = steptwo4;
+                        player.src = steptwo5;
                         player.play()
-                        if (answerClicked > 0 && iscorrect == 1) {
+                        if (iscorrect == 1) {
 
                             let player = document.getElementById('radio');
                             player.pause()
-                            player.src = fbdi_audio_after[i + n_b - 1];
-                            // player.play()
+                            player.src = well;
+                            player.play()
                         }
                     }
                 }
@@ -4354,6 +4611,12 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                         meshk[i - 1].position.x = block_ini_pos_x[i - 1];
                         meshk[i - 1].position.y = block_ini_pos_y[i - 1];
+                        temp1.position.x = x1;
+                        temp2.position.x = x2;
+                        temp3.position.x = x3;
+                        temp1.position.y = y1;
+                        temp2.position.y = y2;
+                        temp3.position.y = y3;
 
                         if (blockdata[i].forces.x[0] != 0) {
                             force_line_x[i - 1].position.x = force_line_x_ini_pos_x[i - 1];
@@ -4409,16 +4672,41 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
                         if (stringdata[sc]["first obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[sc]["first obj"] == i) {
-                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                                if(alld_question_no==68 && substep==1 && subsubstep==1){
+                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (0.9) * time_main * time_main / 5000;
+                                    meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (0.9) * time_main * time_main / 5000;
+                                }
+                                else{
+                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-
+                                }
+                                
+                                if(i==1){
+                                    temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
+                                    temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
+                                    temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
+                                    temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                                    temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+                                }
                             }
                         }
                         if (stringdata[sc]["second obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[sc]["second obj"] == i) {
-                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                                if(alld_question_no==68 && substep==1 && subsubstep==1){
+                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (0.9) * time_main * time_main / 5000;
+                                    meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (0.9) * time_main * time_main / 5000;
+                                }
+                                else{
+                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-
+                                }
+                        if(i==1){
+                            temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
+                            temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
+                            temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
+                            temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                            temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+                        }
                             }
                         }
                     }
@@ -4433,7 +4721,13 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (step == "motion" || (step == "constraint" && subsubstep == -1)) {
                         meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-
+                        if(i==1){
+                            temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
+                            temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
+                            temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
+                            temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                            temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+                        }
                         //14th June starts
                         if (blockdata[i].forces.x[0] != 0) {
                             force_line_x[i - 1].position.x = force_line_x[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
@@ -4455,15 +4749,41 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>")) {
                         if (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[substep]["first obj"] == i && (subsubstep == 1 || subsubstep == 100)) {
-                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
-                                meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+                                if(alld_question_no==68 && substep==1 && subsubstep==1){
+                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (0.9) * time_main * time_main / 5000;
+                                    meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (0.9) * time_main * time_main / 5000;
+                                }
+                                else{
+                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                        meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+                                }
+                                if(i==1){
+                                    temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
+                                    temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
+                                    temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
+                                    temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                                    temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+                                }
                             }
                         }
 
                         if (stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[substep]["second obj"] == i && (subsubstep == 2 || subsubstep == 100)) {
-                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
-                                meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+                                if(alld_question_no==68 && substep==1 && subsubstep==1){
+                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (0.9) * time_main * time_main / 5000;
+                                    meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (0.9) * time_main * time_main / 5000;
+                                }
+                                else{
+                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                        meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+                                }
+                                if(i==1){
+                                    temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
+                                    temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
+                                    temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
+                                    temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                                    temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+                                }
                             }
                         }
                     }
@@ -4529,6 +4849,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 if(alld_question_no>60){
                                     if(i==1 && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
+                                        meshbb2.position.x=meshp[i - 1].position.x+3.5;
+                                        meshbb3.position.x=meshp[i - 1].position.x;
                                     }
                                 }
                                 
@@ -4542,6 +4864,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                         if(alld_question_no>60){
                             if(i==1 && bigblockdata.mass>0){
                                 meshbb.position.x=meshp[i - 1].position.x-3.8;
+                                meshbb2.position.x=meshp[i - 1].position.x+3.5;
+                                meshbb3.position.x=meshp[i - 1].position.x;
                             }
                         }
 
@@ -4558,6 +4882,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                         if(alld_question_no>60){
                             if(i==1 && bigblockdata.mass>0){
                                 meshbb.position.x=meshp[i - 1].position.x-3.8;
+                                meshbb2.position.x=meshp[i - 1].position.x+3.5;
+                                meshbb3.position.x=meshp[i - 1].position.x;
                             }
                         }
                     }
@@ -4570,6 +4896,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 if(alld_question_no>60){
                                     if(i==1 && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
+                                        meshbb2.position.x=meshp[i - 1].position.x+3.5;
+                                        meshbb3.position.x=meshp[i - 1].position.x;
                                     }
                                 }
                             }
@@ -4582,6 +4910,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 if(alld_question_no>60){
                                     if(i==1 && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
+                                        meshbb2.position.x=meshp[i - 1].position.x+3.5;
+                                        meshbb3.position.x=meshp[i - 1].position.x;
                                     }
                                 }
                             }

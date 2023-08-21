@@ -86,7 +86,7 @@ const Questions = (props) => {
             setclick(5);
             setTimeout(() => {
                 changeQuetion(); // Assuming changeQuetion is the function to change the question
-            }, 10000)
+            }, 1000)
 
         } else {
             incorrect();
