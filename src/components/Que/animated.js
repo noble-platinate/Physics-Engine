@@ -4503,7 +4503,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1 || subsubstep == -300)) {
                     // scene.add(chotasphere[cs_count]);
-                    if (bigblockdata.mass!=0 && subsubstep != -100) {
+                    if (alldata["bigblock dick"] != undefined && bigblockdata.mass!=0 && subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
@@ -4512,7 +4512,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                         // player.play()
 
                     }
-                    if (bigblockdata.mass!=0 && subsubstep == -100) {
+                    if (alldata["bigblock dick"] != undefined && bigblockdata.mass!=0 && subsubstep == -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
@@ -4923,7 +4923,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                                 meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                                 if(alld_question_no>60){
-                                    if(i==1 && bigblockdata.mass>0){
+                                    if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
                                         meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                         meshbb3.position.x=meshp[i - 1].position.x;
@@ -4938,7 +4938,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                         if(alld_question_no>60){
-                            if(i==1 && bigblockdata.mass>0){
+                            if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
                                 meshbb.position.x=meshp[i - 1].position.x-3.8;
                                 meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                 meshbb3.position.x=meshp[i - 1].position.x;
@@ -4957,7 +4957,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                         meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                         if(alld_question_no>60){
-                            if(i==1 && bigblockdata.mass>0){
+                            if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
                                 meshbb.position.x=meshp[i - 1].position.x-3.8;
                                 meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                 meshbb3.position.x=meshp[i - 1].position.x;
@@ -4972,7 +4972,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                                 meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                                 if(alld_question_no>60){
-                                    if(i==1 && bigblockdata.mass>0){
+                                    if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
                                         meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                         meshbb3.position.x=meshp[i - 1].position.x;
@@ -4986,7 +4986,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                                 meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                                 if(alld_question_no>60){
-                                    if(i==1 && bigblockdata.mass>0){
+                                    if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
                                         meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                         meshbb3.position.x=meshp[i - 1].position.x;
