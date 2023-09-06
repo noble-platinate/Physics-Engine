@@ -1482,8 +1482,17 @@ if (answerClicked > 0 && iscorrect != 1) {
                     }
                 }
                     
-                if (step == "constraint" && (subsubstep == -1 ||subsubstep == 0))
+                if (step == "constraint" && (subsubstep == -1 ||subsubstep == 0)){
                     scene.add(meshbb);
+                }
+
+                if(step=="constraint" && alld_question_no==68 && subsubstep==1 && substep==1){
+                    meshbb2.position.x=meshbb2.position.x+7
+                    xyz=meshbb2.position.x;
+                    scene.add(meshbb2);
+                    scene.add(meshbb1);
+                    
+                                }
             }
         }
             //mangalik bigblock code ends
@@ -1503,6 +1512,7 @@ if (answerClicked > 0 && iscorrect != 1) {
         var block_ini_pos_y = new Array(n_b);
         var pulley_ini_pos_x = new Array(n_p);
         var pulley_ini_pos_y = new Array(n_p);
+        var pull_x,pull_y,redb_x, xyz;
         var text_loc_x = new Array(n_b);
         var text_loc_y = new Array(n_b);
         var acc_arrow_to
@@ -2470,9 +2480,51 @@ if (answerClicked > 0 && iscorrect != 1) {
         //scene.add( rdm3)
 
 
+        
 
         var meshp = new Array(n_p);
         //var clr = [ 0xff0000, 0xffff00, 0x0088ff, 0x00ff00]  
+
+        if(step=="constraint" && alld_question_no==68 && substep==1 && subsubstep==1){
+            const materialp1 = new THREE.MeshNormalMaterial()
+            const materialx = new THREE.MeshBasicMaterial({color: clr[0]}) //added by mangalik
+
+            var pull = new THREE.Mesh(
+                //changed from /20 to /15 on 20th June
+                new THREE.CylinderGeometry(10 / 15, 10 / 15, 0.03, 32),
+                materialp1
+            )
+            var redb = new THREE.Mesh(
+                new THREE.BoxGeometry(20 / 15, 20 / 15, 20 / 100000), //added by mangalik
+                materialx);
+
+            redb.position.x = (206.5685424949238 - 150) / 15 + 7-3.95; // where do these positions come from?
+            redb.position.y = (220.0 - 150) / 15-3;
+            redb.rotation.z = Math.PI/4;
+            // meshp[1].position.x=meshp[1].position.x+5
+            scene.add(pull)
+            scene.add(redb)
+
+            // 22june manglik code ends 
+            pull.rotation.x = Math.PI/2
+            pull.position.x = (206.5685424949238 - 150) / 15 + 7;
+            pull.position.y = (220.0 - 150) / 15; //changed from 20 to 15 on 20th June 
+            
+            //mangalik code starts
+            camera_avg_x = camera_avg_x + pull.position.x //added by mangalik
+            camera_avg_y = camera_avg_y + pull.position.y
+            num_of_obj = num_of_obj + 1
+            //mangalik code ends
+
+            pull_x = pull.position.x;
+            pull_y = pull.position.y;
+            
+            redb_x=redb.position.x;
+            
+        }
+
+        
+
         for (i = 1; i < n_p + 1; i++) {
 
             const materialp = new THREE.MeshNormalMaterial()
@@ -2485,7 +2537,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                 new THREE.CylinderGeometry(pulleydata[i].radius / 15, pulleydata[i].radius / 15, 0.03, 32),
                 materialp
             )
-            //debugger
+            
             if (!step.includes("constraint") || (step == "constraint" && (subsubstep == 0 || subsubstep == -1))) {
                 if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
                     scene.add(meshp[i-1])
@@ -2538,7 +2590,7 @@ if (answerClicked > 0 && iscorrect != 1) {
             meshp[i - 1].rotation.x = Math.PI/2
             meshp[i - 1].position.x = (pulleydata[i].centre[0] - 150) / 15;
             meshp[i - 1].position.y = (pulleydata[i].centre[1] - 150) / 15; //changed from 20 to 15 on 20th June 
-
+            
             //mangalik code starts
             camera_avg_x = camera_avg_x + meshp[i - 1].position.x //added by mangalik
             camera_avg_y = camera_avg_y + meshp[i - 1].position.y
@@ -3092,10 +3144,16 @@ if (answerClicked > 0 && iscorrect != 1) {
             //added by mangalik, some conditions to draw horizontal string, but this is not perfect will have to change for inclined conditions
             if (strpart["first obj type"] == "<class 'blocksclass.blocks'>" && strpart["second obj type"] == "<class 'blocksclass.pulleys'>") {
                 pt1 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
+                var temp = new THREE.Vector3((206.5685424949238 - 150) / 15 + 7-3.95, (220.0 - 150) / 15-3, 0)
+
                 points[i - 1] = []
+                var gg = []
                 endpos[i - 1] = []
+                var gg3=[]
                 pt1.z = 0
+                temp.z = 0
                 points[i - 1].push(pt1);
+                gg.push(temp);
                 angle = Math.PI - stringdata[i].angle
                 secondobj = meshp[stringdata[i]["second obj"] - 1]
 
@@ -3104,8 +3162,10 @@ if (answerClicked > 0 && iscorrect != 1) {
                 else
                     pt2 = new THREE.Vector3(secondobj.position.x, secondobj.position.y, secondobj.position.z)
                     //console.log( pt2 )
-                
+                var gg2 = new THREE.Vector3((206.5685424949238 - 150) / 15 + 7  + secondobj.geometry.parameters.radiusTop * Math.cos(angle), (220.0 - 150) / 15 + secondobj.geometry.parameters.radiusTop * Math.sin(angle), 0)
+
                 points[i - 1].push(pt2);
+                gg.push(gg2);
 
                 if (block_angle[strpart["first obj"] - 1] == 0) {
                     if (Math.abs(pt1.y-pt2.y) < Math.abs(pt1.x-pt2.x))
@@ -3113,8 +3173,9 @@ if (answerClicked > 0 && iscorrect != 1) {
                     else
                         pt2.x = pt1.x;
                 }
-
+                
                 const geometry4 = new THREE.BufferGeometry().setFromPoints(points[i - 1]);
+                const geometry10 = new THREE.BufferGeometry().setFromPoints(gg);
 
                 if (block_angle[strpart["first obj"] - 1] == 0) {
                     if (pt1.y < pt2.y) {
@@ -3138,11 +3199,21 @@ if (answerClicked > 0 && iscorrect != 1) {
                     pt1.y = pt1.y + Math.sin(block_angle[strpart["first obj"] - 1])*blockdata[stringdata[i]["first obj"]].size[0] / 30
                     endpos[i - 1].push(pt1)
                     endpos[i - 1].push(pt2)
+                    temp.x = temp.x + Math.cos(Math.PI/4)*20 / 30
+                    temp.y = temp.y + Math.sin(Math.PI/4)*20 / 30
+                    gg3.push(temp)
+                    gg3.push(gg2)
                 }
                 
-
+                var tempx=temp.x;
+                var gg2x=gg2.x;
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
+                var linex = new THREE.Line(geometry10, material4);
+                
+                if(substep==1 && subsubstep==1 && alld_question_no==68 && step=="constraint"){
+                    scene.add(linex);
+                }
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
                     if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
                         scene.add(linestr[i - 1])
@@ -4646,7 +4717,12 @@ if (answerClicked > 0 && iscorrect != 1) {
 
 
                     }
-
+                    if(alld_question_no==68 && substep==1 && subsubstep==1 && step=="constraint"){
+                        pull.position.x=pull_x;
+                        redb.position.x=redb_x;
+                        meshbb2.position.x = xyz;
+                    }
+                    
                     /*
                     if (bigblockdata.mass != 0) {
                         meshbb.position.x = bb_ini_pos_x;
@@ -4872,6 +4948,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                             }
                         }
                     }
+                    
                 }
             }
             // 22June change code ends manglik
@@ -4887,6 +4964,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                             }
                         }
                     }
+                    
 
                     if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.pulleys'>")) {
                         if (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>") {
@@ -4918,8 +4996,19 @@ if (answerClicked > 0 && iscorrect != 1) {
                         }
                     }
                 }
+                if(alld_question_no==68 && substep == 1 && subsubstep==1){
+                    // Later, when you want to update the values of temp and gg2
+                    meshbb2.position.x=meshbb2.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
+                    pull.position.x=pull.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
+                    redb.position.x=redb.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
+                    temp.x = tempx + pull.position.x - pull_x;
 
-                /*
+                    gg2.x = gg2x + pull.position.x - pull_x;
+
+                    // Update the geometry of linex with the new values
+                    linex.geometry.setFromPoints([temp, gg2]);
+                }
+                /* 
                 if (bigblockdata.mass != 0) {
                     time_main = elapsedTime - Time_tillnow;
                     if (step == "motion" || (step == "constraint" && subsubstep == -1)) {
