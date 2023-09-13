@@ -6169,7 +6169,7 @@ export const questionData = [
       {
         questionNumber: 11,
         questionDesc:
-          "A red block and yellow block, both of mass 1 kg are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
+          "A red block of mass 10 kg and yellow block of mass 40 kg, are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
         steps: [
           {
             stepName: "Identify Motion of objects",
@@ -23149,7 +23149,7 @@ export const questionData = [
       {
         questionNumber: 34,
         questionDesc:
-          "A red block and yellow block, both of mass 1 kg are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
+          "A red block of 40 kg and yellow block of 10 kg, are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
         steps: [
           {
             stepName: "Identify Motion of objects",
@@ -27339,7 +27339,7 @@ export const questionData = [
       {
         questionNumber: 39,
         questionDesc:
-          "A red block and yellow block, both of mass 1 kg are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
+          "A red block of mass 30 kg and yellow block of mass 40 kg, are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
         steps: [
           {
             stepName: "Identify Motion of objects",

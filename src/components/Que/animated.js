@@ -159,7 +159,11 @@ const TestThree = (props) => {
         var totalunknowns = 0;
         var count =0;
         var pyplayer = document.getElementById('pysound');
+        pyplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
+
         var gplayer = document.getElementById('gsound');
+        gplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
+
         var count = 0;
 
         // function startpart1() {
@@ -490,7 +494,8 @@ const TestThree = (props) => {
          
         if (step == "motion" && substep == 0  && subsubstep == (-1)) {
             let pyplayer = document.getElementById('radio');
- 
+            pyplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
+
             pyplayer.src = steponepone3;
             // setTimeout( ()=>{ pyplayer.pause();
             //                        },50000 );
@@ -662,6 +667,8 @@ const TestThree = (props) => {
             
             gplayer.pause();
             let pyplayer = document.getElementById('radio');
+            pyplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
+
             // player.pause();
             // player.src = unkb_audio[1];
             // player.play()
@@ -679,6 +686,8 @@ const TestThree = (props) => {
                     count++;
                 }
                 let player = document.getElementById('radio');
+                player.volume = Math.min(pyplayer.volume * 2.5, 1.0);
+
                 player.src = well;
                 player.play();
                 // player.pause()
@@ -802,6 +811,8 @@ const TestThree = (props) => {
         if (step == "motion" && substep == 0 && subsubstep == 4) {
             gplayer.pause();
             let pyplayer = document.getElementById('radio');
+            pyplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
+
             // player.pause();
             // player.src = unkb_audio[1];
             // player.play()
@@ -942,6 +953,7 @@ const TestThree = (props) => {
         //this is red block 
         soundtension.pause();
         let xy = document.getElementById('radio');
+        xy.volume = Math.min(pyplayer.volume * 2.5, 1.0);
 
         gplayer.pause();
             xy.src = steptwo5;
@@ -950,6 +962,8 @@ const TestThree = (props) => {
                                 let x = document.getElementById('radio');
                                 xy.pause();
                                 x.source=well;
+                                soundfbd.volume = Math.min(soundfbd.volume * 2.5, 1.0);
+
                                 soundfbd.play();
                                 // sund.play("track01");
                                 // sund.on('end', function(){
@@ -965,12 +979,14 @@ const TestThree = (props) => {
         gplayer.pause();
         if(flag==1){
             gplayer.src = steptwo4;
+            gplayer.play();
         }
         if(flag>1) {
             gplayer.src = steptwo6;
+            gplayer.play();
         }
             
-                              gplayer.play();
+                              
                               if ( iscorrect == 1) {
                                 gplayer.pause();
                                 soundfbd.play();
@@ -982,12 +998,15 @@ const TestThree = (props) => {
         gplayer.pause();
         if(flag==1){
             gplayer.src = steptwo6;
+            gplayer.play();
+
         }
         if(flag>1) {
             gplayer.src = steptwo6;
+            gplayer.play();
+
         }
             
-                              gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
                                 soundfbd.play();
@@ -1059,12 +1078,15 @@ const TestThree = (props) => {
         gplayer.pause();
         if(flag==1){
             gplayer.src = steptwo4;
+            gplayer.play();
+
         }
         if(flag>1) {
             gplayer.src = steptwo6;
+            gplayer.play();
+
         }
             
-                              gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
                                 soundfbd.play();
@@ -1076,12 +1098,15 @@ const TestThree = (props) => {
         gplayer.pause();
         if(flag==1){
             gplayer.src = steptwo6;
+            gplayer.play();
+
         }
         if(flag>1) {
             gplayer.src = steptwo6;
+            gplayer.play();
+
         }
             
-                              gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
                                 soundfbd.play();
@@ -1708,7 +1733,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                 // eq2.rotation.z = block_angle[i - 1]*2
                 // eq1.rotation.z = block_angle[i - 1]*2
             }
-            
+            debugger
             meshk[i - 1].position.x = (blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
             meshk[i - 1].position.y = (blockdata[i].loc[1] - 150) / 15;
             meshk[i - 1].rotation.z = block_angle[i - 1]
@@ -1725,7 +1750,7 @@ if (answerClicked > 0 && iscorrect != 1) {
             y3=temp3.position.y;
             block_ini_pos_x[i - 1] = meshk[i - 1].position.x;
             block_ini_pos_y[i - 1] = meshk[i - 1].position.y;
-            text_loc_x[i - 1] = meshk[i - 1].position.x + 0.8 * blockdata[i].textloc
+            text_loc_x[i - 1] = meshk[i - 1].position.x + 1.8 * blockdata[i].textloc
             text_loc_y[i - 1] = meshk[i - 1].position.y
 
             // added arrdir key in the json file to help determine arrow direction, made the textloc key 2D
@@ -2416,31 +2441,53 @@ if (answerClicked > 0 && iscorrect != 1) {
         var usevarx = 0
 
         var usevary = 0
-        for (let i = 1; i < n_b + 1; i++) {
-            loader.load('Teko_Medium_Regular.json', function (font) {
-                const textGeometry_t1 = new THREE.TextGeometry("a" + i, {
-                    font: font,
-                    size: 1,
-                    height: 5,
-                    curveSegments: 5,
-                    bevelEnabled: false,
+        // for (let i = 1; i < n_b + 1; i++) {
+        //     loader.load('Teko_Medium_Regular.json', function (font) {
+        //         const textGeometry_t1 = new THREE.TextGeometry("a" + i, {
+        //             font: font,
+        //             size: 1,
+        //             height: 5,
+        //             curveSegments: 5,
+        //             bevelEnabled: false,
 
-                });
-                const material_t1 = [
-                    new THREE.MeshPhongMaterial({ color: clr[i - 1] }), // front
-                    new THREE.MeshPhongMaterial({ color: 0x000000 }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry_t1, material_t1);
-                textMesh.castShadow = true
+        //         });
+        //         const material_t1 = [
+        //             new THREE.MeshPhongMaterial({ color: clr[i - 1] }), // front
+        //             new THREE.MeshPhongMaterial({ color: 0x000000 }) // side
+        //         ];
+        //         const textMesh = new THREE.Mesh(textGeometry_t1, material_t1);
+        //         textMesh.castShadow = true
 
 
-                textMesh.position.y = text_loc_y[i - 1]
-                textMesh.position.x = text_loc_x[i - 1]
+        //         textMesh.position.y = text_loc_y[i - 1]
+        //         textMesh.position.x = text_loc_x[i - 1]
 
-                scene.add(textMesh);
+        //         scene.add(textMesh);
 
-            });
-        }
+        //     });
+        // }
+        loader.load('Teko_Medium_Regular.json', function (font) {
+        const textGeometry_t1 = new THREE.TextGeometry("a" + 1, {
+            font: font,
+            size: 200,
+            height: 5,
+            curveSegments: 5,
+            bevelEnabled: false,
+
+        });
+        const material_t1 = [
+            new THREE.MeshPhongMaterial({ color: "white" }), // front
+            new THREE.MeshPhongMaterial({ color: "white" }) // side
+        ];
+        const textMesh = new THREE.Mesh(textGeometry_t1, material_t1);
+        textMesh.castShadow = true
+
+
+        textMesh.position.y = 5
+        textMesh.position.x = 5
+
+        scene.add(textMesh);
+    });
 
         const materialx = new THREE.MeshNormalMaterial()
         const materialy = new THREE.MeshNormalMaterial()
