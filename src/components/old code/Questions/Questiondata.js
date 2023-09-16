@@ -50043,7 +50043,7 @@ export const questionData = [
                 answer: 0,
                 threejsstep: "fbd",
                 threejssubstep: 2,
-                threejssubsubstep: 2,
+                threejssubsubstep: 1,
                 show1: [
                   "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
                         "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
@@ -50383,7 +50383,7 @@ export const questionData = [
                         "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
-                ],
+                ],              
                 type: "basic",
                 showfc: [
                   "Rightward Forces: ",
@@ -50404,8 +50404,8 @@ export const questionData = [
                 ],
                 answer: 1,
                 threejsstep: "fbd",
-                threejssubstep: 2,
-                threejssubsubstep: 100,
+                threejssubstep: 3,
+                threejssubsubstep: 3,
                 show1: [
                   "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
                         "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
@@ -50427,7 +50427,7 @@ export const questionData = [
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084"
                 ],
-                type: "basic",
+                type: "basicc",
               },
             ],
           },

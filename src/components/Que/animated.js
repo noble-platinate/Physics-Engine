@@ -1547,7 +1547,8 @@ if (answerClicked > 0 && iscorrect != 1) {
         //added by mangalik
         var normal_from //added by mangalik
         var normal_to //added by mangalik
-        
+        var normal_from1 //added by mangalik
+        var normal_to1 //added by mangalik   
         //added by manglik on 14 june code starts 
 
         var force_line_x = new Array(n_b)
@@ -1664,6 +1665,10 @@ if (answerClicked > 0 && iscorrect != 1) {
                         }
                     }
                 }
+            }
+
+            if(alld_question_no==68 && step == "fbd" && substep == 5 && subsubstep == 100 && props.type == "basicc"){
+                
             }
              
             // 22June change code starts manglik
@@ -1951,123 +1956,242 @@ if (answerClicked > 0 && iscorrect != 1) {
                 
                 if (normaldata[j + 1].objects[0] == "b"+i || normaldata[j + 1].objects[1] =="b" +i) {
                 //camera_shift = 0//-(meshk[i - 1].position.x - 1.5) *0.11
-                    var camera_shift_y = 0//-(blockdata[i].loc[1] - 174)*0.007
-                    if (blockdata[i].loc[1] <= 174)
-                        camera_shift_y = 0
-                    var currentnormal = normaldata[j + 1]
-                
-                    var norm_angle = currentnormal.angle;
-                    var cone_angle
-                    var normal_length = (blockdata[i].size[0])/17//length of normal has to be finally made proportional to magnitude
-                    var normal_points = []
-
-                    if (currentnormal.objects[1] == ("b"+i)){
-                        normal_from = new THREE.Vector3(meshk[i - 1].position.x - Math.cos(norm_angle)*blockdata[i].size[0] / 30, meshk[i - 1].position.y - Math.sin(norm_angle)*blockdata[i].size[0] / 30, 0.00073)
-                        normal_to = new THREE.Vector3(normal_from.x + normal_length*Math.cos(norm_angle), normal_from.y + normal_length*Math.sin(norm_angle), 0.00073)
-                        cone_angle = norm_angle - 1.57;
-
-                        //normal_from.x = normal_from.x + camera_shift 
-                        //normal_to.x = normal_to.x + camera_shift
-                        normal_from.y = normal_from.y + camera_shift_y 
-                        normal_to.y = normal_to.y + camera_shift_y
-                        /*if (Math.abs(norm_angle-1.57) < 0.1) {
-                        
-                            normal_from.x = normal_from.x + (1)/8
-                            normal_to.x = normal_to.x + (1)/8
-                        }
-                        if (norm_angle == 0) {
-                        
-                            normal_from.y = normal_from.y - (1)/8
-                            normal_to.y = normal_from.y
-                        }
-                        if (norm_angle == 3.14) {
-                        
-                            normal_from.y = normal_from.y + (1)/8
-                            normal_to.y = normal_from.y
-                        }*/
-                        //changed from 1/8 to 1/6 on 20th June
-                        normal_from.x = normal_from.x + 1/6*Math.cos(norm_angle - Math.PI/2)
-                        normal_to.x = normal_to.x + 1/6*Math.cos(norm_angle - Math.PI/2)
-                        normal_from.y = normal_from.y + 1/6*Math.sin(norm_angle - Math.PI/2)
-                        normal_to.y = normal_to.y + 1/6*Math.sin(norm_angle - Math.PI/2)
-
-                    }
-                    if (currentnormal.objects[0] == ("b"+i)){
-                        normal_from = new THREE.Vector3(meshk[i - 1].position.x + Math.cos(norm_angle)*blockdata[i].size[0] / 30, meshk[i - 1].position.y + Math.sin(norm_angle)*blockdata[i].size[0] / 30, 0.00073)
-                        normal_to = new THREE.Vector3(normal_from.x - normal_length*Math.cos(norm_angle), normal_from.y - normal_length*Math.sin(norm_angle), 0.00073)
-                        cone_angle = norm_angle + 1.57
-
-                        //normal_from.x = normal_from.x + camera_shift 
-                        //normal_to.x = normal_to.x + camera_shift
-                        //normal_from.y = normal_from.y + camera_shift_y 
-                        //normal_to.y = normal_to.y + camera_shift_y
-                        /*
-                        if (Math.abs(norm_angle-1.57) < 0.1){
-                      
-                            normal_from.x = normal_from.x - 1/8
-                            normal_to.x = normal_to.x - 1/8
-                        }
-                        if (norm_angle == 0) {
-               
-                            normal_from.y = normal_from.y + (1)/8
-                            normal_to.y = normal_from.y
-                        }
-                        if (norm_angle == 3.14) {
-                      
-                            normal_from.y = normal_from.y - (1)/8
-                            normal_to.y = normal_from.y
-                        }*/
-                        //changed from 1/8 to 1/6 on 20th June
-                        normal_from.x = normal_from.x + 1/6*Math.cos(norm_angle + Math.PI / 2)
-                        normal_to.x = normal_to.x + 1/6*Math.cos(norm_angle + Math.PI / 2)
-                        normal_from.y = normal_from.y + 1/6*Math.sin(norm_angle + Math.PI / 2)
-                        normal_to.y = normal_to.y + 1/6*Math.sin(norm_angle + Math.PI / 2)
-                    }
-    
-                    //acc_arrow_direction = normal_to.clone().sub(normal_from);
-                    //acc_arrow_length = acc_arrow_direction.length();
-                
-                    //var normal_helper = new THREE.ArrowHelper(acc_arrow_direction.normalize(), normal_from, acc_arrow_length, 0xffffff);
-                    const material_norm = new THREE.MeshBasicMaterial({color: 'white'})
-                    var normal_cone = new THREE.Mesh(geometryc, material_norm);
-                
-                    //approx
-                    normal_cone.position.x = normal_to.x;
-                    normal_cone.position.y = normal_to.y;
-                    normal_cone.position.z = 0
-                
-                
-                    normal_cone.rotation.z = cone_angle;
-                
-                    normal_points.push(normal_from, normal_to)
-
-                    var normal_geometry = new THREE.BufferGeometry().setFromPoints(normal_points);
-
-                    var normal_line = new THREE.Line(normal_geometry, material_norm)
-
-                    const materialch = new THREE.MeshBasicMaterial()
-                    materialch.color = new THREE.Color(0xffffff)
-                    //materialfbd.transparent = true
-                    //materialfbd.opacity = 0.8
-                    var normal_chotasphere = new THREE.Mesh(
-                        new THREE.SphereGeometry(0.08, 16, 16),
-                        materialch
-                    )
-                
-                    normal_chotasphere.position.x = normal_from.x;
-                    normal_chotasphere.position.y = normal_from.y;
-                    normal_chotasphere.position.z = 0
-
-                    if (step == "fbd" && substep == i && (subsubstep == -200 || subsubstep == j+1 || subsubstep == -300)) {
-                        scene.add(normal_chotasphere);
-                    }
-        
-                    if (step == "fbd" && substep == i && ((subsubstep > j+1 && subsubstep < block_normals[i - 1] + 1) || subsubstep == 100)) {
                     
+                    if(alld_question_no==68 && step == "fbd" && substep == 3 && subsubstep == 3){
+
+                        var camera_shift_y = 0//-(blockdata[i].loc[1] - 174)*0.007
+                        if (blockdata[i].loc[1] <= 174)
+                            camera_shift_y = 0
+                        var currentnormal = normaldata[j + 1]
+                    
+                        var norm_angle = currentnormal.angle;
+                        norm_angle = norm_angle + 3.14;
+                        var cone_angle
+                        var normal_length = (blockdata[i].size[0])/17//length of normal has to be finally made proportional to magnitude
+                        var normal_points = []
+
+                        if (currentnormal.objects[1] == ("b"+i)){
+                            
+                            normal_from = new THREE.Vector3(meshk[i - 1].position.x + Math.cos(norm_angle)*blockdata[i].size[0] / 30, meshk[i - 1].position.y + Math.sin(norm_angle)*blockdata[i].size[0] / 30, 0.00073)
+                            normal_to = new THREE.Vector3(normal_from.x + normal_length*Math.cos(norm_angle), normal_from.y + normal_length*Math.sin(norm_angle), 0.00073)
+                            cone_angle = norm_angle - 1.57;
+
+                            //normal_from.x = normal_from.x + camera_shift 
+                            //normal_to.x = normal_to.x + camera_shift
+                            normal_from.y = normal_from.y + camera_shift_y 
+                            normal_to.y = normal_to.y + camera_shift_y
+                            /*if (Math.abs(norm_angle-1.57) < 0.1) {
+                            
+                                normal_from.x = normal_from.x + (1)/8
+                                normal_to.x = normal_to.x + (1)/8
+                            }
+                            if (norm_angle == 0) {
+                            
+                                normal_from.y = normal_from.y - (1)/8
+                                normal_to.y = normal_from.y
+                            }
+                            if (norm_angle == 3.14) {
+                            
+                                normal_from.y = normal_from.y + (1)/8
+                                normal_to.y = normal_from.y
+                            }*/
+                            //changed from 1/8 to 1/6 on 20th June
+                            normal_from.x = normal_from.x + 1/6*Math.cos(norm_angle - Math.PI/2)
+                            normal_to.x = normal_to.x + 1/6*Math.cos(norm_angle - Math.PI/2)
+                            normal_from.y = normal_from.y + 1/6*Math.sin(norm_angle - Math.PI/2)
+                            normal_to.y = normal_to.y + 1/6*Math.sin(norm_angle - Math.PI/2)
+
+                        }
+                        if (currentnormal.objects[0] == ("b"+i)){
+                            normal_from = new THREE.Vector3(meshk[i - 1].position.x + Math.cos(norm_angle)*blockdata[i].size[0] / 30, meshk[i - 1].position.y + Math.sin(norm_angle)*blockdata[i].size[0] / 30, 0.00073)
+                            normal_to = new THREE.Vector3(normal_from.x - normal_length*Math.cos(norm_angle), normal_from.y - normal_length*Math.sin(norm_angle), 0.00073)
+                            cone_angle = norm_angle + 1.57
+
+                            //normal_from.x = normal_from.x + camera_shift 
+                            //normal_to.x = normal_to.x + camera_shift
+                            //normal_from.y = normal_from.y + camera_shift_y 
+                            //normal_to.y = normal_to.y + camera_shift_y
+                            /*
+                            if (Math.abs(norm_angle-1.57) < 0.1){
+                        
+                                normal_from.x = normal_from.x - 1/8
+                                normal_to.x = normal_to.x - 1/8
+                            }
+                            if (norm_angle == 0) {
+                
+                                normal_from.y = normal_from.y + (1)/8
+                                normal_to.y = normal_from.y
+                            }
+                            if (norm_angle == 3.14) {
+                        
+                                normal_from.y = normal_from.y - (1)/8
+                                normal_to.y = normal_from.y
+                            }*/
+                            //changed from 1/8 to 1/6 on 20th June
+                            normal_from.x = normal_from.x + 1/6*Math.cos(norm_angle + Math.PI / 2)
+                            normal_to.x = normal_to.x + 1/6*Math.cos(norm_angle + Math.PI / 2)
+                            normal_from.y = normal_from.y + 1/6*Math.sin(norm_angle + Math.PI / 2)
+                            normal_to.y = normal_to.y + 1/6*Math.sin(norm_angle + Math.PI / 2)
+                        }
+        
+                        //acc_arrow_direction = normal_to.clone().sub(normal_from);
+                        //acc_arrow_length = acc_arrow_direction.length();
+                    
+                        //var normal_helper = new THREE.ArrowHelper(acc_arrow_direction.normalize(), normal_from, acc_arrow_length, 0xffffff);
+                        const material_norm = new THREE.MeshBasicMaterial({color: 'white'})
+                        var normal_cone = new THREE.Mesh(geometryc, material_norm);
+                    
+                        //approx
+                        normal_cone.position.x = normal_to.x;
+                        normal_cone.position.y = normal_to.y;
+                        normal_cone.position.z = 0
+                    
+                    
+                        normal_cone.rotation.z = cone_angle;
+                    
+                        normal_points.push(normal_from, normal_to)
+
+                        var normal_geometry = new THREE.BufferGeometry().setFromPoints(normal_points);
+
+                        var normal_line = new THREE.Line(normal_geometry, material_norm)
+
+                        const materialch = new THREE.MeshBasicMaterial()
+                        materialch.color = new THREE.Color(0xffffff)
+                        //materialfbd.transparent = true
+                        //materialfbd.opacity = 0.8
+                        var normal_chotasphere = new THREE.Mesh(
+                            new THREE.SphereGeometry(0.08, 16, 16),
+                            materialch
+                        )
+                    
+                        normal_chotasphere.position.x = normal_from.x;
+                        normal_chotasphere.position.y = normal_from.y;
+                        normal_chotasphere.position.z = 0
                         scene.add(normal_chotasphere);
+
                         scene.add(normal_line);
                         scene.add(normal_cone);
                     }
+                    else{
+                        var camera_shift_y = 0//-(blockdata[i].loc[1] - 174)*0.007
+                        if (blockdata[i].loc[1] <= 174)
+                            camera_shift_y = 0
+                        var currentnormal = normaldata[j + 1]
+                    
+                        var norm_angle = currentnormal.angle;
+                        var cone_angle
+                        var normal_length = (blockdata[i].size[0])/17//length of normal has to be finally made proportional to magnitude
+                        var normal_points = []
+
+                        if (currentnormal.objects[1] == ("b"+i)){
+                            
+                            normal_from = new THREE.Vector3(meshk[i - 1].position.x - Math.cos(norm_angle)*blockdata[i].size[0] / 30, meshk[i - 1].position.y - Math.sin(norm_angle)*blockdata[i].size[0] / 30, 0.00073)
+                            normal_to = new THREE.Vector3(normal_from.x + normal_length*Math.cos(norm_angle), normal_from.y + normal_length*Math.sin(norm_angle), 0.00073)
+                            cone_angle = norm_angle - 1.57;
+
+                            //normal_from.x = normal_from.x + camera_shift 
+                            //normal_to.x = normal_to.x + camera_shift
+                            normal_from.y = normal_from.y + camera_shift_y 
+                            normal_to.y = normal_to.y + camera_shift_y
+                            /*if (Math.abs(norm_angle-1.57) < 0.1) {
+                            
+                                normal_from.x = normal_from.x + (1)/8
+                                normal_to.x = normal_to.x + (1)/8
+                            }
+                            if (norm_angle == 0) {
+                            
+                                normal_from.y = normal_from.y - (1)/8
+                                normal_to.y = normal_from.y
+                            }
+                            if (norm_angle == 3.14) {
+                            
+                                normal_from.y = normal_from.y + (1)/8
+                                normal_to.y = normal_from.y
+                            }*/
+                            //changed from 1/8 to 1/6 on 20th June
+                            normal_from.x = normal_from.x + 1/6*Math.cos(norm_angle - Math.PI/2)
+                            normal_to.x = normal_to.x + 1/6*Math.cos(norm_angle - Math.PI/2)
+                            normal_from.y = normal_from.y + 1/6*Math.sin(norm_angle - Math.PI/2)
+                            normal_to.y = normal_to.y + 1/6*Math.sin(norm_angle - Math.PI/2)
+
+                        }
+                        if (currentnormal.objects[0] == ("b"+i)){
+                            normal_from = new THREE.Vector3(meshk[i - 1].position.x + Math.cos(norm_angle)*blockdata[i].size[0] / 30, meshk[i - 1].position.y + Math.sin(norm_angle)*blockdata[i].size[0] / 30, 0.00073)
+                            normal_to = new THREE.Vector3(normal_from.x - normal_length*Math.cos(norm_angle), normal_from.y - normal_length*Math.sin(norm_angle), 0.00073)
+                            cone_angle = norm_angle + 1.57
+
+                            //normal_from.x = normal_from.x + camera_shift 
+                            //normal_to.x = normal_to.x + camera_shift
+                            //normal_from.y = normal_from.y + camera_shift_y 
+                            //normal_to.y = normal_to.y + camera_shift_y
+                            /*
+                            if (Math.abs(norm_angle-1.57) < 0.1){
+                        
+                                normal_from.x = normal_from.x - 1/8
+                                normal_to.x = normal_to.x - 1/8
+                            }
+                            if (norm_angle == 0) {
+                
+                                normal_from.y = normal_from.y + (1)/8
+                                normal_to.y = normal_from.y
+                            }
+                            if (norm_angle == 3.14) {
+                        
+                                normal_from.y = normal_from.y - (1)/8
+                                normal_to.y = normal_from.y
+                            }*/
+                            //changed from 1/8 to 1/6 on 20th June
+                            normal_from.x = normal_from.x + 1/6*Math.cos(norm_angle + Math.PI / 2)
+                            normal_to.x = normal_to.x + 1/6*Math.cos(norm_angle + Math.PI / 2)
+                            normal_from.y = normal_from.y + 1/6*Math.sin(norm_angle + Math.PI / 2)
+                            normal_to.y = normal_to.y + 1/6*Math.sin(norm_angle + Math.PI / 2)
+                        }
+        
+                        //acc_arrow_direction = normal_to.clone().sub(normal_from);
+                        //acc_arrow_length = acc_arrow_direction.length();
+                    
+                        //var normal_helper = new THREE.ArrowHelper(acc_arrow_direction.normalize(), normal_from, acc_arrow_length, 0xffffff);
+                        const material_norm = new THREE.MeshBasicMaterial({color: 'white'})
+                        var normal_cone = new THREE.Mesh(geometryc, material_norm);
+                    
+                        //approx
+                        normal_cone.position.x = normal_to.x;
+                        normal_cone.position.y = normal_to.y;
+                        normal_cone.position.z = 0
+                    
+                    
+                        normal_cone.rotation.z = cone_angle;
+                    
+                        normal_points.push(normal_from, normal_to)
+
+                        var normal_geometry = new THREE.BufferGeometry().setFromPoints(normal_points);
+
+                        var normal_line = new THREE.Line(normal_geometry, material_norm)
+
+                        const materialch = new THREE.MeshBasicMaterial()
+                        materialch.color = new THREE.Color(0xffffff)
+                        //materialfbd.transparent = true
+                        //materialfbd.opacity = 0.8
+                        var normal_chotasphere = new THREE.Mesh(
+                            new THREE.SphereGeometry(0.08, 16, 16),
+                            materialch
+                        )
+                    
+                        normal_chotasphere.position.x = normal_from.x;
+                        normal_chotasphere.position.y = normal_from.y;
+                        normal_chotasphere.position.z = 0
+                        if (step == "fbd" && substep == i && (subsubstep == -200 || subsubstep == j+1 || subsubstep == -300)) {
+                            scene.add(normal_chotasphere);
+                        }
+            
+                        if (step == "fbd" && substep == i && ((subsubstep > j+1 && subsubstep < block_normals[i - 1] + 1) || subsubstep == 100)) {
+                        
+                            scene.add(normal_chotasphere);
+                            scene.add(normal_line);
+                            scene.add(normal_cone);
+                        }
+                    }
+                    
                 }
             }
 
@@ -3772,7 +3896,11 @@ if (answerClicked > 0 && iscorrect != 1) {
             spherefbd[i - 1 + n_b].position.x = meshp[i - 1].position.x;
             spherefbd[i - 1 + n_b].position.y = meshp[i - 1].position.y;
             if (step == "fbd" && substep == i + n_b && subsubstep != 100) {
-                scene.add(spherefbd[i - 1 + n_b])
+                if(!(alld_question_no==68 && substep == 3 && subsubstep == 3)){
+                    scene.add(spherefbd[i - 1 + n_b])
+                }
+
+                
             }
 
         }
